@@ -5,14 +5,14 @@
 You can use `python show_result.py` to display our results.
 
 ```
-mamba_0_5_dpo_ep3: Hybrid-Mamba (50% attention) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 3 epochs DPO with `beta=0.1`
-mamba_0_5_dpo_ep1: Hybrid-Mamba (50% attention) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 1 epoch DPO with `beta=0.01`
+mamba_0_5_dpo_ep3: Hybrid-Mamba (16 attention layers) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 3 epochs DPO with `beta=0.1`
+mamba_0_5_dpo_ep1: Hybrid-Mamba (16 attention layers) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 1 epoch DPO with `beta=0.01`
 
-mamba_0_75_dpo_ep3: Hybrid-Mamba (75% attention) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 3 epochs DPO with `beta=0.1`
-mamba_0_75_dpo_ep1: Hybrid-Mamba (75% attention) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 1 epoch DPO with `beta=0.01`
+mamba_0_75_dpo_ep3: Hybrid-Mamba (8 attention layers) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 3 epochs DPO with `beta=0.1`
+mamba_0_75_dpo_ep1: Hybrid-Mamba (8 attention layers) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 1 epoch DPO with `beta=0.01`
 
-mamba_0_875_dpo_ep3: Hybrid-Mamba (87.5% attention) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 3 epochs DPO with `beta=0.1`
-mamba_0_875_dpo_ep1: Hybrid-Mamba (87.5% attention) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 1 epoch DPO with `beta=0.01`
+mamba_0_875_dpo_ep3: Hybrid-Mamba (4 attention layers) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 3 epochs DPO with `beta=0.1`
+mamba_0_875_dpo_ep1: Hybrid-Mamba (4 attention layers) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 1 epoch DPO with `beta=0.01`
 ```
 
 ```
