@@ -1,3 +1,6 @@
 [submodule "benchmark/mt_bench/FastChat"]
 	path = benchmark/mt_bench/FastChat
-	url = https://github.com/lm-sys/FastChat.git
+	url = git@github.com:jxiw/FastChat.git
+[submodule "benchmark/alpaca_eval/alpaca_eval"]
+	path = benchmark/alpaca_eval/alpaca_eval
+	url = git@github.com:jxiw/alpaca_eval.git
