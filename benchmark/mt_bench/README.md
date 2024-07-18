@@ -4,6 +4,52 @@
 
 You can use `python show_result.py` to display our results.
 
+```
+mamba_0_5_dpo_ep3: Hybrid-Mamba (50% attention) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 3 epochs DPO with `beta=0.1`
+mamba_0_5_dpo_ep1: Hybrid-Mamba (50% attention) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 1 epoch DPO with `beta=0.01`
+
+mamba_0_75_dpo_ep3: Hybrid-Mamba (75% attention) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 3 epochs DPO with `beta=0.1`
+mamba_0_75_dpo_ep1: Hybrid-Mamba (75% attention) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 1 epoch DPO with `beta=0.01`
+
+mamba_0_875_dpo_ep3: Hybrid-Mamba (87.5% attention) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 3 epochs DPO with `beta=0.1`
+mamba_0_875_dpo_ep1: Hybrid-Mamba (87.5% attention) distilled from HuggingFaceH4/zephyr-7b-beta + SFT + 1 epoch DPO with `beta=0.01`
+```
+
+```
+Mode: single
+Input file: data/mt_bench/model_judgment/gpt-4_single.jsonl
+
+########## First turn ##########
+                            score
+model               turn
+mamba_0_5_dpo_ep3   1     7.73750
+mamba_0_5_dpo_ep1   1     7.59375
+mamba_0_75_dpo_ep1  1     7.41875
+mamba_0_75_dpo_ep3  1     7.19375
+mamba_0_875_dpo_ep1 1     6.95625
+mamba_0_875_dpo_ep3 1     6.93125
+
+########## Second turn ##########
+                            score
+model               turn
+mamba_0_5_dpo_ep3   2     6.88750
+mamba_0_5_dpo_ep1   2     6.65000
+mamba_0_75_dpo_ep1  2     6.65000
+mamba_0_75_dpo_ep3  2     5.96875
+mamba_0_875_dpo_ep1 2     5.81875
+mamba_0_875_dpo_ep3 2     5.80625
+
+########## Average ##########
+                        score
+model
+mamba_0_5_dpo_ep3    7.312500
+mamba_0_5_dpo_ep1    7.121875
+mamba_0_75_dpo_ep1   7.034375
+mamba_0_75_dpo_ep3   6.581250
+mamba_0_875_dpo_ep1  6.387500
+mamba_0_875_dpo_ep3  6.368750
+```
+
 Or follow these steps to reproduce the results:
 
 * Follow the installation instructions [here](https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge). Note that the OpenAI requirements for MT-bench and AlpacaEval are different. If you use the same conda environment, please ensure you use `openai==0.28.0`.
