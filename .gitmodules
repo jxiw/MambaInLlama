@@ -1,0 +1,3 @@
+[submodule "benchmark/mt_bench/FastChat"]
+	path = benchmark/mt_bench/FastChat
+	url = https://github.com/lm-sys/FastChat.git
