@@ -42,10 +42,6 @@ Follow these steps to reproduce the results:
 * Next, update the [config name](https://github.com/tatsu-lab/alpaca_eval/blob/2daa6e11b194653043ca74f735728dc068e04aae/src/alpaca_eval/models_configs/zephyr-7b-beta/configs.yaml#L1) and [Hub model ID](https://github.com/tatsu-lab/alpaca_eval/blob/2daa6e11b194653043ca74f735728dc068e04aae/src/alpaca_eval/models_configs/zephyr-7b-beta/configs.yaml#L5) to match your model name. Your model name must include mamba.
 * Follow the steps to evaluate your model [here](https://github.com/tatsu-lab/alpaca_eval/tree/main#evaluating-a-model).
 
-
 ```
-export MODEL=llama3_0_5_dpo_open_not_openhermes_progressive_train_largest_dataset_ep1/
-alpaca_eval evaluate_from_model /local1/junxiong/${MODEL} --output_path ${MODEL} --chunksize 1800 --is_overwrite_leaderboard=True
-```
-
-alpaca_eval evaluate_from_model zephyr-7b-beta --output_path ssm_0_25_dpo_open_900/ --chunksize 1800 
+alpaca_eval evaluate_from_model [YOUR_MODEL_PATH] --output_path [MODEL_OUTPUT_PATH] --chunksize 1800 --is_overwrite_leaderboard=True
+``` 
