@@ -35,11 +35,23 @@ mamba_0_875_dpo_ep1,12.955972695503103,1.0249355755021206,97,705,3,805,12.236024
 mamba_0_875_dpo_ep3,11.073088366887827,0.9646410422463423,85,719,1,805,10.621118012422361,community,1599,12.674281873662284,0.6125756531005329
 ```
 
+So the win rate of our hybrid mamba model against `gpt-4` is
+
+```
+Model,win rate,variance
+mamba_0_5_dpo_ep1,20.660664816178677,0.7377040113167127
+mamba_0_5_dpo_ep3,17.477947322881132,0.7196913648943388
+mamba_0_75_dpo_ep1,17.15774549259986,0.6902325752732126
+mamba_0_75_dpo_ep3,13.889566949138848,0.6155458090726904
+mamba_0_875_dpo_ep1,15.32013766091149,0.6595253340332127
+mamba_0_875_dpo_ep3,12.674281873662284,0.6125756531005329
+```
+
 Follow these steps to reproduce the results:
 
 * Follow the installation instructions [here](https://github.com/tatsu-lab/alpaca_eval#quick-start).
 * Since our model is distilled from Zephyr, please copy and paste the [config](https://github.com/tatsu-lab/alpaca_eval/blob/main/src/alpaca_eval/models_configs/zephyr-7b-beta/configs.yaml) for `zephyr-7b-beta` and place it in the `model_configs` directory under `{your_zephyr_model}`.
-* Next, update the [config name](https://github.com/tatsu-lab/alpaca_eval/blob/2daa6e11b194653043ca74f735728dc068e04aae/src/alpaca_eval/models_configs/zephyr-7b-beta/configs.yaml#L1) and [Hub model ID](https://github.com/tatsu-lab/alpaca_eval/blob/2daa6e11b194653043ca74f735728dc068e04aae/src/alpaca_eval/models_configs/zephyr-7b-beta/configs.yaml#L5) to match your model name. Your model name must include mamba.
+* Next, update the [config name](https://github.com/tatsu-lab/alpaca_eval/blob/2daa6e11b194653043ca74f735728dc068e04aae/src/alpaca_eval/models_configs/zephyr-7b-beta/configs.yaml#L1) and [Hub model ID](https://github.com/tatsu-lab/alpaca_eval/blob/2daa6e11b194653043ca74f735728dc068e04aae/src/alpaca_eval/models_configs/zephyr-7b-beta/configs.yaml#L5) to match your model name. Your model name must include `mamba`. See [this](https://huggingface.co/JunxiongWang/mamba_0_75_dpo_ep3/blob/main/configs.yaml) for a correct config example.
 * Follow the steps to evaluate your model [here](https://github.com/tatsu-lab/alpaca_eval/tree/main#evaluating-a-model).
 
 ```
