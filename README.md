@@ -31,6 +31,46 @@ For reproduction, please follow the instructions [here](mamba_zephyr/README.md).
 |               | Mamba (1/4 attention)  |
 |               | Mamba (1/8 attention)  |
 
+## Usage
+
+### Environment
+We provide an [environment file](environment.yml) that lists the specific Python package versions used in our experiments. To ensure the best reproducibility, we suggest using these same package versions. Nonetheless, you may also use alternative versions and still be able to run the program.
+
+### Generation Example
+
+```
+import torch
+from transformers import AutoTokenizer
+from mamba.hybrid_wrapper import MambaTransformerHybridModelWrapper
+
+pretrained_model_name = "JunxiongWang/mamba_0_5_dpo_ep3" # change the model that you want to test here
+model = MambaTransformerHybridModelWrapper.from_pretrained(pretrained_model_name, torch_dtype=torch.bfloat16)
+
+messages = [[
+    {
+        "role": "user",
+        "content": "Tell me the history about chinese guzheng?",
+    },
+]]
+
+tokenizer = AutoTokenizer.from_pretrained(pretrained_model_name)
+formatted_prompts = [
+    tokenizer.apply_chat_template(message, tokenize=False, add_generation_prompt=True) for message in messages
+]
+
+prompts = [
+    tokenizer.encode(formatted_prompt, return_tensors="pt", truncation=True, max_length=200)
+    for formatted_prompt in formatted_prompts
+]
+batch_prompts = torch.cat(prompts, dim=0).cuda()
+
+outputs = model.generate(batch_prompts, max_length=200, do_sample=True, temperature=0.7, top_k=50, top_p=0.95)
+generated_text = tokenizer.decode(outputs[0], skip_special_tokens=False)
+print(generated_text)
+
+# The guzheng, a traditional Chinese stringed instrument, has a rich and fascinating history that dates back thousands of years. It is believed to have originated during the Eastern Zhou Dynasty (771–256 BCE) and has evolved over time through various dynasties.
+```
+
 ## Evaluation
 
 Please follow the instructions [here](benchmark/README.md)

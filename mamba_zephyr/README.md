@@ -37,7 +37,7 @@ This model is available [here](https://huggingface.co/JunxiongWang/zephyr_0.50_m
 ### SFT
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3 train_sft.py mamba_zephyr/zephyr_0.50_mamba_sft.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_sft.py mamba_zephyr/zephyr_0.50_mamba_sft.yaml
 ```
 
 This should rougly takes 3 days in 8x80G A100. This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_5_sft).
@@ -47,13 +47,13 @@ This should rougly takes 3 days in 8x80G A100. This model is available [here](ht
 Zephyr provides two hyperparameters. You can choose one config from those two.
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3 train_dpo.py mamba_zephyr/zephyr_0.50_mamba_dpo_ep1.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_dpo.py mamba_zephyr/zephyr_0.50_mamba_dpo_ep1.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_5_dpo_ep1).
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3 train_dpo.py mamba_zephyr/zephyr_0.50_mamba_dpo_ep3.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_dpo.py mamba_zephyr/zephyr_0.50_mamba_dpo_ep3.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_5_dpo_ep3).
@@ -67,7 +67,7 @@ We use the distilled SFT model from 50% attention to initialize this model.
 ### SFT
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3 train_sft.py mamba_zephyr/zephyr_0.75_mamba_sft.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_sft.py mamba_zephyr/zephyr_0.75_mamba_sft.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_75_sft).
@@ -75,13 +75,13 @@ This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_75_sf
 ### DPO
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3 train_dpo.py mamba_zephyr/zephyr_0.75_mamba_dpo_ep1.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_dpo.py mamba_zephyr/zephyr_0.75_mamba_dpo_ep1.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_75_dpo_ep1).
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3 train_dpo.py mamba_zephyr/zephyr_0.75_mamba_dpo_ep3.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_dpo.py mamba_zephyr/zephyr_0.75_mamba_dpo_ep3.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_75_dpo_ep3).
@@ -93,7 +93,7 @@ We use the distilled SFT model from 25% attention to initialize this model.
 ### SFT
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3 train_sft.py mamba_zephyr/zephyr_0.875_mamba_sft.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_sft.py mamba_zephyr/zephyr_0.875_mamba_sft.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_875_sft).
@@ -101,13 +101,13 @@ This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_875_s
 ### DPO
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3 train_dpo.py mamba_zephyr/zephyr_0.875_mamba_dpo_ep1.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_dpo.py mamba_zephyr/zephyr_0.875_mamba_dpo_ep1.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_875_dpo_ep1).
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3 train_dpo.py mamba_zephyr/zephyr_0.875_mamba_dpo_ep3.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_dpo.py mamba_zephyr/zephyr_0.875_mamba_dpo_ep3.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_875_dpo_ep3).

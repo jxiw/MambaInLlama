@@ -50,6 +50,7 @@ class MambaTransformerHybridModelWrapper(nn.Module):
         self.mamba_config = mamba_config
         self.attn_layers = attn_layers
         self.model = transformer_model
+        self.config = self.model.config
         
         for layer_idx in range(mamba_config.n_layer):
             if layer_idx not in attn_layers:
@@ -106,26 +107,17 @@ class MambaTransformerHybridModelWrapper(nn.Module):
     ):
         return self.model(input_ids, **kwargs)
 
-    # def generate(
-    #     self,
-    #     input_ids,
-    #     max_length,
-    #     do_sample=True,
-    #     top_k=1,
-    #     top_p=0.0,
-    #     min_p=0.0,
-    #     temperature=1.0
-    # ):
-    #     output = self.model.generate(
-    #         input_ids,
-    #         max_length,
-    #         do_sample=True,
-    #         top_k=top_k,
-    #         top_p=top_p,
-    #         min_p=min_p,
-    #         temperature=temperature,
-    #     )
-    #     return output
+    def generate(
+        self,
+        input_ids,
+        **kwargs,
+    ):
+        output = self.model.generate(
+            input_ids,
+            use_cache=False,
+            **kwargs,
+        )
+        return output
     
     @staticmethod
     def init_distillation(
