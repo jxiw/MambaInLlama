@@ -2,7 +2,7 @@
 
 This repository contains the code and released models for our paper.
 
-![MambaInLlama](assets/mambainllama.png){ width=75% }
+<img src="assets/mambainllama.png" alt="MambaInLlama" width="75%">
 
 Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while preserving the generational quality with the best effort. Typically, you only need 8x80G A100 (with very **limited** resources) and run for 3 to 4 days to reproduce our results. Our approach can be used for both base models and chat models.
 
