@@ -17,7 +17,7 @@ We recommend you start to reproduce using [HuggingFaceH4/zephyr-7b-beta](https:/
 
 | Teacher Model | Hybrid Mamba Model - SFT  | Hybrid Mamba Model - DPO |
 |---------------|---------------------------|--------------------------|
-| Zephyr        | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_50_sft) | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_50_dpo_ep1) |
+| Zephyr        | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_5_sft) | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_5_dpo_ep1) |
 |               | [Mamba (1/4 attention)](https://huggingface.co/JunxiongWang/mamba_0_75_sft) | [Mamba (1/4 attention)](https://huggingface.co/JunxiongWang/mamba_0_75_dpo_ep1) |
 |               | [Mamba (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_sft) | [Mamba (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_dpo_ep1) |
 

@@ -20,7 +20,7 @@ Here are detailed commands to reproduce those models. Make sure you are in the r
 
 ### Distillation phrase:
 
-We start with [HuggingFaceH4/zephyr-7b-beta](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta). First, we replace 25% of the attention layers with Mamba, and then replace another 25% of the attention layers with Mamba by running the following command.
+We start with [HuggingFaceH4/zephyr-7b-beta](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta). First, we replace 25% of the attention layers with Mamba, and then replace another 25% of the attention layers with Mamba by running the following command. 
 
 ```
 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file multi_gpu.yaml train_hybrid.py mamba_zephyr/zephyr_0.25_mamba.yaml
@@ -31,6 +31,8 @@ ACCELERATE_LOG_LEVEL=info accelerate launch --config_file multi_gpu.yaml train_h
 This should rougly takes 10 hours in 8x80G A100.
 
 Now, we have a distilled hybrid mamba model with 50% attention and 50% mamba. We will then want to align it with human feedback.
+
+This model is available [here](https://huggingface.co/JunxiongWang/zephyr_0.50_mamba_progressive).
 
 ### SFT
 
