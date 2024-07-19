@@ -1,0 +1,48 @@
+# Model arguments
+model_name_or_path: HuggingFaceH4/zephyr-7b-beta
+with_distill: false
+prev_checkpoint_path: zephyr_0.75_mamba_sft/
+ssm_layers: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30]
+init_with_kqvo: true
+decontaminate: true
+torch_dtype: bfloat16
+use_flash_attention_2: true
+
+# Data training arguments
+chat_template: "{% for message in messages %}\n{% if message['role'] == 'user' %}\n{{ '<|user|>\n' + message['content'] + eos_token }}\n{% elif message['role'] == 'system' %}\n{{ '<|system|>\n' + message['content'] + eos_token }}\n{% elif message['role'] == 'assistant' %}\n{{ '<|assistant|>\n'  + message['content'] + eos_token }}\n{% endif %}\n{% if loop.last and add_generation_prompt %}\n{{ '<|assistant|>' }}\n{% endif %}\n{% endfor %}"
+dataset_mixer:
+  JunxiongWang/sftdataset: 1.0
+dataset_splits:
+- train
+- test
+preprocessing_num_workers: 64
+
+# SFT trainer config
+bf16: true
+do_eval: true
+evaluation_strategy: epoch
+gradient_accumulation_steps: 1
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: False
+learning_rate: 2.0e-05
+log_level: info
+logging_steps: 10
+logging_strategy: steps
+lr_scheduler_type: cosine
+max_seq_length: 2048
+max_steps: -1
+num_train_epochs: 1
+output_dir: zephyr_0.875_mamba_sft/
+overwrite_output_dir: true
+per_device_eval_batch_size: 4
+per_device_train_batch_size: 8
+push_to_hub: false
+remove_unused_columns: true
+report_to:
+- wandb
+save_strategy: "steps"
+save_steps: 10000
+save_total_limit: 1
+seed: 42
+warmup_ratio: 0.01
