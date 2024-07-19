@@ -94,7 +94,6 @@ def main():
     ###############
     # Load datasets
     ###############
-    print(data_args, data_args.dataset_splits, data_args.dataset_configs)
     raw_datasets = get_datasets(
         data_args,
         splits=data_args.dataset_splits,
@@ -102,7 +101,6 @@ def main():
         columns_to_keep=["messages", "chosen", "rejected", "prompt", "completion", "label"],
     )
 
-    print("raw_datasets:", raw_datasets)
     logger.info(
         f"Training on the following datasets and their proportions: {[split + ' : ' + str(dset.num_rows) for split, dset in raw_datasets.items()]}"
     )
@@ -174,7 +172,6 @@ def main():
             logger.info(f"Sample {index} of the processed training set:\n\n{raw_datasets['train'][index]['text']}")
 
     if not training_args.with_distill:
-        print("load from scratch")
         config = AutoConfig.from_pretrained(model_args.model_name_or_path, dtype=model_args.torch_dtype)
         ssm_layers = training_args.ssm_layers
         d_xb = config.num_key_value_heads * (config.hidden_size // config.num_attention_heads)
@@ -191,7 +188,6 @@ def main():
         )
         model = MambaTransformerHybridModelWrapper.init_distillation(
             None, model_args.model_name_or_path, mamba_config, attn_layers=attn_layers, init_with_kqvo=True)
-        print("model:", model)
     else:
         model = MambaTransformerHybridModelWrapper.from_pretrained(model_args.model_name_or_path)
 
@@ -199,19 +195,14 @@ def main():
         config = AutoConfig.from_pretrained(model_args.model_name_or_path, dtype=model_args.torch_dtype)
         prev_checkpoint = torch.load(f"{training_args.prev_checkpoint_path}/pytorch_model.bin", map_location=torch.device('cpu'))
         prev_checkpoint_layers, is_mamba_layer = construct_layer_dict(prev_checkpoint, config.num_hidden_layers)
-        print("is_mamba_layer:", is_mamba_layer)
         for (layer_id, layer_checkpoint) in prev_checkpoint_layers.items():
             if is_mamba_layer[layer_id]:
-                print("layer_checkpoint:", layer_checkpoint.keys())
                 # override weights of that layer
                 model.model.model.layers[layer_id].load_state_dict(layer_checkpoint)
-                print("correct")
 
     model.save_config(training_args.output_dir)
     model = model.model
-    # print("***************************")
-    # print("model:", model)
-    # print("torch_dtype:", torch_dtype)
+    print("model:", model)
 
     ########################
     # Initialize the Trainer
