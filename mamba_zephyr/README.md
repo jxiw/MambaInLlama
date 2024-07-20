@@ -1,4 +1,3 @@
-
 # Instructions to Replicate Mamba-Zephyr
 
 As described in our technical report, training this model proceeds in three steps:

@@ -9,7 +9,7 @@ cd alpaca_eval
 pip install -e .
 ```
 
-Note that the OpenAI requirements for MT-bench and AlpacaEval are different. If you use the same conda environment, please ensure you use `openai==1.35.14`.
+Note that the OpenAI requirements for MT-bench and AlpacaEval are different. If you use the same conda environment, please ensure you use `openai==1.30.1`.
 
 ### Models
 
