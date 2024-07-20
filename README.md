@@ -9,7 +9,7 @@ Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while pre
 We recommend you start to reproduce using [HuggingFaceH4/zephyr-7b-beta](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta) as teacher model as a start.
 
 ## Changelog 
-- **[2024.07.18]** We release first version code
+- **[2024.07.18]** We release first version code and models. We are distilling [meta-llama/Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) and [google/gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it). Stay tuned for updates.
 
 ## Released Models
 
@@ -22,6 +22,16 @@ We recommend you start to reproduce using [HuggingFaceH4/zephyr-7b-beta](https:/
 |               | [Mamba (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_sft) | [Mamba (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_dpo_ep1) | [Mamba (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_dpo_ep3) |
 
 
+| Model | MMLU (5 shots) | AlpacaEval (LC win against GPT-4) | MT-Bench (scored by GPT-4) |
+|-------|----------------|-----------------------------------|----------------------------|
+| [Zephyr](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta) | 61.44 | 13.20 | 7.34 |
+| [Mamba DPO 1 (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_5_dpo_ep1) | 55.23 | 20.66 | 7.12 |
+| [Mamba DPO 1 (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_5_dpo_ep3) | 55.38 | 17.48 | 7.31 |
+| [Mamba DPO 1 (1/4 attention)](https://huggingface.co/JunxiongWang/mamba_0_75_dpo_ep1) | 50.94 | 17.16 | 7.03 |
+| [Mamba DPO 3 (1/4 attention)](https://huggingface.co/JunxiongWang/mamba_0_75_dpo_ep3) | 51.19 | 13.89 | 6.58 |
+| [Mamba DPO 1 (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_dpo_ep1) | 48.35 | 15.32 | 6.39 |
+| [Mamba DPO 3 (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_dpo_ep3) | 48.44 | 12.67 | 6.37 |
+
 For reproduction, please follow the instructions [here](mamba_zephyr/README.md).
 
 ### Hybrid Mamba distilled from Llama3
@@ -32,6 +42,11 @@ For reproduction, please follow the instructions [here](mamba_zephyr/README.md).
 |               | Mamba (1/4 attention)      | Mamba (1/4 attention)      | Mamba (1/4 attention)      |
 |               | Mamba (1/8 attention)      | Mamba (1/8 attention)      | Mamba (1/8 attention)      |
 
+
+| Model | MMLU (5 shots) | AlpacaEval (LC win against GPT-4) | MT-Bench (scored by GPT-4) |
+|-------|----------------|-----------------------------------|----------------------------|
+| [Mamba DPO 1 (1/2 attention)](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_dpo_ep1) | 59.10 | 19.74 | 7.50 |
+| [Mamba DPO 1 (1/2 attention)](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_dpo_ep3) | 59.26 | 17.01 | 7.23 |
 
 For reproduction, please follow the instructions [here](mamba_llama/README.md).
 
