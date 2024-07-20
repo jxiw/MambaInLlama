@@ -113,4 +113,4 @@ This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_875_d
 
 ## Evaluation
 
-Please follow the instructions [here](benchmark/README.md)
+Please follow the instructions [here](https://github.com/jxiw/MambaInLlama/tree/main/benchmark)
