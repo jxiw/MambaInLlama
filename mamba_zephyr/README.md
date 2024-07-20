@@ -110,3 +110,7 @@ ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml t
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_875_dpo_ep3).
+
+## Evaluation
+
+Please follow the instructions [here](benchmark/README.md)

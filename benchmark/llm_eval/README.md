@@ -10,4 +10,8 @@ To run evaluations of models in the [lm-evaluation-harness](https://github.com/E
 python evals/lm_harness_eval.py --model mamba_hybrid --model_args pretrained=[MODEL_PATH] --tasks mmlu --num_fewshot 5 --device cuda --batch_size 16
 ```
 
+```
+python benchmark/llm_eval/lm_harness_eval.py --model mamba_hybrid --model_args pretrained=JunxiongWang/llama3_mamba_0_5_dpo_ep1 --tasks hellaswag,piqa,arc_easy,arc_challenge,winogrande,openbookqa,pubmedqa,nq_open,race,squadv2 --num_fewshot 0 --device cuda --batch_size 16
+```
+
 
