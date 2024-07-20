@@ -22,8 +22,8 @@ We recommend you start to reproduce using [HuggingFaceH4/zephyr-7b-beta](https:/
 |               | [Mamba (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_sft) | [Mamba (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_dpo_ep1) | [Mamba (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_dpo_ep3) |
 
 
-| Model | MMLU (5 shots) | AlpacaEval (LC win against GPT-4) | MT-Bench (scored by GPT-4) |
-|-------|----------------|-----------------------------------|----------------------------|
+| Model | MMLU <br> (5 shots) | AlpacaEval <br> (LC win against GPT-4) | MT-Bench <br> (scored by GPT-4) |
+|-------|---------------------|-----------------------------------|----------------------------|
 | [Zephyr](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta) | 61.44 | 13.20 | 7.34 |
 | [Mamba DPO 1 (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_5_dpo_ep1) | 55.23 | 20.66 | 7.12 |
 | [Mamba DPO 1 (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_5_dpo_ep3) | 55.38 | 17.48 | 7.31 |
@@ -43,7 +43,7 @@ For reproduction, please follow the instructions [here](mamba_zephyr/README.md).
 |               | Mamba (1/8 attention)      | Mamba (1/8 attention)      | Mamba (1/8 attention)      |
 
 
-| Model | MMLU (5 shots) | AlpacaEval (LC win against GPT-4) | MT-Bench (scored by GPT-4) |
+| Model | MMLU <br> (5 shots) | AlpacaEval <br> (LC win against GPT-4) | MT-Bench <br> (scored by GPT-4) |
 |-------|----------------|-----------------------------------|----------------------------|
 | [Mamba DPO 1 (1/2 attention)](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_dpo_ep1) | 59.10 | 19.74 | 7.50 |
 | [Mamba DPO 1 (1/2 attention)](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_dpo_ep3) | 59.26 | 17.01 | 7.23 |
