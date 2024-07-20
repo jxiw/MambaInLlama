@@ -15,21 +15,23 @@ We recommend you start to reproduce using [HuggingFaceH4/zephyr-7b-beta](https:/
 
 ### Hybrid Mamba distilled from Zephyr
 
-| Teacher Model | Hybrid Mamba Model - SFT  | Hybrid Mamba Model - DPO |
+| Teacher Model | Hybrid Mamba Model - SFT  | Hybrid Mamba Model - DPO |Hybrid Mamba Model - DPO |
 |---------------|---------------------------|--------------------------|
-| Zephyr        | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_5_sft) | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_5_dpo_ep1) |
-|               | [Mamba (1/4 attention)](https://huggingface.co/JunxiongWang/mamba_0_75_sft) | [Mamba (1/4 attention)](https://huggingface.co/JunxiongWang/mamba_0_75_dpo_ep1) |
-|               | [Mamba (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_sft) | [Mamba (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_dpo_ep1) |
+| Zephyr        | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_5_sft) | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_5_dpo_ep1) | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_5_dpo_ep3) |
+|               | [Mamba (1/4 attention)](https://huggingface.co/JunxiongWang/mamba_0_75_sft) | [Mamba (1/4 attention)](https://huggingface.co/JunxiongWang/mamba_0_75_dpo_ep1) | [Mamba (1/4 attention)](https://huggingface.co/JunxiongWang/mamba_0_75_dpo_ep3) |
+|               | [Mamba (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_sft) | [Mamba (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_dpo_ep1) | [Mamba (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_dpo_ep3) |
 
 For reproduction, please follow the instructions [here](mamba_zephyr/README.md).
 
 ### Hybrid Mamba distilled from Llama3
 
-| Teacher Model | Hybrid Mamba Model     |
+| Teacher Model | Hybrid Mamba Model - SFT  | Hybrid Mamba Model - DPO |Hybrid Mamba Model - DPO |
 |---------------|------------------------|
-| Llama3 8B     | Mamba (1/2 attention)  |
-|               | Mamba (1/4 attention)  |
-|               | Mamba (1/8 attention)  |
+| Llama3 8B     | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_sft)  | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_dpo_ep1)  | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_dpo_ep3)  |
+|               | Mamba (1/4 attention)  | Mamba (1/4 attention)  | Mamba (1/4 attention)  |
+|               | Mamba (1/8 attention)  | Mamba (1/8 attention)  | Mamba (1/8 attention)  |
+
+For reproduction, please follow the instructions [here](mamba_llama/README.md).
 
 ## Usage
 
