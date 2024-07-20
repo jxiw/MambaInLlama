@@ -25,11 +25,12 @@ For reproduction, please follow the instructions [here](mamba_zephyr/README.md).
 
 ### Hybrid Mamba distilled from Llama3
 
-| Teacher Model | Hybrid Mamba Model - SFT  | Hybrid Mamba Model - DPO |Hybrid Mamba Model - DPO |
-|---------------|------------------------|
+| Teacher Model | Hybrid Mamba Model - SFT  | Hybrid Mamba Model - DPO | Hybrid Mamba Model - DPO |
+|---------------|---------------------------|--------------------------|--------------------------|
 | Llama3 8B     | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_sft)  | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_dpo_ep1)  | [Mamba (1/2 attention)](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_dpo_ep3)  |
-|               | Mamba (1/4 attention)  | Mamba (1/4 attention)  | Mamba (1/4 attention)  |
-|               | Mamba (1/8 attention)  | Mamba (1/8 attention)  | Mamba (1/8 attention)  |
+|               | Mamba (1/4 attention)      | Mamba (1/4 attention)      | Mamba (1/4 attention)      |
+|               | Mamba (1/8 attention)      | Mamba (1/8 attention)      | Mamba (1/8 attention)      |
+
 
 For reproduction, please follow the instructions [here](mamba_llama/README.md).
 
