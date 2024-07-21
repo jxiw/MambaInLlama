@@ -85,7 +85,7 @@ ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml t
 
 This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_75_dpo_ep3).
 
-## Hybrid Mamba (12.8% attention / 4 attention layer)
+## Hybrid Mamba (12.5% attention / 4 attention layer)
 
 We use the distilled SFT model from 25% attention to initialize this model.
 
