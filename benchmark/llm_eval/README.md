@@ -14,9 +14,9 @@ python evals/lm_harness_eval.py --model mamba_hybrid --model_args pretrained=[MO
 python benchmark/llm_eval/lm_harness_eval.py --model mamba_hybrid --model_args pretrained=JunxiongWang/llama3_mamba_0_5_dpo_ep1 --tasks hellaswag,piqa,arc_easy,arc_challenge,winogrande,openbookqa,pubmedqa,race --num_fewshot 0 --device cuda --batch_size 16
 ```
 
-| Model                     | Tokens | WG    | PIQA  | HellaSwag | ARC-E  | ARC-C  | MMLU  | OpenBook | TruthFul | PubMed | RACE  | Avg   |
+| Model                     | Training Tokens | WG    | PIQA  | HellaSwag | ARC-E  | ARC-C  | MMLU  | OpenBook | TruthFul | PubMed | RACE  | Avg   |
 |---------------------------|--------|-------|-------|-----------|--------|--------|-------|----------|----------|--------|-------|-------|
 | Mamba-2-Hybrid-4K         | 3.5T   | **71.27** | **79.65** | **77.68**   | **77.23** | 47.70  | 53.60 | 42.80    | 38.72   | **69.80** | **39.71** | 59.82 |
 | Mamba-Llama3 (50% att)    | 8B     | 68.43 | 78.02 | 77.55     | 72.60  | **50.85** | **59.26** | **44.00**  | **45.24**  | 72.80  | 38.47 | **60.72** |
 
-LM eval benchmark results for Mamba-Llama3 and Mamba-2-Hybrid-4K.
+LM eval benchmark results for Mamba-Llama3 compared with Nvidia Mamba-2-Hybrid-4K.
