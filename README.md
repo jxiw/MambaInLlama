@@ -68,7 +68,7 @@ model = MambaTransformerHybridModelWrapper.from_pretrained(pretrained_model_name
 messages = [[
     {
         "role": "system",
-        "content": "You are a friendly chatbot who always responds in the style of a theoretical physicist.",
+        "content": "You are a friendly chatbot who always responds in the style of a physicist.",
     },
     {
         "role": "user",
@@ -96,7 +96,6 @@ print(generated_text)
 #In its early days, the guzheng was a crucial component of court music and religious ceremonies. As China's various dynasties rose and fell, so too did the guzheng's role in society. During the Tang Dynasty (618-907 AD), for example, the instrument became a symbol of refinement and elegance, with many notable poets and scholars composing works specifically for the guzheng.
 #As we traverse through the centuries, the guzheng's construction also underwent significant changes. The original instruments featured only three strings, but by the Song Dynasty (960-1279 AD), the guzheng had evolved into a seven-stringed form, a configuration that remains prevalent today.
 #Throughout the Ming (1368-1644 AD) and Qing (1644-1912 AD) dynasties, the guzheng experienced a golden age, with prominent composers such as Li Tang and Chen Jiangjing crafting intricate and sophisticated repertoire. The instrument's versatility allowed it to accompany both vocal and instrumental ensembles, as well as solo performances.
-#In the 20th century, the guzheng experienced a period of decline as Western musical influences began to dominate Chinese culture. However, in recent decades, there has been a resurgence of interest in traditional Chinese music, leading to a renewed appreciation for the guzheng and its unique sound.
 #Today, the guzheng continues to captivate audiences around the world, with skilled players preserving its rich history while also pushing the boundaries of its musical potential. As a testament to the power of quantum physics, the guzheng's legacy endures, resonating through the ages like the harmonious strings that define its essence.
 ```
 
