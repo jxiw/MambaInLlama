@@ -36,7 +36,7 @@ class MambaDecoderLayer(nn.Module):
         factory_kwargs = {"device": device, "dtype": dtype}
         self.layer_idx = layer_idx
         self.mamba = Mamba(
-            d_model=config.d_model, d_xb=config.d_xb, layer_idx=layer_idx, **config.ssm_cfg, **factory_kwargs
+            d_model=config.d_model, d_inner=config.d_inner, d_xb=config.d_xb, layer_idx=layer_idx, **config.ssm_cfg, **factory_kwargs
         )
         self.mlp = MLP(config=config)
         self.input_layernorm = RMSNorm(config.d_model, eps=config.rms_norm_eps)

@@ -61,7 +61,7 @@ def main():
     dtype = torch.bfloat16
 
     teacher_model = AutoModelForCausalLM.from_pretrained(
-        model_name, torch_dtype=dtype, attn_implementation="flash_attention_2")
+        model_name, torch_dtype=dtype, attn_implementation='flash_attention_2')
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     tokenizer.pad_token_id = tokenizer.eos_token_id
 
@@ -69,11 +69,15 @@ def main():
 
     config = AutoConfig.from_pretrained(model_name, dtype=dtype)
     
-    d_xb = config.num_key_value_heads * \
-        (config.hidden_size // config.num_attention_heads)
+    if config.head_dim is None:
+        d_xb = config.num_key_value_heads * \
+            (config.hidden_size // config.num_attention_heads)
+        d_inner = None
+    else:
+        # to handle gemma2
+        d_xb = config.num_key_value_heads * config.head_dim
+        d_inner = config.num_attention_heads * config.head_dim
 
-    # d_xb = config.num_key_value_heads * config.head_dim
-    
     ssm_layers = training_args.ssm_layers
     attn_layers = [i for i in range(config.num_hidden_layers) if i not in ssm_layers]
     
@@ -81,6 +85,7 @@ def main():
         config.hidden_size,
         {"expand": 1},
         config.rms_norm_eps,
+        d_inner=d_inner,
         d_xb=d_xb,
         intermediate_size=config.intermediate_size,
         hidden_act=config.hidden_act,
@@ -89,7 +94,7 @@ def main():
     )
 
     student_model = MambaTransformerHybridModelWrapper.init_distillation(
-            None, model_name, mamba_config, attn_layers=attn_layers, init_with_kqvo=training_args.init_with_kqvo)
+            None, model_name, mamba_config, attn_layers=attn_layers, init_with_kqvo=training_args.init_with_kqvo, attn_implementation='flash_attention_2')
 
     if training_args.prev_checkpoint_path is not None:
         # this is for progressive distillation,

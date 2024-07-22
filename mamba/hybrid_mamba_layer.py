@@ -44,6 +44,7 @@ class Mamba(nn.Module):
     def __init__(
         self,
         d_model,
+        d_inner,
         d_xb,
         d_state=16,
         d_conv=4,
@@ -54,7 +55,7 @@ class Mamba(nn.Module):
         dt_init="random",
         dt_scale=1.0,
         dt_init_floor=1e-4,
-        # repeat_kv_before_conv=True,
+        repeat_kv_before_conv=True,
         conv_bias=True,
         proj_x_bias=False,
         proj_z_bias=False,
@@ -71,10 +72,11 @@ class Mamba(nn.Module):
         self.d_state = d_state
         self.d_conv = d_conv
         self.expand = expand
-        self.d_inner = int(self.expand * self.d_model)
+        self.d_inner = d_inner if d_inner is not None else int(self.expand * self.d_model)
         self.dt_rank = math.ceil(self.d_model / 16) if dt_rank == "auto" else dt_rank
         self.use_fast_path = use_fast_path
         self.layer_idx = layer_idx
+        self.repeat_kv_before_conv = repeat_kv_before_conv
 
         self.in_proj_x = nn.Linear(self.d_model, self.d_xb, bias=proj_x_bias, **factory_kwargs)
         self.in_proj_z = nn.Linear(self.d_model, self.d_inner, bias=proj_z_bias, **factory_kwargs)
@@ -101,7 +103,7 @@ class Mamba(nn.Module):
         # load using q weights
         self.C_proj = nn.Linear(self.d_model, self.d_inner, bias=False, **factory_kwargs)
 
-        self.dt_proj_down = nn.Linear(self.d_inner, self.dt_rank, bias=False, **factory_kwargs)
+        self.dt_proj_down = nn.Linear(self.d_model, self.dt_rank, bias=False, **factory_kwargs)
         self.dt_proj = nn.Linear(self.dt_rank, self.d_inner, bias=True, **factory_kwargs)
 
         # Initialize special dt projection to preserve variance at initialization
@@ -172,10 +174,11 @@ class Mamba(nn.Module):
         dt = self.dt_proj(dt)  # B, L, d_inner
         dt = rearrange(dt, "b l d -> b d l")  # B, d_inner, L
 
-        # b d l
-        x = rearrange(x, "b (n_group dstate) l -> b n_group l dstate", dstate=self.d_state)
-        x = repeat_kv(x, self.num_groups)
-        x = rearrange(x, "b n_group l dstate -> b (n_group dstate) l")
+        if self.repeat_kv_before_conv:
+            # b d l
+            x = rearrange(x, "b (n_group dstate) l -> b n_group l dstate", dstate=self.d_state)
+            x = repeat_kv(x, self.num_groups)
+            x = rearrange(x, "b n_group l dstate -> b (n_group dstate) l")
 
         # Compute short convolution
         if conv_state is not None:
@@ -193,6 +196,11 @@ class Mamba(nn.Module):
                 bias=self.conv1d.bias,
                 activation=self.activation,
             )
+
+        if not self.repeat_kv_before_conv:
+            x = rearrange(x, "b (n_group dstate) l -> b n_group l dstate", dstate=self.d_state)
+            x = repeat_kv(x, self.num_groups)
+            x = rearrange(x, "b n_group l dstate -> b (n_group dstate) l")
 
         assert self.activation in ["silu", "swish"]
         y = selective_scan_fn(
@@ -238,9 +246,10 @@ class Mamba(nn.Module):
         dt = self.dt_proj_down(hidden_states_input) # B, d_rank
         dt = self.dt_proj(dt)   # B, d_inner
 
-        x = rearrange(x, "b (n_group dstate) -> b n_group dstate", dstate=self.d_state)
-        x = torch.repeat_interleave(x, dim=1, repeats=self.num_groups)
-        x = rearrange(x, "b n_group dstate -> b (n_group dstate)")
+        if self.repeat_kv_before_conv:
+            x = rearrange(x, "b (n_group dstate) -> b n_group dstate", dstate=self.d_state)
+            x = torch.repeat_interleave(x, dim=1, repeats=self.num_groups)
+            x = rearrange(x, "b n_group dstate -> b (n_group dstate)")
 
         # Conv step
         if causal_conv1d_update is None:
@@ -259,6 +268,11 @@ class Mamba(nn.Module):
                 self.conv1d.bias,
                 self.activation,
             )
+
+        if not self.repeat_kv_before_conv:
+            x = rearrange(x, "b (n_group dstate) -> b n_group dstate", dstate=self.d_state)
+            x = torch.repeat_interleave(x, dim=1, repeats=self.num_groups)
+            x = rearrange(x, "b n_group dstate -> b (n_group dstate)")
 
         x = x.unsqueeze(-1)
         dt = dt.unsqueeze(-1)

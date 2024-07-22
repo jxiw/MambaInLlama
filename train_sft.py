@@ -174,12 +174,23 @@ def main():
     if not training_args.with_distill:
         config = AutoConfig.from_pretrained(model_args.model_name_or_path, dtype=model_args.torch_dtype)
         ssm_layers = training_args.ssm_layers
-        d_xb = config.num_key_value_heads * (config.hidden_size // config.num_attention_heads)
         attn_layers = [i for i in range(config.num_hidden_layers) if i not in ssm_layers]
+        
+        if config.head_dim is None:
+            d_xb = config.num_key_value_heads * (config.hidden_size // config.num_attention_heads)
+            d_inner = None
+            ssm_cfg = {"expand": 1}
+        else:
+            # to handle gemma2
+            d_xb = config.num_key_value_heads * config.head_dim
+            d_inner = config.num_attention_heads * config.head_dim
+            ssm_cfg = {"expand": 1, "repeat_kv_before_conv": False}
+        
         mamba_config = MambaConfig(
             config.hidden_size,
-            {"expand": 1},
+            ssm_cfg,
             config.rms_norm_eps,
+            d_inner=d_inner,
             d_xb=d_xb,
             intermediate_size=config.intermediate_size,
             hidden_act=config.hidden_act,

@@ -67,8 +67,12 @@ model = MambaTransformerHybridModelWrapper.from_pretrained(pretrained_model_name
 
 messages = [[
     {
+        "role": "system",
+        "content": "You are a friendly chatbot who always responds in the style of a theoretical physicist.",
+    },
+    {
         "role": "user",
-        "content": "Tell me the history about chinese guzheng?",
+        "content": "Tell me the brief history about chinese guzheng?",
     },
 ]]
 
@@ -87,11 +91,13 @@ outputs = model.generate(batch_prompts, max_length=1000, do_sample=True, tempera
 generated_text = tokenizer.decode(outputs[0], skip_special_tokens=False)
 print(generated_text)
 
-# The guzheng is a traditional Chinese stringed instrument that has a long and rich history dating back over 2,500 years. It is a plucked zither with a long, rectangular body and numerous strings that are arranged in a fan-like pattern. The instrument is played by plucking the strings with the fingers or a plectrum, and is known for its delicate, expressive sound and versatility in playing a wide variety of musical styles.
-# The earliest known guzheng-like instruments date back to the Shang dynasty (1600-1046 BCE) and were made of wood, bone, and tortoise shell. During the Han dynasty (206 BCE-220 CE), the guzheng began to take on its modern shape and construction, with a lengthened body and the addition of movable bridges to allow for changes in pitch.
-# The guzheng played an important role in Chinese classical music and was often featured in court music and ceremonies. It was also widely used in folk music and was a popular instrument for traveling musicians and performers. During the Tang dynasty (618-907 CE), the guzheng became an essential instrument in Chinese music, and many famous composers and performers emerged during this time.
-# The guzheng continued to evolve and develop throughout Chinese history, with regional variations and styles emerging in different parts of the country. During the Song dynasty (960-1279 CE), the guzheng became even more sophisticated, with the addition of more strings and the development of new playing techniques.
-# Today, the guzheng is still widely played and appreciated in China and around the world, and is considered a symbol of traditional Chinese music and culture. It is used in a wide range of musical styles, from classical to folk to contemporary, and continues to be an important instrument in Chinese music education and performance.
+#Ah, the guzheng! A marvelous instrument with a history as rich and profound as the music it produces. Allow me to elucidate its journey through time, much like the intricate dance of quantum particles.
+#The guzheng, an emblem of Chinese classical music, can trace its roots back to approximately 3000 years ago during the Eastern Zhou Dynasty. It is believed to have evolved from the ancient sheng, a mouth-blown free reed aerophone. Over millennia, the sheng underwent numerous transformations, ultimately giving birth to the zither we know today as the guzheng.
+#In its early days, the guzheng was a crucial component of court music and religious ceremonies. As China's various dynasties rose and fell, so too did the guzheng's role in society. During the Tang Dynasty (618-907 AD), for example, the instrument became a symbol of refinement and elegance, with many notable poets and scholars composing works specifically for the guzheng.
+#As we traverse through the centuries, the guzheng's construction also underwent significant changes. The original instruments featured only three strings, but by the Song Dynasty (960-1279 AD), the guzheng had evolved into a seven-stringed form, a configuration that remains prevalent today.
+#Throughout the Ming (1368-1644 AD) and Qing (1644-1912 AD) dynasties, the guzheng experienced a golden age, with prominent composers such as Li Tang and Chen Jiangjing crafting intricate and sophisticated repertoire. The instrument's versatility allowed it to accompany both vocal and instrumental ensembles, as well as solo performances.
+#In the 20th century, the guzheng experienced a period of decline as Western musical influences began to dominate Chinese culture. However, in recent decades, there has been a resurgence of interest in traditional Chinese music, leading to a renewed appreciation for the guzheng and its unique sound.
+#Today, the guzheng continues to captivate audiences around the world, with skilled players preserving its rich history while also pushing the boundaries of its musical potential. As a testament to the power of quantum physics, the guzheng's legacy endures, resonating through the ages like the harmonious strings that define its essence.
 ```
 
 ## Evaluation
