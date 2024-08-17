@@ -77,9 +77,6 @@ class Mamba(nn.Module):
         self.layer_idx = layer_idx
         self.repeat_kv_before_conv = repeat_kv_before_conv
 
-        self.in_proj_x = nn.Linear(self.d_model, self.d_xb, bias=proj_x_bias, **factory_kwargs)
-        self.in_proj_z = nn.Linear(self.d_model, self.d_inner, bias=proj_z_bias, **factory_kwargs)
-
         if self.repeat_kv_before_conv:
             self.conv1d = nn.Conv1d(
                 in_channels=self.d_inner,
@@ -104,16 +101,18 @@ class Mamba(nn.Module):
         self.activation = "silu"
         self.act = nn.SiLU()
 
-        self.num_B_head = self.d_xb // self.d_state
+        self.num_xb_head = self.d_xb // self.d_state
         self.num_C_head = self.d_inner // self.d_state
-        self.num_groups = self.num_C_head // self.num_B_head
+        self.repeat_group = self.num_C_head // self.num_xb_head
 
-        # load using k weights
-        self.B_proj = nn.Linear(self.d_model, self.d_xb, bias=False, **factory_kwargs)
-        # load using q weights
-        self.C_proj = nn.Linear(self.d_model, self.d_inner, bias=False, **factory_kwargs)
+        # fuse those layers
+        # self.in_proj_z = nn.Linear(self.d_model, self.d_inner, bias=proj_z_bias, **factory_kwargs)
+        # self.in_proj_x = nn.Linear(self.d_model, self.d_xb, bias=proj_x_bias, **factory_kwargs)
+        # self.B_proj = nn.Linear(self.d_model, self.d_xb, bias=False, **factory_kwargs)
+        # self.C_proj = nn.Linear(self.d_model, self.d_inner, bias=False, **factory_kwargs)
+        # self.dt_proj_down = nn.Linear(self.d_model, self.dt_rank, bias=False, **factory_kwargs)
 
-        self.dt_proj_down = nn.Linear(self.d_model, self.dt_rank, bias=False, **factory_kwargs)
+        self.in_proj = nn.Linear(self.d_model, 2 * self.d_xb + 2 * self.d_inner + self.dt_rank, bias=False, **factory_kwargs)
         self.dt_proj = nn.Linear(self.dt_rank, self.d_inner, bias=True, **factory_kwargs)
 
         # Initialize special dt projection to preserve variance at initialization
@@ -166,28 +165,29 @@ class Mamba(nn.Module):
                 # The states are updated inplace
                 out, _, _ = self.step(hidden_states, conv_state, ssm_state)
                 return out
-
-        x = rearrange(self.in_proj_x(hidden_states), "b l d -> b d l")
-        z = rearrange(self.in_proj_z(hidden_states), "b l d -> b d l")
-
+        
         A = -torch.exp(self.A_log.float())  # (d_inner, d_state)
 
-        B = self.B_proj(hidden_states)  # B, L, H_inner
-        C = self.C_proj(hidden_states)  # B, L, H
+        zxbcdt = self.in_proj(hidden_states)
+        z, x, B, C, dt = torch.split(
+            zxbcdt, [self.d_inner, self.d_xb, self.d_xb, self.d_inner, self.dt_rank], dim=-1
+        )
+
+        x = rearrange(x, "b l d -> b d l")
+        z = rearrange(z, "b l d -> b d l")
 
         B = rearrange(B, "b l (n_group dstate) -> b n_group l dstate", dstate=self.d_state)
-        B = repeat_kv(B, self.num_groups)  # B, n_group, L, H
+        B = repeat_kv(B, self.repeat_group)  # B, n_group, L, H
         B = rearrange(B, "b n_group l dstate -> b n_group dstate l").contiguous()
         C = rearrange(C, "b l (n_group dstate) -> b n_group dstate l", dstate=self.d_state).contiguous()
 
-        dt = self.dt_proj_down(hidden_states)  # B, L, d_rank
         dt = self.dt_proj(dt)  # B, L, d_inner
         dt = rearrange(dt, "b l d -> b d l")  # B, d_inner, L
 
         if self.repeat_kv_before_conv:
             # b d l
             x = rearrange(x, "b (n_group dstate) l -> b n_group l dstate", dstate=self.d_state)
-            x = repeat_kv(x, self.num_groups)
+            x = repeat_kv(x, self.repeat_group)
             x = rearrange(x, "b n_group l dstate -> b (n_group dstate) l")
 
         # Compute short convolution
@@ -209,7 +209,7 @@ class Mamba(nn.Module):
 
         if not self.repeat_kv_before_conv:
             x = rearrange(x, "b (n_group dstate) l -> b n_group l dstate", dstate=self.d_state)
-            x = repeat_kv(x, self.num_groups)
+            x = repeat_kv(x, self.repeat_group)
             x = rearrange(x, "b n_group l dstate -> b (n_group dstate) l")
 
         assert self.activation in ["silu", "swish"]
@@ -240,25 +240,30 @@ class Mamba(nn.Module):
         hidden_states_input = hidden_states.squeeze(1)
 
         # hidden_states_input shape: (B, H)
-        x = self.in_proj_x(hidden_states_input)
-        z = self.in_proj_z(hidden_states_input)
+        # x = self.in_proj_x(hidden_states_input)
+        # z = self.in_proj_z(hidden_states_input)
 
         A = -torch.exp(self.A_log.float())  # (d_inner, d_state)
 
-        B = self.B_proj(hidden_states_input)  # B, H_inner
-        C = self.C_proj(hidden_states_input)  # B, H
+        # B = self.B_proj(hidden_states_input)  # B, H_inner
+        # C = self.C_proj(hidden_states_input)  # B, H
+
+        zxbcdt = self.in_proj(hidden_states_input)
+        z, x, B, C, dt = torch.split(
+            zxbcdt, [self.d_inner, self.d_xb, self.d_xb, self.d_inner, self.dt_rank], dim=-1
+        )
 
         B = rearrange(B, "b (n_group dstate) -> b n_group dstate", dstate=self.d_state)
-        B = torch.repeat_interleave(B, dim=1, repeats=self.num_groups)
+        B = torch.repeat_interleave(B, dim=1, repeats=self.repeat_group)
 
         C = rearrange(C, "b (n_group dstate) -> b n_group dstate", dstate=self.d_state).contiguous()
 
-        dt = self.dt_proj_down(hidden_states_input) # B, d_rank
+        # dt = self.dt_proj_down(hidden_states_input) # B, d_rank
         dt = self.dt_proj(dt)   # B, d_inner
 
         if self.repeat_kv_before_conv:
             x = rearrange(x, "b (n_group dstate) -> b n_group dstate", dstate=self.d_state)
-            x = torch.repeat_interleave(x, dim=1, repeats=self.num_groups)
+            x = torch.repeat_interleave(x, dim=1, repeats=self.repeat_group)
             x = rearrange(x, "b n_group dstate -> b (n_group dstate)")
 
         # Conv step
@@ -281,7 +286,7 @@ class Mamba(nn.Module):
 
         if not self.repeat_kv_before_conv:
             x = rearrange(x, "b (n_group dstate) -> b n_group dstate", dstate=self.d_state)
-            x = torch.repeat_interleave(x, dim=1, repeats=self.num_groups)
+            x = torch.repeat_interleave(x, dim=1, repeats=self.repeat_group)
             x = rearrange(x, "b n_group dstate -> b (n_group dstate)")
 
         x = x.unsqueeze(-1)
@@ -330,6 +335,7 @@ class Mamba(nn.Module):
                 self.d_state,
                 device=self.dt_proj.weight.device,
                 dtype=self.dt_proj.weight.dtype,
+                # dtype=torch.float32,
             )
             inference_params.key_value_memory_dict[self.layer_idx] = (conv_state, ssm_state)
         else:

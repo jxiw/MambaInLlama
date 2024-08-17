@@ -5,13 +5,15 @@ import json
 import torch
 import torch.nn as nn
 
+from dataclasses import dataclass, field
+
 from transformers import AutoModelForCausalLM
-from transformers.utils.hub import cached_file
 
 from mamba_ssm.utils.hf import load_config_hf, load_state_dict_hf
+from transformers.utils.hub import cached_file
 
-from mamba.hybrid_model import MambaDecoderLayer
-from mamba.hybrid_mamba_config import MambaConfig
+from mamba2.hybrid_model import MambaDecoderLayer
+from mamba2.hybrid_mamba_config import MambaConfig
 
 from util import load_safetensors_to_dict
 
@@ -40,15 +42,16 @@ class MambaTransformerHybridModelWrapper(nn.Module):
                     mamba_encoder.mlp.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].mlp.state_dict())
                     mamba_encoder.input_layernorm.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].input_layernorm.state_dict())
                     mamba_encoder.post_attention_layernorm.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].post_attention_layernorm.state_dict())
-                    mamba_encoder.mamba.in_proj_x.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].self_attn.v_proj.state_dict())
-                    mamba_encoder.mamba.B_proj.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].self_attn.k_proj.state_dict())
-                    mamba_encoder.mamba.C_proj.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].self_attn.q_proj.state_dict())
-                    mamba_encoder.mamba.out_proj.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].self_attn.o_proj.state_dict())  
+                    mamba_encoder.mamba.out_proj.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].self_attn.o_proj.state_dict())
+                    # [z, x, B, C, dt]
+                    mamba_encoder.mamba.in_proj.weight.data[mamba_config.d_inner:mamba_config.d_inner+mamba_config.d_xb, :].copy_(transformer_model.model.layers._modules[f'{layer_idx}'].self_attn.v_proj.weight.data)
+                    mamba_encoder.mamba.in_proj.weight.data[mamba_config.d_inner+mamba_config.d_xb:mamba_config.d_inner+2*mamba_config.d_xb, :].copy_(transformer_model.model.layers._modules[f'{layer_idx}'].self_attn.k_proj.weight.data)
+                    mamba_encoder.mamba.in_proj.weight.data[mamba_config.d_inner+2*mamba_config.d_xb:2*mamba_config.d_inner+2*mamba_config.d_xb, :].copy_(transformer_model.model.layers._modules[f'{layer_idx}'].self_attn.q_proj.weight.data)
                     # keep dtype to be the same
                     mamba_encoder.mlp = mamba_encoder.mlp.to(dtype)
                     mamba_encoder.input_layernorm = mamba_encoder.input_layernorm.to(dtype)
                     mamba_encoder.post_attention_layernorm = mamba_encoder.post_attention_layernorm.to(dtype)
-                
+
                 self.model.model.layers[layer_idx] = mamba_encoder
 
         if checkpoint_path is not None:

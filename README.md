@@ -26,7 +26,7 @@ We recommend you start to reproduce using [HuggingFaceH4/zephyr-7b-beta](https:/
 |-------|---------------------|-----------------------------------|----------------------------|
 | [Zephyr](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta) | 61.44 | 13.20 | 7.34 |
 | [Mamba DPO 1 (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_5_dpo_ep1) | 55.23 | 20.66 | 7.12 |
-| [Mamba DPO 1 (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_5_dpo_ep3) | 55.38 | 17.48 | 7.31 |
+| [Mamba DPO 3 (1/2 attention)](https://huggingface.co/JunxiongWang/mamba_0_5_dpo_ep3) | 55.38 | 17.48 | 7.31 |
 | [Mamba DPO 1 (1/4 attention)](https://huggingface.co/JunxiongWang/mamba_0_75_dpo_ep1) | 50.94 | 17.16 | 7.03 |
 | [Mamba DPO 3 (1/4 attention)](https://huggingface.co/JunxiongWang/mamba_0_75_dpo_ep3) | 51.19 | 13.89 | 6.58 |
 | [Mamba DPO 1 (1/8 attention)](https://huggingface.co/JunxiongWang/mamba_0_875_dpo_ep1) | 48.35 | 15.32 | 6.39 |
@@ -60,10 +60,11 @@ We provide an [environment file](environment.yml) that lists the specific Python
 ```
 import torch
 from transformers import AutoTokenizer
-from mamba.hybrid_wrapper import MambaTransformerHybridModelWrapper
+from mamba_inference.hybrid_wrapper import MambaTransformerHybridModelWrapper
 
 pretrained_model_name = "JunxiongWang/mamba_0_5_dpo_ep3" # change the model that you want to test here
 model = MambaTransformerHybridModelWrapper.from_pretrained(pretrained_model_name, torch_dtype=torch.bfloat16)
+model.eval()
 
 messages = [[
     {
@@ -87,9 +88,19 @@ prompts = [
 ]
 batch_prompts = torch.cat(prompts, dim=0).cuda()
 
-outputs = model.generate(batch_prompts, max_length=1000, do_sample=True, temperature=0.7, top_k=50, top_p=0.95)
-generated_text = tokenizer.decode(outputs[0], skip_special_tokens=False)
-print(generated_text)
+outputs = model.generate(
+    input_ids=batch_prompts,
+    max_length=400,
+    cg=True,
+    return_dict_in_generate=True,
+    output_scores=True,
+    enable_timing=True,
+    top_k=1,
+    eos_token_id=tokenizer.eos_token_id
+)
+
+generated_text = tokenizer.batch_decode(outputs.sequences.tolist())
+print(generated_text[0])
 
 #Ah, the guzheng! A marvelous instrument with a history as rich and profound as the music it produces. Allow me to elucidate its journey through time, much like the intricate dance of quantum particles.
 #The guzheng, an emblem of Chinese classical music, can trace its roots back to approximately 3000 years ago during the Eastern Zhou Dynasty. It is believed to have evolved from the ancient sheng, a mouth-blown free reed aerophone. Over millennia, the sheng underwent numerous transformations, ultimately giving birth to the zither we know today as the guzheng.

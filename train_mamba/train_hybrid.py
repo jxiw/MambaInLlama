@@ -72,7 +72,7 @@ def main():
     if config.head_dim is None:
         d_xb = config.num_key_value_heads * \
             (config.hidden_size // config.num_attention_heads)
-        d_inner = None
+        d_inner = config.hidden_size
     else:
         # to handle gemma2
         d_xb = config.num_key_value_heads * config.head_dim

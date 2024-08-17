@@ -22,9 +22,9 @@ Here are detailed commands to reproduce those models. Make sure you are in the r
 We start with [meta-llama/Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct). First, we replace 25% of the attention layers with Mamba, and then replace another 25% of the attention layers with Mamba by running the following command. 
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file multi_gpu.yaml train_hybrid.py mamba_llama/llama3_0.25_mamba.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file multi_gpu.yaml train_mamba/train_hybrid.py mamba_llama/llama3_0.25_mamba.yaml
 
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file multi_gpu.yaml train_hybrid.py mamba_llama/llama3_0.50_mamba.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file multi_gpu.yaml train_mamba/train_hybrid.py mamba_llama/llama3_0.50_mamba.yaml
 ```
 
 This should rougly takes 10 hours in 8x80G A100.
@@ -36,7 +36,7 @@ This model is available [here](https://huggingface.co/JunxiongWang/llama3_0.50_m
 ### SFT
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_sft.py mamba_llama/llama3_0.50_mamba_sft.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba/train_sft.py mamba_llama/llama3_0.50_mamba_sft.yaml
 ```
 
 This should rougly takes 4 days in 8x80G A100. This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_sft).
@@ -46,13 +46,13 @@ This should rougly takes 4 days in 8x80G A100. This model is available [here](ht
 Zephyr provides two hyperparameters. You can choose one config from those two.
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_dpo.py mamba_llama/llama3_0.50_mamba_dpo_ep1.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba/train_dpo.py mamba_llama/llama3_0.50_mamba_dpo_ep1.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_dpo_ep1).
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_dpo.py mamba_llama/llama3_0.50_mamba_dpo_ep3.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba/train_dpo.py mamba_llama/llama3_0.50_mamba_dpo_ep3.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_dpo_ep3).
@@ -66,7 +66,7 @@ We use the distilled SFT model from 50% attention to initialize this model.
 ### SFT
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_sft.py mamba_llama/llama3_0.75_mamba_sft.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba/train_sft.py mamba_llama/llama3_0.75_mamba_sft.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_0_75_sft).
@@ -74,13 +74,13 @@ This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_
 ### DPO
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_dpo.py mamba_llama/llama3_0.75_mamba_dpo_ep1.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba/train_dpo.py mamba_llama/llama3_0.75_mamba_dpo_ep1.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_0_75_dpo_ep1).
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_dpo.py mamba_llama/llama3_0.75_mamba_dpo_ep3.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba/train_dpo.py mamba_llama/llama3_0.75_mamba_dpo_ep3.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_0_75_dpo_ep3).
@@ -92,7 +92,7 @@ We use the distilled SFT model from 25% attention to initialize this model.
 ### SFT
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_sft.py mamba_llama/llama3_0.875_mamba_sft.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba/train_sft.py mamba_llama/llama3_0.875_mamba_sft.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_0_875_sft).
@@ -100,13 +100,13 @@ This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_
 ### DPO
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_dpo.py mamba_llama/llama3_0.875_mamba_dpo_ep1.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba/train_dpo.py mamba_llama/llama3_0.875_mamba_dpo_ep1.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_0_875_dpo_ep1).
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_dpo.py mamba_llama/llama3_0.875_mamba_dpo_ep3.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba/train_dpo.py mamba_llama/llama3_0.875_mamba_dpo_ep3.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_0_875_dpo_ep3).

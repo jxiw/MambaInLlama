@@ -39,7 +39,7 @@ from alignment import (
 from peft import PeftConfig, PeftModel
 from trl import DPOTrainer
 
-from mamba.hybrid_wrapper import MambaTransformerHybridModelWrapper
+from mamba2.hybrid_wrapper import MambaTransformerHybridModelWrapper
 
 logger = logging.getLogger(__name__)
 

@@ -41,8 +41,8 @@ from alignment import (
 )
 from trl import SFTTrainer, setup_chat_format
 
-from mamba.hybrid_wrapper import MambaTransformerHybridModelWrapper
-from mamba.hybrid_mamba_config import MambaConfig
+from mamba2.hybrid_wrapper import MambaTransformerHybridModelWrapper
+from mamba2.hybrid_mamba_config import MambaConfig
 
 from train_configs import SFTDistillConfig
 from util import construct_layer_dict
@@ -171,24 +171,29 @@ def main():
         for index in random.sample(range(len(raw_datasets["train"])), 3):
             logger.info(f"Sample {index} of the processed training set:\n\n{raw_datasets['train'][index]['text']}")
 
+    attn_implementation="flash_attention_2"
+    if not model_args.use_flash_attention_2:
+        attn_implementation="eager"
+
     if not training_args.with_distill:
         config = AutoConfig.from_pretrained(model_args.model_name_or_path, dtype=model_args.torch_dtype)
         ssm_layers = training_args.ssm_layers
         attn_layers = [i for i in range(config.num_hidden_layers) if i not in ssm_layers]
         
-        if config.head_dim is None:
-            d_xb = config.num_key_value_heads * (config.hidden_size // config.num_attention_heads)
-            d_inner = None
-            ssm_cfg = {"expand": 1}
+        if not hasattr(config, 'head_dim'):
+            d_xb = config.num_key_value_heads * \
+                (config.hidden_size // config.num_attention_heads)
+            d_inner = config.hidden_size
+            d_state = config.hidden_size//config.num_attention_heads
         else:
             # to handle gemma2
             d_xb = config.num_key_value_heads * config.head_dim
             d_inner = config.num_attention_heads * config.head_dim
-            ssm_cfg = {"expand": 1, "repeat_kv_before_conv": False}
+            d_state = config.head_dim
         
         mamba_config = MambaConfig(
             config.hidden_size,
-            ssm_cfg,
+            {"expand": 1, "ngroups":config.num_attention_heads, "d_state": d_state},
             config.rms_norm_eps,
             d_inner=d_inner,
             d_xb=d_xb,
@@ -198,22 +203,44 @@ def main():
             attn_layers=attn_layers,
         )
         model = MambaTransformerHybridModelWrapper.init_distillation(
-            None, model_args.model_name_or_path, mamba_config, attn_layers=attn_layers, init_with_kqvo=True)
+            None, model_args.model_name_or_path, mamba_config, attn_layers=attn_layers, init_with_kqvo=training_args.init_with_kqvo, attn_implementation=attn_implementation)
     else:
-        model = MambaTransformerHybridModelWrapper.from_pretrained(model_args.model_name_or_path)
+        model = MambaTransformerHybridModelWrapper.from_pretrained(model_args.model_name_or_path, attn_implementation=attn_implementation)
 
     if training_args.prev_checkpoint_path is not None:
         config = AutoConfig.from_pretrained(model_args.model_name_or_path, dtype=model_args.torch_dtype)
         prev_checkpoint = torch.load(f"{training_args.prev_checkpoint_path}/pytorch_model.bin", map_location=torch.device('cpu'))
         prev_checkpoint_layers, is_mamba_layer = construct_layer_dict(prev_checkpoint, config.num_hidden_layers)
+        ssm_layers = training_args.ssm_layers
         for (layer_id, layer_checkpoint) in prev_checkpoint_layers.items():
             if is_mamba_layer[layer_id]:
-                # override weights of that layer
+                # override weights of mamba that layer
                 model.model.model.layers[layer_id].load_state_dict(layer_checkpoint)
+            elif layer_id in ssm_layers:
+                # previous transformer layers, but now mamba layers, apply kvq transfomer
+                mlp_state_dict = {k.replace('mlp.', ''): v for k, v in layer_checkpoint.items() if k.startswith('mlp.')}
+                input_layernorm_state_dict = {k.replace('input_layernorm.', ''): v for k, v in layer_checkpoint.items() if k.startswith('input_layernorm.')}
+                post_attention_layernorm_state_dict = {k.replace('post_attention_layernorm.', ''): v for k, v in layer_checkpoint.items() if k.startswith('post_attention_layernorm.')}
+                self_attn_v_proj_state_dict = {k.replace('self_attn.v_proj.', ''): v for k, v in layer_checkpoint.items() if k.startswith('self_attn.v_proj.')}
+                self_attn_k_proj_state_dict = {k.replace('self_attn.k_proj.', ''): v for k, v in layer_checkpoint.items() if k.startswith('self_attn.k_proj.')}
+                self_attn_q_proj_state_dict = {k.replace('self_attn.q_proj.', ''): v for k, v in layer_checkpoint.items() if k.startswith('self_attn.q_proj.')}
+                self_attn_o_proj_state_dict = {k.replace('self_attn.o_proj.', ''): v for k, v in layer_checkpoint.items() if k.startswith('self_attn.o_proj.')}
+                model.model.model.layers[layer_id].mlp.load_state_dict(mlp_state_dict)
+                model.model.model.layers[layer_id].input_layernorm.load_state_dict(input_layernorm_state_dict)
+                model.model.model.layers[layer_id].post_attention_layernorm.load_state_dict(post_attention_layernorm_state_dict)
+                model.model.model.layers[layer_id].mamba.out_proj.load_state_dict(self_attn_o_proj_state_dict)
+                model.model.model.layers[layer_id].mamba.in_proj.weight.data[mamba_config.d_inner:mamba_config.d_inner+mamba_config.d_xb, :].copy_(self_attn_v_proj_state_dict['weight'].data)
+                model.model.model.layers[layer_id].mamba.in_proj.weight.data[mamba_config.d_inner+mamba_config.d_xb:mamba_config.d_inner+2*mamba_config.d_xb, :].copy_(self_attn_k_proj_state_dict['weight'].data)
+                model.model.model.layers[layer_id].mamba.in_proj.weight.data[mamba_config.d_inner+2*mamba_config.d_xb:2*mamba_config.d_inner+2*mamba_config.d_xb, :].copy_(self_attn_q_proj_state_dict['weight'].data)
+                print("init here.")
+            else:
+                # previous transformer layers, and now still transformer
+                model.model.model.layers[layer_id].load_state_dict(layer_checkpoint)
+
 
     model.save_config(training_args.output_dir)
     model = model.model
-    print("model:", model)
+    # print("model:", model)
 
     ########################
     # Initialize the Trainer

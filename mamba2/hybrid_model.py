@@ -2,8 +2,8 @@ from mamba_ssm.ops.triton.layer_norm import RMSNorm
 from torch import Tensor
 from transformers.activations import ACT2FN
 
-from mamba.hybrid_mamba_config import MambaConfig
-from mamba.hybrid_mamba_layer import Mamba
+from mamba2.hybrid_mamba_config import MambaConfig
+from mamba2.hybrid_mamba_layer import Mamba2
 
 import torch
 import torch.nn as nn
@@ -30,17 +30,19 @@ class MambaDecoderLayer(nn.Module):
         layer_idx: int,
         device=None,
         dtype=None,
+        residual_in_fp32=True,
     ):
         super(MambaDecoderLayer, self).__init__()
         factory_kwargs = {"device": device, "dtype": dtype}
         self.layer_idx = layer_idx
-        self.mamba = Mamba(
-            d_model=config.d_model, d_inner=config.d_inner, d_xb=config.d_xb, layer_idx=layer_idx, **config.ssm_cfg, **factory_kwargs
+        self.mamba = Mamba2(
+            d_model=config.d_model, d_xb=config.d_xb, d_inner=config.d_inner, layer_idx=layer_idx, **config.ssm_cfg, **factory_kwargs
         )
         self.mlp = MLP(config=config)
         self.input_layernorm = RMSNorm(config.d_model, eps=config.rms_norm_eps)
         self.post_attention_layernorm = RMSNorm(config.d_model, eps=config.rms_norm_eps)
-
+        self.residual_in_fp32 = True
+        
     def allocate_inference_cache(self, batch_size, max_seqlen, dtype=None, **kwargs):
         return self.mamba.allocate_inference_cache(batch_size, max_seqlen, dtype=dtype, **kwargs)
 

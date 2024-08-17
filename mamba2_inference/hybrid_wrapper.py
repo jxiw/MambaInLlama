@@ -5,21 +5,59 @@ import json
 import torch
 import torch.nn as nn
 
+from dataclasses import dataclass, field
+from mamba_ssm.utils.generation import GenerationMixin
+
 from transformers import AutoModelForCausalLM
-from transformers.utils.hub import cached_file
 
 from mamba_ssm.utils.hf import load_config_hf, load_state_dict_hf
+from transformers.utils.hub import cached_file
 
-from mamba.hybrid_model import MambaDecoderLayer
-from mamba.hybrid_mamba_config import MambaConfig
+from mamba2.hybrid_mamba_config import MambaConfig
+from mamba2_inference.hybrid_model import MambaDecoderLayer, MHADecoderLayer
 
 from util import load_safetensors_to_dict
+from collections import namedtuple
+
+def merge_projections_for_layers(checkpoint, layer_indices):
+    for layer_idx in layer_indices:
+        # Get the weights for q_proj, k_proj, and v_proj
+        q_proj_key = f"model.layers.{layer_idx}.self_attn.q_proj.weight"
+        k_proj_key = f"model.layers.{layer_idx}.self_attn.k_proj.weight"
+        v_proj_key = f"model.layers.{layer_idx}.self_attn.v_proj.weight"
+        o_proj_key = f"model.layers.{layer_idx}.self_attn.o_proj.weight"
+
+        # Check if the keys exist in the checkpoint
+        if q_proj_key in checkpoint and k_proj_key in checkpoint and v_proj_key in checkpoint:
+            # Assuming all the projections have the same shape, otherwise adjust accordingly
+            q_proj_weight = checkpoint[q_proj_key]
+            k_proj_weight = checkpoint[k_proj_key]
+            v_proj_weight = checkpoint[v_proj_key]
+
+            # Concatenate the weights along the first dimension (often dimension 0)
+            in_proj_weight = torch.cat([q_proj_weight, k_proj_weight, v_proj_weight], dim=0)
+
+            # Assign the new weight to the corresponding in_proj key
+            in_proj_key = f"model.layers.{layer_idx}.mha.in_proj.weight"
+            checkpoint[in_proj_key] = in_proj_weight
+
+            # Optionally, remove the old keys to clean up the checkpoint
+            del checkpoint[q_proj_key]
+            del checkpoint[k_proj_key]
+            del checkpoint[v_proj_key]
+
+        if o_proj_key in checkpoint:
+            out_proj_key = f"model.layers.{layer_idx}.mha.out_proj.weight"
+            checkpoint[out_proj_key] = checkpoint[o_proj_key]
+            del checkpoint[o_proj_key]
+
+    return checkpoint
 
 MAMBA_CONFIG_NAME = "mamba_config.json"
 
-class MambaTransformerHybridModelWrapper(nn.Module):
+class MambaTransformerHybridModelWrapper(nn.Module, GenerationMixin):
 
-    def __init__(self, checkpoint_path, transformer_model, mamba_config, attn_layers, dtype, init_with_kqvo, load_from_hub=False, **kwargs):
+    def __init__(self, checkpoint_path, transformer_model, mamba_config, attn_layers, dtype, load_from_hub=False, **kwargs):
         super(MambaTransformerHybridModelWrapper, self).__init__()
         self.mamba_config = mamba_config
         self.attn_layers = attn_layers
@@ -27,71 +65,61 @@ class MambaTransformerHybridModelWrapper(nn.Module):
         self.config = self.model.config
         
         for layer_idx in range(mamba_config.n_layer):
-            if layer_idx not in attn_layers:
-                mamba_encoder = MambaDecoderLayer(
+            if layer_idx in attn_layers:
+                layer_encoder = MHADecoderLayer(
+                    self.config,
+                    layer_idx,
+                    device="cuda",
+                    dtype=dtype,
+                )
+            else:
+                layer_encoder = MambaDecoderLayer(
                     mamba_config,
                     layer_idx,
                     device="cuda",
                     dtype=dtype,
                 )
-                
-                if init_with_kqvo:
-                    # init weights using attention weights
-                    mamba_encoder.mlp.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].mlp.state_dict())
-                    mamba_encoder.input_layernorm.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].input_layernorm.state_dict())
-                    mamba_encoder.post_attention_layernorm.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].post_attention_layernorm.state_dict())
-                    mamba_encoder.mamba.in_proj_x.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].self_attn.v_proj.state_dict())
-                    mamba_encoder.mamba.B_proj.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].self_attn.k_proj.state_dict())
-                    mamba_encoder.mamba.C_proj.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].self_attn.q_proj.state_dict())
-                    mamba_encoder.mamba.out_proj.load_state_dict(transformer_model.model.layers._modules[f'{layer_idx}'].self_attn.o_proj.state_dict())  
-                    # keep dtype to be the same
-                    mamba_encoder.mlp = mamba_encoder.mlp.to(dtype)
-                    mamba_encoder.input_layernorm = mamba_encoder.input_layernorm.to(dtype)
-                    mamba_encoder.post_attention_layernorm = mamba_encoder.post_attention_layernorm.to(dtype)
-                
-                self.model.model.layers[layer_idx] = mamba_encoder
-
+            self.model.model.layers[layer_idx] = layer_encoder
+            
+        print("self.model:", self.model)      
+           
         if checkpoint_path is not None:
             if load_from_hub:
                 # load from a huggingface hub
-                self.model.load_state_dict(load_state_dict_hf(checkpoint_path, device=torch.device("cpu"), dtype=dtype))
+                ckpt = load_state_dict_hf(checkpoint_path, device=torch.device("cpu"), dtype=dtype)
             else:
                 # load from a local directory
                 if os.path.exists(f"{checkpoint_path}/pytorch_model.bin"):
                     # support save from bin file
-                    self.model.load_state_dict(torch.load(f"{checkpoint_path}/pytorch_model.bin", map_location=torch.device("cpu")))
+                    ckpt = torch.load(f"{checkpoint_path}/pytorch_model.bin", map_location=torch.device("cpu"))
                 else:
                     # support save from safetensors
-                    self.model.load_state_dict(load_safetensors_to_dict(checkpoint_path))
+                    ckpt = load_safetensors_to_dict(checkpoint_path)
         
+        merge_projections_for_layers(ckpt, self.attn_layers)
+        self.model.load_state_dict(ckpt)
         self.model = self.model.to(dtype).cuda()
 
-    def allocate_mamba_inference_cache(self, batch_size, max_seqlen, dtype=None, **kwargs):
+    def allocate_inference_cache(self, batch_size, max_seqlen, dtype=None, **kwargs):
         return {
             i: layer.allocate_inference_cache(batch_size, max_seqlen, dtype=dtype, **kwargs)
             for i, layer in enumerate(self.model.model.layers)
-            if isinstance(layer, MambaDecoderLayer)
         }
 
-    def forward(
-        self,
-        input_ids,
-        **kwargs,
-    ):
-        return self.model(input_ids, **kwargs)
+    def forward(self, input_ids, position_ids=None, inference_params=None, num_last_tokens=0, **mixer_kwargs):
+        """
+        "position_ids" is just to be compatible with Transformer generation. We don't use it.
+        num_last_tokens: if > 0, only return the logits for the last n tokens
+        """
+        hidden_states = self.model.model.embed_tokens(input_ids, **mixer_kwargs)
+        for decoder_layer in self.model.model.layers:
+            hidden_states = decoder_layer(hidden_states, inference_params=inference_params, **mixer_kwargs)
+        if num_last_tokens > 0:
+            hidden_states = hidden_states[:, -num_last_tokens:]
+        lm_logits = self.model.lm_head(hidden_states)
+        CausalLMOutput = namedtuple("CausalLMOutput", ["logits"])
+        return CausalLMOutput(logits=lm_logits)
 
-    def generate(
-        self,
-        input_ids,
-        **kwargs,
-    ):
-        output = self.model.generate(
-            input_ids,
-            use_cache=False,
-            **kwargs,
-        )
-        return output
-    
     @staticmethod
     def init_distillation(
         checkpoint_path,
