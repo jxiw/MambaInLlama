@@ -1,5 +1,5 @@
 # Model arguments
-model_name_or_path: llama3_0_50_mamba_dpo_ep3
+model_name_or_path: llama3_0_50_mamba_sft
 torch_dtype: bfloat16
 
 # Data training arguments
