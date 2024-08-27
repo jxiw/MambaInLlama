@@ -107,6 +107,7 @@ outputs = model.generate(
 generated_text = tokenizer.batch_decode(outputs.sequences.tolist())
 print(generated_text[0])
 
+#output:
 #Let's denote the number of chickens as C and the number of cows as K. We know that:
 #1. There are 20 animals in total: C + K = 20.
 #2. Chickens have 2 legs and cows have 4 legs. Together, they have 70 legs: 2C + 4K = 70.
@@ -127,9 +128,9 @@ Mamba 2:
 ```
 import torch
 from transformers import AutoTokenizer
-from mamba_inference.hybrid_wrapper import MambaTransformerHybridModelWrapper
+from mamba2_inference.hybrid_wrapper import MambaTransformerHybridModelWrapper
 
-pretrained_model_name = "JunxiongWang/MambaInLlama_0_50" # change the model that you want to test here
+pretrained_model_name = "JunxiongWang/Mamba2InLlama_0_50" # change the model that you want to test here
 model = MambaTransformerHybridModelWrapper.from_pretrained(pretrained_model_name, torch_dtype=torch.bfloat16)
 model.eval()
 
@@ -165,6 +166,7 @@ outputs = model.generate(
 generated_text = tokenizer.batch_decode(outputs.sequences.tolist())
 print(generated_text[0])
 
+#output:
 #**Step 1:** Let's denote the number of chickens as C and the number of cows as K.
 #**Step 2:** Chickens have 2 legs each, and cows have 4 legs each. We can create an equation based on the total number of legs:
 #2C (chicken legs) + 4K (cow legs) = 70 legs
