@@ -23,3 +23,35 @@ python benchmark/llm_eval/lm_harness_eval.py --model mamba2_hybrid --model_args 
 | Our [Mamba2-Llama3 (50% att)](https://huggingface.co/JunxiongWang/Mamba2InLlama_0_50) | 20B     | **71.51** | **81.45** | **79.47** | **78.83** | **58.19** | 55.70 | 44.20 | **57.74** | **72.4** | 38.85 | **63.84** |
 
 LM eval benchmark results for Mamba-Llama3 compared with Nvidia Mamba-2-Hybrid-4K.
+
+To evaluate few-shot results on the OpenLLM leaderboard, please refer to the following script.
+
+```
+python benchmark/llm_eval/lm_harness_eval.py    --model mamba_hybrid \
+    --model_args pretrained=JunxiongWang/MambaInLlama_0_50 \
+    --tasks arc_challenge \
+    --num_fewshot 25 \
+    --device cuda \
+    --batch_size 4
+
+python benchmark/llm_eval/lm_harness_eval.py --model mamba_hybrid \
+    --model_args pretrained=JunxiongWang/MambaInLlama_0_50 \
+    --tasks hellaswag \
+    --num_fewshot 10 \
+    --device cuda \
+    --batch_size 4
+
+python benchmark/llm_eval/lm_harness_eval.py --model mamba_hybrid \
+    --model_args pretrained=JunxiongWang/MambaInLlama_0_50 \
+    --tasks winogrande \
+    --num_fewshot 5 \
+    --device cuda \
+    --batch_size 4
+
+python benchmark/llm_eval/lm_harness_eval.py --model mamba_hybrid \
+    --model_args pretrained=JunxiongWang/MambaInLlama_0_50 \
+    --tasks mmlu \
+    --num_fewshot 5 \
+    --device cuda \
+    --batch_size 4
+```
