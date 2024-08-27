@@ -56,4 +56,4 @@ python benchmark/llm_eval/lm_harness_eval.py --model mamba_hybrid \
     --batch_size 4
 ```
 
-For GSM8K results, please refer to [here](../zero_eval/README.md)
+For GSM8K results, please refer to [here](https://github.com/jxiw/ZeroEval)
