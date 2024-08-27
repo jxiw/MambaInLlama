@@ -165,19 +165,20 @@ outputs = model.generate(
 generated_text = tokenizer.batch_decode(outputs.sequences.tolist())
 print(generated_text[0])
 
-#Let's denote the number of chickens as C and the number of cows as K. We know that:
-#1. There are 20 animals in total: C + K = 20.
-#2. Chickens have 2 legs and cows have 4 legs. Together, they have 70 legs: 2C + 4K = 70.
-#Now, we can solve these equations step by step:
-#From the first equation, we can express K in terms of C:
+#**Step 1:** Let's denote the number of chickens as C and the number of cows as K.
+#**Step 2:** Chickens have 2 legs each, and cows have 4 legs each. We can create an equation based on the total number of legs:
+#2C (chicken legs) + 4K (cow legs) = 70 legs
+#**Step 3:** We also know that there are 20 animals in total:
+#C + K = 20
+#**Step 4:** Solve the second equation for one variable, let's say K:
 #K = 20 - C
-#Substitute this expression into the second equation:
+#**Step 5:** Substitute the expression for K in the first equation:
 #2C + 4(20 - C) = 70
-#Simplify and solve for C:
+#**Step 6:** Simplify and solve for C:
 #2C + 80 - 4C = 70
 #-2C = -10
 #C = 5
-#So, there are 5 chickens on Farmer Brown's farm.
+#**Conclusion:** There are 5 chickens on Farmer Brown's farm.
 ```
 
 ## Evaluation
