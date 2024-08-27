@@ -115,3 +115,6 @@ This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_
 
 Please follow the instructions [here](https://github.com/jxiw/MambaInLlama/tree/main/benchmark)
 
+## Mamba 2
+
+For Mamba 2 models, you can just change the script path from `train_mamba/*.py` to `train_mamba2/*.py`.
