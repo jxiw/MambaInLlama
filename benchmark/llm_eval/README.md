@@ -27,7 +27,7 @@ LM eval benchmark results for Mamba-Llama3 compared with Nvidia Mamba-2-Hybrid-4
 To evaluate few-shot results on the OpenLLM leaderboard, please refer to the following script.
 
 ```
-python benchmark/llm_eval/lm_harness_eval.py    --model mamba_hybrid \
+python benchmark/llm_eval/lm_harness_eval.py --model mamba_hybrid \
     --model_args pretrained=JunxiongWang/MambaInLlama_0_50 \
     --tasks arc_challenge \
     --num_fewshot 25 \
@@ -55,3 +55,5 @@ python benchmark/llm_eval/lm_harness_eval.py --model mamba_hybrid \
     --device cuda \
     --batch_size 4
 ```
+
+For GSM8K results, please refer to [here](../zero_eval/README.md)

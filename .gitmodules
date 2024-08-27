@@ -4,3 +4,6 @@
 [submodule "benchmark/alpaca_eval/alpaca_eval"]
 	path = benchmark/alpaca_eval/alpaca_eval
 	url = git@github.com:jxiw/alpaca_eval.git
+[submodule "benchmark/zero_eval"]
+	path = benchmark/zero_eval
+	url = git@github.com:jxiw/ZeroEval.git
