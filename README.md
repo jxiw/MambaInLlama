@@ -187,8 +187,14 @@ Please follow the instructions [here](benchmark/README.md)
 
 ## Citation
 If you use this codebase, or otherwise found our work valuable, please cite:
-```
 
+```
+@article{junxiongdaniele2024mambainllama,
+  title   = {The Mamba in the Llama: Distilling and Accelerating Hybrid Models},
+  author  = {Junxiong Wang and Daniele Paliotta and Avner May and Alexander M. Rush and Tri Dao},
+  journal = {arXiv preprint arXiv:2408.15237},
+  year    = {2024}
+}
 ```
 
 
