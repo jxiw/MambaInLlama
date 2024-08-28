@@ -75,3 +75,52 @@ python gen_judgment.py --model-list [MODEL_ID] --parallel 24
 python show_result.py --model-list [MODEL_ID]
 ```
 
+### Hybrid Mamba Models Distilled From Llama-3-8B-Instruct	
+
+
+```
+########## First turn ##########
+                                  score
+model                    turn
+llama3_mamba_0_5_dpo_ep1 1     8.006250
+Mamba2InLlama_0_50       1     7.931250
+MambaInLlama_0_50        1     7.822785
+MambaInLlama_0_75        1     7.562500
+llama3_mamba_0_5_dpo_ep3 1     7.512500
+recurrentgemma-9b-it     1     7.418750
+falcon-mamba-7b-instruct 1     7.325000
+Mamba2InLlama_0_75       1     7.243750
+MambaInLlama_0_875       1     6.906250
+Mamba2InLlama_0_875      1     6.825000
+Mamba2InLlama_1          1     6.162500
+
+########## Second turn ##########
+                                  score
+model                    turn
+llama3_mamba_0_5_dpo_ep1 2     6.987500
+llama3_mamba_0_5_dpo_ep3 2     6.950000
+recurrentgemma-9b-it     2     6.900000
+MambaInLlama_0_50        2     6.875000
+Mamba2InLlama_0_50       2     6.658228
+Mamba2InLlama_0_75       2     6.237500
+MambaInLlama_0_75        2     6.150000
+Mamba2InLlama_0_875      2     6.121795
+MambaInLlama_0_875       2     5.987500
+falcon-mamba-7b-instruct 2     5.550000
+Mamba2InLlama_1          2     5.112500
+
+########## Average ##########
+                             score
+model
+llama3_mamba_0_5_dpo_ep1  7.496875
+MambaInLlama_0_50         7.345912
+Mamba2InLlama_0_50        7.298742
+llama3_mamba_0_5_dpo_ep3  7.231250
+recurrentgemma-9b-it      7.159375
+MambaInLlama_0_75         6.856250
+Mamba2InLlama_0_75        6.740625
+Mamba2InLlama_0_875       6.477848
+MambaInLlama_0_875        6.446875
+falcon-mamba-7b-instruct  6.437500
+Mamba2InLlama_1           5.637500
+```

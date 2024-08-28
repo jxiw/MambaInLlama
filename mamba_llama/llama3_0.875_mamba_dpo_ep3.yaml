@@ -5,8 +5,6 @@ torch_dtype: bfloat16
 # Data training arguments
 # For definitions, see: src/h4/training/config.py
 dataset_mixer:
-  HuggingFaceH4/ultrafeedback_binarized: 1.0
-  HuggingFaceH4/orca_dpo_pairs: 1.0
   JunxiongWang/llama3-ultrafeedback-armorm: 1.0
 dataset_splits:
 - train_prefs

@@ -57,3 +57,32 @@ Follow these steps to reproduce the results:
 ```
 alpaca_eval evaluate_from_model [YOUR_MODEL_PATH] --output_path [MODEL_OUTPUT_PATH] --chunksize 1800 --is_overwrite_leaderboard=True
 ``` 
+
+### Hybrid Mamba Models Distilled From Llama-3-8B-Instruct	
+
+MambaInLlama_0_50: `alpaca_eval evaluate_from_model MambaInLlama_0_50 --output_path MambaInLlama_0_50 --chunksize 1800 --is_overwrite_leaderboard=True`
+
+MambaInLlama_0_75: `alpaca_eval evaluate_from_model MambaInLlama_0_75 --output_path MambaInLlama_0_75 --chunksize 1800 --is_overwrite_leaderboard=True`
+
+MambaInLlama_0_875: `alpaca_eval evaluate_from_model MambaInLlama_0_875 --output_path MambaInLlama_0_875 --chunksize 1800 --is_overwrite_leaderboard=True`
+
+MambaInLlama2_0_50: `alpaca_eval evaluate_from_model MambaInLlama2_0_50 --output_path MambaInLlama2_0_50 --chunksize 1800 --is_overwrite_leaderboard=True`
+
+MambaInLlama2_0_75: `alpaca_eval evaluate_from_model MambaInLlama2_0_75 --output_path MambaInLlama2_0_75 --chunksize 1800 --is_overwrite_leaderboard=True`
+
+MambaInLlama2_0_875: `alpaca_eval evaluate_from_model MambaInLlama2_0_875 --output_path MambaInLlama2_0_875 --chunksize 1800 --is_overwrite_leaderboard=True`
+
+MambaInLlama2_1: `alpaca_eval evaluate_from_model MambaInLlama2_1 --output_path MambaInLlama2_1 --chunksize 1800 --is_overwrite_leaderboard=True`
+
+The win rate of our hybrid mamba model against `gpt-4` is
+
+```
+Model,LC win rate
+MambaInLlama_0_50,29.61
+MambaInLlama_0_75,25.85
+MambaInLlama_0_875,20.76
+MambaInLlama2_0_50,25.00
+MambaInLlama2_0_75,22.75
+MambaInLlama2_0_875,20.25
+MambaInLlama2_1,14.49
+```
