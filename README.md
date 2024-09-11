@@ -66,10 +66,13 @@ conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
 # Install PyTorch (with CUDA 11.8) before everything else. those assume you are using cu118
 pip install torch --index-url https://download.pytorch.org/whl/cu118
 
-pip install mamba-ssm==2.2.2
 pip install causal-conv1d==1.4.0
 pip install flash-attn==2.6.3
 ```
+
+If you install mamba-ssm using `pip install mamba-ssm==2.2.2`, you will need to manually change `CONDA_ENV_PATH/site-packages/mamba_ssm/modules/mha.py` to [this version](https://github.com/state-spaces/mamba/blob/014c094d11f780a27330657faabecaaded7a31db/mamba_ssm/modules/mha.py) to support GQA, since GQA is used in Llama3.
+
+Alternatively, you can build mamba-ssm from source, but ensure the commit is after [this one](https://github.com/state-spaces/mamba/commit/014c094d11f780a27330657faabecaaded7a31db), which fixes the GQA bugs in generations.
 
 ### Generation Example
 
