@@ -16,9 +16,16 @@ python benchmark/llm_eval/lm_harness_eval.py --model mamba_hybrid --model_args p
 python benchmark/llm_eval/lm_harness_eval.py --model mamba2_hybrid --model_args pretrained=JunxiongWang/Mamba2InLlama_0_50 --tasks mmlu,hellaswag,piqa,arc_easy,arc_challenge,winogrande,openbookqa,pubmedqa,race --num_fewshot 0 --device cuda --batch_size 16
 ```
 
+For teacher model [Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct), use this command to run
+
+```
+python benchmark/llm_eval/lm_harness_eval.py --model hf --model_args pretrained=meta-llama/Meta-Llama-3-8B-Instruct --tasks mmlu,hellaswag,piqa,arc_easy,arc_challenge,winogrande,openbookqa,pubmedqa,race --num_fewshot 0 --device cuda --batch_size 16
+```
+
 | Model                     | Training Tokens | WG    | PIQA  | HellaSwag | ARC-Easy  | ARC-Challenge  | MMLU  | OpenBook | TruthFul | PubMed | RACE  | Avg   |
 |---------------------------|--------|-------|-------|-----------|--------|--------|-------|----------|----------|--------|-------|-------|
 | Mamba-2-Hybrid-4K        | 3.5T   | 71.27 | 79.65 | 77.68 | 77.23 | 47.70 | 51.46 | 42.80 | 38.72 | 69.80 | 39.71 | 59.60 |
+| [Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B) |   | 72.3 | 78.67 | 75.77     | 79.67    | 57.00            | 63.79 | 42.8     | 41.21    | 74.4   | 45.93 | 63.15 |
 | Our [Mamba-Llama3 (50% att)](https://huggingface.co/JunxiongWang/MambaInLlama_0_50) | 20B     | 68.98 | 78.02 | 78.43 | 74.45 | 51.96 | **57.81** | 44.00 | 47.69 | 73.00 | 38.56 | 61.30|
 | Our [Mamba2-Llama3 (50% att)](https://huggingface.co/JunxiongWang/Mamba2InLlama_0_50) | 20B     | **71.51** | **81.45** | **79.47** | **78.83** | **58.19** | 55.70 | 44.20 | **57.74** | **72.4** | 38.85 | **63.84** |
 
