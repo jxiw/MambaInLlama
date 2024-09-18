@@ -19,7 +19,7 @@ python benchmark/llm_eval/lm_harness_eval.py --model mamba2_hybrid --model_args 
 For teacher model [Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct), use this command to run
 
 ```
-python benchmark/llm_eval/lm_harness_eval.py --model hf --model_args pretrained=meta-llama/Meta-Llama-3-8B-Instruct --tasks mmlu,hellaswag,piqa,arc_easy,arc_challenge,winogrande,openbookqa,pubmedqa,race --num_fewshot 0 --device cuda --batch_size 16
+lm_eval --model hf --model_args pretrained=meta-llama/Meta-Llama-3-8B-Instruct --tasks mmlu,hellaswag,piqa,arc_easy,arc_challenge,winogrande,openbookqa,pubmedqa,race --num_fewshot 0 --device cuda --batch_size 16
 ```
 
 | Model                     | Training Tokens | WG    | PIQA  | HellaSwag | ARC-Easy  | ARC-Challenge  | MMLU  | OpenBook | TruthFul | PubMed | RACE  | Avg   |
