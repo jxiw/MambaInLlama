@@ -1,3 +1,4 @@
+
 # Copyright (c) 2023, Albert Gu, Tri Dao.
 import os
 import json
@@ -114,6 +115,7 @@ class MambaTransformerHybridModelWrapper(nn.Module, GenerationMixin):
         hidden_states = self.model.model.embed_tokens(input_ids, **mixer_kwargs)
         for decoder_layer in self.model.model.layers:
             hidden_states = decoder_layer(hidden_states, inference_params=inference_params, **mixer_kwargs)
+        hidden_states = self.model.model.norm(hidden_states)
         if num_last_tokens > 0:
             hidden_states = hidden_states[:, -num_last_tokens:]
         lm_logits = self.model.lm_head(hidden_states)
