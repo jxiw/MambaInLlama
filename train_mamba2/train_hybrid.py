@@ -197,8 +197,7 @@ def main():
     # We initialize the trackers only on main process because `accelerator.log`
     # only logs on main process and we don't want empty logs/runs on other processes.
     if accelerator.is_main_process:
-        # experiment_config = vars(training_args)
-        experiment_config={}
+        experiment_config = vars(training_args)
         experiment_config["lr_scheduler_type"] = "cosine"
         accelerator.init_trackers("mamba_distill", experiment_config)
 

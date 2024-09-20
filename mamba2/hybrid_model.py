@@ -46,7 +46,7 @@ class MambaDecoderLayer(nn.Module):
     def allocate_inference_cache(self, batch_size, max_seqlen, dtype=None, **kwargs):
         return self.mamba.allocate_inference_cache(batch_size, max_seqlen, dtype=dtype, **kwargs)
 
-    def forward(self, hidden_states: Tensor, **kwargs):
+    def forward(self, hidden_states: Tensor, *args, **kwargs):
         residual = hidden_states
         hidden_states = self.input_layernorm(hidden_states)
         hidden_states = self.mamba(hidden_states)
