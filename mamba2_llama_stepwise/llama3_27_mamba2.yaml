@@ -1,0 +1,20 @@
+model_name: meta-llama/Meta-Llama-3-8B-Instruct
+ssm_layers: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26, 28, 29, 30]
+kl_weight: 0.1
+ce_weight: 1
+do_eval: false
+train_datasets_path: [PSEUDO_LABEL_PATH_1, PSEUDO_LABEL_PATH_2]
+prev_checkpoint_path: llama3_26_mamba2/
+output_dir: llama3_27_mamba2/
+seed: 42
+save_steps: 5000
+warmup_steps: 1500
+per_device_train_batch_size: 1
+per_device_eval_batch_size: 4
+num_train_epochs: 1
+gradient_accumulation_steps: 8
+lr_scheduler_type: cosine
+learning_rate: 8.0e-5
+max_grad_norm: 0.1
+progressive_step: 26
+total_progressive_step: 32
