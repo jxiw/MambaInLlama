@@ -5,3 +5,5 @@ This is to show how stepwise distillation works.
 </div>
 
 Run `bash stepwise.sh`
+
+If you are only interested in non-attention model instead of hybrid model, we suggest you switch from the first layer to last layer with a stepwise manner.
