@@ -124,3 +124,5 @@ MambaInLlama_0_875        6.446875
 falcon-mamba-7b-instruct  6.437500
 Mamba2InLlama_1           5.637500
 ```
+
+The top-performing model is [this](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_dpo_ep1)
