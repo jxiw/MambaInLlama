@@ -3,8 +3,8 @@
 This repository contains the code and released models for our paper.
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="assets/mambainllama.png" alt="MambaInLlama" style="height:300px; width:auto; margin-right: 10px;">
-    <img src="assets/mambainllama2.png" alt="MambaInLlama" style="height:300px; width:auto; margin-left: 10px;">
+    <img src="assets/mambainllama.png" alt="MambaInLlama" style="height:200px; width:auto; margin-right: 10px;">
+    <img src="assets/mambainllama2.png" alt="MambaInLlama" style="height:200px; width:auto; margin-left: 10px;">
 </div>
 
 Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while preserving the generational quality with the best effort. Typically, you only need 8x80G A100 (with very **limited** resources) and run for 3 to 4 days to reproduce our results. Our approach can be used for both base models and chat models. If you don't want to do alignment or prefer not to use SFT/DPO at all, please refer to [this](mamba2_llama_stepwise/README).
