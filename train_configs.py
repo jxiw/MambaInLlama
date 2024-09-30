@@ -44,6 +44,14 @@ class DistillConfig(transformers.TrainingArguments):
         metadata={"help": "Test datasets."},
     )
     init_with_kqvo: bool = field(default=True, metadata={"help": "Whether to init with transformer weights."})
+    progressive_step: List[int] = field(
+        default=None,
+        metadata={"help": "The current progressive step."},
+    )
+    total_progressive_step: List[int] = field(
+        default=None,
+        metadata={"help": "The total progressive step."},
+    )
 
 @dataclass
 class SFTDistillConfig(SFTConfig):
