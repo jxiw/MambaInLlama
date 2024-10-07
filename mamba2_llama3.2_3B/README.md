@@ -1,8 +1,6 @@
 # Instructions to Replicate Mamba-Llama3.2-3B
 
-As described in our technical report, training this model proceeds in three steps:
-
-1. We streamlined the process and distilled the Hybrid Mamba2 3B model, utilizing the [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) as the teacher model and the [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) as the base model for initialization.
+1. We streamlined the process and distilled the Hybrid Mamba2 3B model, utilizing the [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) as the teacher model and the [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) as the model for kqv initialization.
 
 ```
 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba2/train_sft_distill.py mamba2_llama3.2_3B/large_llama3_ft_mamba2_0.5.yaml
