@@ -18,8 +18,7 @@ The ```train_sft_distill.py``` script allows you to initialize your Mamba model 
 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba2/train_sft_distill.py mamba2_llama3.2_3B/large_llama3_ft_mamba2_0.5_dpo.yaml
 ```
 
-Zero-shot results
-
+Zero-shot results when using the [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) as the teacher model, and the [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) as the initialized model
 
 | Task         | [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) | Llama-Mamba2-0.5-3.2-3B-teacher-Llama-3.1-8B-Instruct-sft | Llama-Mamba2-0.5-3.2-3B-teacher-Llama-3.1-8B-Instruct-dpo |
 |--------------|-----------------|--------------------------------------------------------------|------------------------------------------------------------------|
