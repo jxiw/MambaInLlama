@@ -21,7 +21,7 @@ ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml t
 Zero-shot results
 
 
-| Task         | Llama-3.2-3B-it | Llama-Mamba2-3.2-3B-teacher-Llama-3.1-8B-Instruct-sft | Llama-Mamba2-3.2-3B-teacher-Llama-3.1-8B-Instruct-dpo |
+| Task         | [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) | Llama-Mamba2-0.5-3.2-3B-teacher-Llama-3.1-8B-Instruct-sft | Llama-Mamba2-0.5-3.2-3B-teacher-Llama-3.1-8B-Instruct-dpo |
 |--------------|-----------------|--------------------------------------------------------------|------------------------------------------------------------------|
 | arc_challenge| 0.4352          | 0.4309                                                       | 0.5145                                                          |
 |              | 0.459           | 0.4608                                                       | 0.5222                                                          |
