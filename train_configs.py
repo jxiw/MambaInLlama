@@ -3,7 +3,7 @@ import sys
 import transformers
 import dataclasses
 from dataclasses import dataclass, field
-from typing import Any, List, Tuple, Optional, NewType
+from typing import Any, List, Dict, Tuple, Optional, NewType
 from transformers import HfArgumentParser
 from alignment import SFTConfig
 
@@ -72,7 +72,19 @@ class SFTDistillConfig(SFTConfig):
         metadata={"help": "List of SSM layers."},
     )
     init_with_kqvo: bool = field(default=True, metadata={"help": "Whether to init with transformer weights."})
-    decontaminate: bool = field(default=False, metadata={"help": "Whether to apply the decontaminate steps"})
+    decontaminate: bool = field(default=False, metadata={"help": "Whether to apply the decontaminate steps."})
+
+    teacher_model_name_or_path: Optional[str] = field(default=None, metadata={"help": "Teacher Model."})
+    # teacher_model_init_kwargs: Optional[Dict[str, Any]] = field(default=None, metadata={"help": "Teacher Model Init Kwargs."})
+    teacher_load_in_8bit: bool = field(default=False, metadata={"help": "Whether to load the Teacher Model in 8bit."})
+    kl_weight: float = field(
+        default=0.1,
+        metadata={"help": "Ratio of KL loss."},
+    )
+    ce_weight: float = field(
+        default=1,
+        metadata={"help": "Ratio of CE loss."},
+    )
 
 # Copy from HuggingFace H4ArgumentParser
 class DistillArgumentParser(HfArgumentParser):
