@@ -1,0 +1,50 @@
+# Model arguments
+model_name_or_path: meta-llama/Llama-3.2-3B-Instruct
+teacher_model_name_or_path: meta-llama/Llama-3.1-8B-Instruct
+with_distill: false
+ssm_layers: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26]
+init_with_kqvo: true
+decontaminate: true
+torch_dtype: bfloat16
+use_flash_attention_2: true
+
+# Data training arguments
+chat_template: "{% set loop_messages = messages %}{% for message in loop_messages %}{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'+ message['content'] | trim + '<|eot_id|>' %}{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}{{ content }}{% endfor %}{% if add_generation_prompt %}{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}{% endif %}"
+dataset_mixer:
+  JunxiongWang/sftdatasetv3: 1.0
+dataset_splits:
+- train
+- test
+preprocessing_num_workers: 64
+
+# SFT trainer config
+bf16: true
+do_eval: true
+evaluation_strategy: epoch
+gradient_accumulation_steps: 2
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: False
+learning_rate: 2.0e-05
+log_level: info
+logging_steps: 10
+logging_strategy: steps
+lr_scheduler_type: cosine
+max_seq_length: 2048
+max_steps: -1
+num_train_epochs: 1
+output_dir: Llama-Mamba2-3.2-3B-teacher-Llama-3.1-8B-Instruct-kl1.0-ce0.0
+overwrite_output_dir: true
+per_device_eval_batch_size: 4
+per_device_train_batch_size: 4
+push_to_hub: false
+remove_unused_columns: true
+report_to:
+- wandb
+save_strategy: "steps"
+save_steps: 5000
+save_total_limit: 1
+seed: 42
+warmup_ratio: 0.01
+kl_weight: 1.0
+ce_weight: 0.0
