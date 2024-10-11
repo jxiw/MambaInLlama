@@ -11,8 +11,8 @@ Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while pre
 
 ## Approach
 
-1. **Stepwise layer alignment** (Optional). Remove the attention layers one by one in a stepwise manner.
-2. **End to end distillation** (Most important). Minimize cross-entropy between the student and teacher models.
+1. **Stepwise layer alignment** (Optional). Reply the attention layers by Mamba2, one by one in a stepwise manner.
+2. **End to end distillation** (Most important). Minimize cross-entropy between the student and teacher models. You can consider to use a larger teacher model to get better results.
 3. **Instruction tuning** (Optional). For simplicity, we use DPO for this process.
 
 ## Changelog
