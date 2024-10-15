@@ -20,20 +20,16 @@ Zero-shot results when using the [Llama-3.1-8B-Instruct](https://huggingface.co/
 
 | Teacher Model | N/A                                                                             | Llama-3.1-8B-Instruct             | Llama-3.1-8B-Instruct             |
 |---------------|---------------------------------------------------------------------------------|-----------------------------------|-----------------------------------|
-| Model          | [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) | Llama-Mamba2-0.5-3.2-3B-sft       | Llama-Mamba2-0.5-3.2-3B-dpo       |
-| arc_challenge| 0.4352          | 0.4309                                                       | 0.5145                                                          |
-|              | 0.459           | 0.4608                                                       | 0.5222                                                          |
-| arc_easy     | 0.7407          | 0.7588                                                       | 0.7997                                                          |
-|              | 0.678           | 0.7193                                                       | 0.7424                                                          |
-| hellaswag    | 0.5221          | 0.5104                                                       | 0.5514                                                          |
-|              | 0.7043          | 0.6905                                                       | 0.7484                                                          |
-| mmlu         | 0.6043          | 0.5216                                                       | 0.5088                                                          |
-| openbookqa   | 0.282           | 0.278                                                        | 0.318                                                           |
-|              | 0.36            | 0.392                                                        | 0.412                                                           |
-| piqa         | 0.7568          | 0.7622                                                       | 0.7726                                                          |
-|              | 0.7568          | 0.7617                                                       | 0.7764                                                          |
-| pubmedqa     | 0.696           | 0.662                                                        | 0.672                                                           |
-| race         | 0.4067          | 0.4029                                                       | 0.4679                                                          |
-| winogrande   | 0.6748          | 0.644                                                        | 0.6535                                                          |
+| Model          | [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) | [Llama-Mamba2-0.5-3.2-3B-sft](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half)       | [Llama-Mamba2-0.5-3.2-3B-dpo](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half_DPO)       |
+| arc_challenge   | 0.459                                                                           | 0.4667                                                            | 0.541                                                                 |
+| arc_easy        | 0.7407                                                                          | 0.7668                                                            | 0.8026                                                                |                                                               |
+| hellaswag       | 0.7043                                                                          | 0.6913                                                            | 0.7445                                                                |
+| mmlu            | 0.6043                                                                          | 0.5271                                                            | 0.5247                                                                |
+| openbookqa      | 0.36                                                                            | 0.388                                                             | 0.424                                                                 |
+| piqa            | 0.7568                                                                          | 0.7601                                                            | 0.7769                                                                |
+| pubmedqa        | 0.696                                                                           | 0.638                                                             | 0.654                                                                 |
+| race            | 0.4067                                                                          | 0.3981                                                            | 0.4344                                                                |
+| winogrande      | 0.6748                                                                          | 0.6606                                                            | 0.6732                                                                |
 
 
+We are removing more attention during the process, while keeping it in torch.

@@ -22,6 +22,12 @@ Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while pre
 
 ## Released Models
 
+### Hybrid Mamba (3B) distilled from Llama3.2
+
+Check [this](mamba2_llama3.2_3B/README.md) for more details.
+
+Models are available [here](https://huggingface.co/collections/JunxiongWang/mamba2inllama32-3b-670ed6fcaddfb1834881e38b).
+
 ### Hybrid Mamba distilled from Llama3
 
 | Teacher Model | Hybrid Mamba Model - DPO |Hybrid Mamba2 Model - DPO |
