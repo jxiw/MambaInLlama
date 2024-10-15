@@ -18,9 +18,10 @@ ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml t
 
 Zero-shot results when using the [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) as the teacher model, and the [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) as the initialized model
 
-| Teacher Model | N/A                                                                             | Llama-3.1-8B-Instruct             | Llama-3.1-8B-Instruct             |
+| Initialization Model | N/A                                                                             | Llama-3.2-3B-Instruct             | Llama-3.2-3B-Instruct             |
 |---------------|---------------------------------------------------------------------------------|-----------------------------------|-----------------------------------|
-| Model          | [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) | [Llama-Mamba2-0.5-3.2-3B-sft](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half)       | [Llama-Mamba2-0.5-3.2-3B-dpo](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half_DPO)       |
+| Teacher Model | N/A                                                                             | Llama-3.1-8B-Instruct             | Llama-3.1-8B-Instruct             |
+| Model          | [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) | [Llama-3.2-Mamba2-0.5-3B-sft](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half)       | [Llama-3.2-Mamba2-0.5-3B-dpo](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half_DPO)       |
 | arc_challenge   | 0.459                                                                           | 0.4667                                                            | 0.541                                                                 |
 | arc_easy        | 0.7407                                                                          | 0.7668                                                            | 0.8026                                                                |                                                               |
 | hellaswag       | 0.7043                                                                          | 0.6913                                                            | 0.7445                                                                |
@@ -30,6 +31,5 @@ Zero-shot results when using the [Llama-3.1-8B-Instruct](https://huggingface.co/
 | pubmedqa        | 0.696                                                                           | 0.638                                                             | 0.654                                                                 |
 | race            | 0.4067                                                                          | 0.3981                                                            | 0.4344                                                                |
 | winogrande      | 0.6748                                                                          | 0.6606                                                            | 0.6732                                                                |
-
 
 We are removing more attention during the process, while keeping it in torch.
