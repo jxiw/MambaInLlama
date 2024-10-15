@@ -11,7 +11,7 @@ Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while pre
 
 ## Approach
 
-1. **Stepwise layer alignment** (Optional). Reply the attention layers by Mamba2, one by one in a stepwise manner.
+1. **Stepwise layer alignment** (Optional). Replace the attention layers by Mamba2, one by one in a stepwise manner.
 2. **End to end distillation** (Most important). Minimize cross-entropy between the student and teacher models. You can consider to use a larger teacher model to get better results.
 3. **Instruction tuning** (Optional). For simplicity, we use DPO for this process.
 
@@ -101,7 +101,7 @@ model.eval()
 messages = [[
     {
         "role": "user",
-        "content": "## Question: \n\nFarmer Brown has 20 animals on his farm, all either chickens or cows. They have a total of 70 legs, all together. How many of the animals are chickens? ## Instruction \n\nPlease answer this question by first reasoning and then providing your answer.",
+        "content": "Farmer Brown has 20 animals on his farm, all either chickens or cows. They have a total of 70 legs, all together. How many of the animals are chickens?",
     },
 ]]
 
@@ -131,18 +131,28 @@ generated_text = tokenizer.batch_decode(outputs.sequences.tolist())
 print(generated_text[0])
 
 #output:
-#Let's denote the number of chickens as C and the number of cows as K. We know that:
-#1. There are 20 animals in total: C + K = 20.
-#2. Chickens have 2 legs and cows have 4 legs. Together, they have 70 legs: 2C + 4K = 70.
-#Now, we can solve these equations step by step:
-#From the first equation, we can express K in terms of C:
-#K = 20 - C
-#Substitute this expression into the second equation:
-#2C + 4(20 - C) = 70
-#Simplify and solve for C:
-#2C + 80 - 4C = 70
-#-2C = -10
-#C = 5
+#Let's use algebra to solve this problem. We'll use the variable \( c \) for the number of chickens and \( k \) for the number of cows. We know two things from the problem statement:
+
+#1. The total number of animals is 20: \( c + k = 20 \)
+#2. The total number of legs is 70: Chickens have 2 legs each, and cows have 4 legs each. So, \( 2c + 4k = 70 \).
+
+#Now, we'll solve the system of equations:
+
+#From the first equation, we can express \( k \) in terms of \( c \):
+
+#\( k = 20 - c \)
+
+#Now, substitute \( k \) in the second equation:
+
+#\( 2c + 4(20 - c) = 70 \)
+
+#Solve for \( c \):
+
+#\( 2c + 80 - 4c = 70 \)
+#\( -2c = 70 - 80 \)
+#\( -2c = -10 \)
+#\( c = 5 \)
+
 #So, there are 5 chickens on Farmer Brown's farm.
 ```
 
@@ -160,7 +170,7 @@ model.eval()
 messages = [[
     {
         "role": "user",
-        "content": "## Question: \n\nFarmer Brown has 20 animals on his farm, all either chickens or cows. They have a total of 70 legs, all together. How many of the animals are chickens? ## Instruction \n\nPlease answer this question by first reasoning and then providing your answer.",
+        "content": "Farmer Brown has 20 animals on his farm, all either chickens or cows. They have a total of 70 legs, all together. How many of the animals are chickens?",
     },
 ]]
 
@@ -190,20 +200,26 @@ generated_text = tokenizer.batch_decode(outputs.sequences.tolist())
 print(generated_text[0])
 
 #output:
-#**Step 1:** Let's denote the number of chickens as C and the number of cows as K.
-#**Step 2:** Chickens have 2 legs each, and cows have 4 legs each. We can create an equation based on the total number of legs:
-#2C (chicken legs) + 4K (cow legs) = 70 legs
-#**Step 3:** We also know that there are 20 animals in total:
-#C + K = 20
-#**Step 4:** Solve the second equation for one variable, let's say K:
-#K = 20 - C
-#**Step 5:** Substitute the expression for K in the first equation:
-#2C + 4(20 - C) = 70
-#**Step 6:** Simplify and solve for C:
-#2C + 80 - 4C = 70
-#-2C = -10
-#C = 5
-#**Conclusion:** There are 5 chickens on Farmer Brown's farm.
+#Let's use algebra to solve this problem. Let \( c \) represent the number of chickens and \( k \) represent the number of cows.
+
+#We know that:
+#1. The total number of animals is 20: \( c + k = 20 \)
+#2. Chickens have 2 legs each, and cows have 4 legs each, giving a total of 70 legs: \( 2c + 4k = 70 \)
+
+#Now, we can solve these equations simultaneously.
+
+#From equation 1, we can express \( k \) in terms of \( c \):
+\( k = 20 - c \)
+
+#Substitute \( k \) in equation 2:
+\( 2c + 4(20 - c) = 70 \)
+
+#Simplify and solve for \( c \):
+#\( 2c + 80 - 4c = 70 \)
+#\( -2c = -10 \)
+#\( c = 5 \)
+
+#So, there are 5 chickens on Farmer Brown's farm.
 ```
 
 ## Evaluation

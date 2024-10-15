@@ -18,8 +18,9 @@ ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml t
 
 Zero-shot results when using the [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) as the teacher model, and the [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) as the initialized model
 
-| Task         | [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) | Llama-Mamba2-0.5-3.2-3B-teacher-Llama-3.1-8B-Instruct-sft | Llama-Mamba2-0.5-3.2-3B-teacher-Llama-3.1-8B-Instruct-dpo |
-|--------------|-----------------|--------------------------------------------------------------|------------------------------------------------------------------|
+| Teacher Model | N/A                                                                             | Llama-3.1-8B-Instruct             | Llama-3.1-8B-Instruct             |
+|---------------|---------------------------------------------------------------------------------|-----------------------------------|-----------------------------------|
+| Model          | [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) | Llama-Mamba2-0.5-3.2-3B-sft       | Llama-Mamba2-0.5-3.2-3B-dpo       |
 | arc_challenge| 0.4352          | 0.4309                                                       | 0.5145                                                          |
 |              | 0.459           | 0.4608                                                       | 0.5222                                                          |
 | arc_easy     | 0.7407          | 0.7588                                                       | 0.7997                                                          |
