@@ -84,6 +84,17 @@ pip install torch --index-url https://download.pytorch.org/whl/cu118
 
 pip install causal-conv1d==1.4.0
 pip install flash-attn==2.6.3
+
+# make sure you use this alignment version
+git clone https://github.com/huggingface/alignment-handbook.git --branch 606d2e954fd17999af40e6fb4f712055ca11b2f0
+git clone https://github.com/huggingface/transformers.git --branch v4.43.1
+
+# check your version matches those
+# deepspeed==0.12.2
+# torch==2.1.1+cu118
+# transformers==4.43.1
+# trl==0.8.6
+# accelerate==0.33.0
 ```
 
 If you install mamba-ssm using `pip install mamba-ssm==2.2.2`, you will need to manually change `CONDA_ENV_PATH/site-packages/mamba_ssm/modules/mha.py` to [this version](https://github.com/state-spaces/mamba/blob/014c094d11f780a27330657faabecaaded7a31db/mamba_ssm/modules/mha.py) to support GQA, since GQA is used in Llama3. The **mamba-ssm** used in my experiment is from this [commit](https://github.com/state-spaces/mamba/tree/49ddf8321e4987650e8dc8dc44caa44b892f207a).
