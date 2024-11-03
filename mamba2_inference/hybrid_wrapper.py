@@ -100,6 +100,9 @@ class MambaTransformerHybridModelWrapper(nn.Module, GenerationMixin):
         merge_projections_for_layers(ckpt, self.attn_layers)
         self.model.load_state_dict(ckpt)
         self.model = self.model.to(dtype).cuda()
+        self.device = self.model.device
+        self.can_generate = self.model.can_generate
+        self.generation_config = self.model.generation_config
 
     def allocate_inference_cache(self, batch_size, max_seqlen, dtype=None, **kwargs):
         return {
@@ -166,3 +169,55 @@ class MambaTransformerHybridModelWrapper(nn.Module, GenerationMixin):
         config_path = os.path.join(save_directory, 'mamba_config.json')
         with open(config_path, 'w') as f:
             json.dump(self.mamba_config.__dict__, f, indent=4)
+
+    def get_memory_footprint(self):
+        return self.model.get_memory_footprint()
+
+    def generate(
+        self,
+        input_ids,
+        max_length=1024,
+        top_k=1,
+        top_p=0.0,
+        min_p=0.0,
+        temperature=1.0,
+        return_dict_in_generate=False,
+        output_scores=False,
+        **kwargs,
+    ):
+
+        if kwargs is not None:
+            max_new_tokens = kwargs.pop('max_new_tokens', None)
+            if max_new_tokens is not None:
+                max_length = max_new_tokens + input_ids.shape[1]
+            do_sample = kwargs.pop('do_sample', True)
+            if not do_sample:
+                top_k, top_p, min_p = 1, 0.0, 0.0
+            cg = kwargs.pop('cg', True)
+
+            eos_token_id = kwargs.pop('eos_token_id', None)
+            if eos_token_id is None:
+                eos_token_id = self.config.eos_token_id
+
+            attention_mask = kwargs.pop('attention_mask', None)
+            pad_token_id = kwargs.pop('pad_token_id', None)
+            no_repeat_ngram_size = kwargs.pop('no_repeat_ngram_size', None)
+            length_penalty = kwargs.pop('length_penalty', None)
+            num_return_sequences = kwargs.pop('num_return_sequences', None)
+            num_beams = kwargs.pop('num_beams', None)
+            low_memory = kwargs.pop('low_memory', None)
+            stopping_criteria = kwargs.pop('stopping_criteria', None)
+
+        return super().generate(
+            input_ids=input_ids,
+            max_length=max_length,
+            cg=cg,
+            top_k=top_k,
+            top_p=top_p,
+            min_p=min_p,
+            temperature=temperature,
+            return_dict_in_generate=return_dict_in_generate,
+            output_scores=output_scores,
+            eos_token_id=eos_token_id,
+            **kwargs,
+        )
