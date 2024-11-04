@@ -34,7 +34,9 @@ Check [this](mamba2_llama3.2_3B/README.md) for more details.
 
 Models are available [here](https://huggingface.co/collections/JunxiongWang/mamba2inllama32-3b-670ed6fcaddfb1834881e38b).
 
+
 | Model | MMLU <br> | AlpacaEval <br> (LC win against GPT-4) | MT-Bench <br> (scored by GPT-4) | GSM8K (0-shot) | [CRUX](https://crux-eval.github.io/) (0-shot) |
+|---------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|
 [Llama-3.2-Mamba2-0.5-3B-dpo-v2](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half_DPO_v2) | 53.12 | 22.08 | 6.81| 50.37 | 20.12 |
 
 ### Hybrid Mamba distilled from Llama3
