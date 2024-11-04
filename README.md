@@ -97,7 +97,10 @@ pip install causal-conv1d==1.4.0
 pip install flash-attn==2.6.3
 
 # make sure you use this alignment version
-git clone https://github.com/huggingface/alignment-handbook.git --branch 606d2e954fd17999af40e6fb4f712055ca11b2f0
+git clone https://github.com/huggingface/alignment-handbook.git
+cd alignment-handbook/
+git checkout 606d2e9
+
 git clone https://github.com/huggingface/transformers.git --branch v4.43.1
 
 # check your version matches those
