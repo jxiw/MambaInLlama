@@ -119,5 +119,5 @@ Please follow the instructions [here](https://github.com/jxiw/MambaInLlama/tree/
 
 For Mamba 2 models, you can just change the script path from `train_mamba/*.py` to `train_mamba2/*.py`.
 
-**After releasing our models, we found that using a larger teacher model and minimizing it with KL divergence loss leads to a better model in the SFT phase. Please check train_mamba/train_sft_distill.py, train_mamba2/train_sft_distill.py and our Mamba 3.2B for more details.**
+**After releasing our models, we found that using a larger teacher model and minimizing it with KL divergence loss leads to a better model in the distillation phase. Please check train_mamba/train_distill.py, train_mamba2/train_distill.py and our Mamba 3.2B for more details.**
 

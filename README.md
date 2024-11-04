@@ -7,13 +7,19 @@ This repository contains the code and released models for our paper.
     <img src="assets/mambainllama2.png" alt="MambaInLlama" style="height:200px; width:auto; margin-left: 10px;">
 </div>
 
-Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while preserving the generational quality with the best effort. Typically, you only need 8x80G A100 (with very **limited** resources) and run for 3 to 4 days to reproduce our results. Our approach can be used for both base models and chat models. If you don't want to do alignment or prefer not to use SFT/DPO at all, please refer to [this](mamba2_llama_stepwise/README.md) and in this case, you may consider using the base model instead of the chat model as teacher model and selecting the general web corpus dataset instead of the chat dataset.
+Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while preserving the generational quality with the best effort. Typically, you only need 8x80G A100 (with very **limited** resources) and run for 3 to 4 days to reproduce our results. Our approach can be used for both base models and chat models. 
+
+<!-- If you don't want to do alignment or prefer not to use SFT/DPO at all, please refer to [this](mamba2_llama_stepwise/README.md) and in this case, you may consider using the base model instead of the chat model as teacher model and selecting the general web corpus dataset instead of the chat dataset. -->
 
 ## Approach
 
 1. **Stepwise layer alignment** (Optional). Replace the attention layers by Mamba2, one by one in a stepwise manner.
 2. **End to end distillation** (Most important). Minimize KL divergence loss between the student and teacher models. You can consider to use a larger teacher model to get better results.
-3. **Instruction tuning** (Optional). For simplicity, we use DPO for this process.
+3. **Instruction tuning** (Optional). For simplicity, we use SFT + DPO for this process.
+
+## Evaluation
+
+Please follow the instructions [here](benchmark/README.md). Our evaluation includes: a. Standard tasks in [LM Eval](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/llm_eval), b. [Chat Benchmarks](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/alpaca_eval) and [here](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/mt_bench), c. Reasoning tasks [Math and Code Reasoning Benchmarks](https://github.com/jxiw/ZeroEval), and d. Long-range tasks, [NeedleInAHaystack](). Our goal is to provide a thorough evaluation and study.
 
 ## Changelog
 - **[2024.10.06]** We simplified the procedure and distilled the Hybrid Mamba2 3B model using the [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) as the teacher model, and the [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) as the initialized model. Check [this](mamba2_llama3.2_3B/README.md) for more details.
@@ -27,6 +33,9 @@ Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while pre
 Check [this](mamba2_llama3.2_3B/README.md) for more details.
 
 Models are available [here](https://huggingface.co/collections/JunxiongWang/mamba2inllama32-3b-670ed6fcaddfb1834881e38b).
+
+| Model | MMLU <br> | AlpacaEval <br> (LC win against GPT-4) | MT-Bench <br> (scored by GPT-4) | GSM8K (0-shot) | [CRUX](https://crux-eval.github.io/) (0-shot) |
+[Llama-3.2-Mamba2-0.5-3B-dpo-v2](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half_DPO_v2) | 53.12 | 22.08 | 6.81| 50.37 | 20.12 |
 
 ### Hybrid Mamba distilled from Llama3
 
@@ -238,10 +247,6 @@ print(generated_text[0])
 
 #So, there are 5 chickens on Farmer Brown's farm.
 ```
-
-## Evaluation
-
-Please follow the instructions [here](benchmark/README.md)
 
 ## Citation
 If you use this codebase, or otherwise found our work valuable, please cite:

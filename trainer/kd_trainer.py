@@ -50,7 +50,7 @@ class KDTrainer(SFTTrainer):
 
         if isinstance(teacher_model, str):
             warnings.warn(
-                "You passed a teacher model_id to the GKDTrainer. This will automatically create an "
+                "You passed a teacher model_id to the KDTrainer. This will automatically create an "
                 "`AutoModelForCausalLM`"
             )
             print("teacher_model_init_kwargs:", teacher_model_init_kwargs)
