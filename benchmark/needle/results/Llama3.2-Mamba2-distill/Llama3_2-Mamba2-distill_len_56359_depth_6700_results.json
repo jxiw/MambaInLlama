@@ -1,0 +1,1 @@
+{"model": "JunxiongWang/Mamba2InLlama3B_Half", "context_length": 56359, "depth_percent": 67.0, "version": 1, "needle": "\nThe best thing to do in San Francisco is eat a sandwich and sit in Dolores Park on a sunny day.\n", "model_response": "Hack.", "score": 0.0, "test_duration_seconds": 9.003306865692139, "test_timestamp_utc": "2024-11-14 09:06:57+0000"}

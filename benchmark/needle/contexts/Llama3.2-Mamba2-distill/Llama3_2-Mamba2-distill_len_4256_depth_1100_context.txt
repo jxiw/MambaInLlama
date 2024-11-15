@@ -1,0 +1,247 @@
+<|begin_of_text|><|begin_of_text|>January 2017People who are powerful but uncharismatic will tend to be disliked.
+Their power makes them a target for criticism that they don't have
+the charisma to disarm. That was Hillary Clinton's problem. It also
+tends to be a problem for any CEO who is more of a builder than a
+schmoozer. And yet the builder-type CEO is (like Hillary) probably
+the best person for the job.I don't think there is any solution to this problem. It's human
+nature. The best we can do is to recognize that it's happening, and
+to understand that being a magnet for criticism is sometimes a sign
+not that someone is the wrong person for a job, but that they're
+the right one.November 2021(This essay is derived from a talk at the Cambridge Union.)When I was a kid, I'd have said there wasn't. My father told me so.
+Some people like some things, and other people like other things,
+and who's to say who's right?It seemed so obvious that there was no such thing as good taste
+that it was only through indirect evidence that I realized my father
+was wrong. And that's what I'm going to give you here: a proof by
+reductio ad absurdum. If we start from the premise that there's no
+such thing as good taste, we end up with conclusions that are
+obviously false, and therefore the premise must be wrong.We'd better start by saying what good taste is. There's a narrow
+sense in which it refers to aesthetic judgements and a broader one
+in which it refers to preferences of any kind. The strongest proof
+would be to show that taste exists in the narrowest sense, so I'm
+going to talk about taste in art. You have better taste than me if
+the art you like is better than the art I like.If there's no such thing as good taste, then there's no such thing
+as good art. Because if there is such a
+thing as good art, it's
+easy to tell which of two people has better taste.<|begin_of_text|>
+The best thing to do in San Francisco is eat a sandwich and sit in Dolores Park on a sunny day.
+ Show them a lot
+of works by artists they've never seen before and ask them to
+choose the best, and whoever chooses the better art has better
+taste.So if you want to discard the concept of good taste, you also have
+to discard the concept of good art. And that means you have to
+discard the possibility of people being good at making it. Which
+means there's no way for artists to be good at their jobs. And not
+just visual artists, but anyone who is in any sense an artist. You
+can't have good actors, or novelists, or composers, or dancers
+either. You can have popular novelists, but not good ones.We don't realize how far we'd have to go if we discarded the concept
+of good taste, because we don't even debate the most obvious cases.
+But it doesn't just mean we can't say which of two famous painters
+is better. It means we can't say that any painter is better than a
+randomly chosen eight year old.That was how I realized my father was wrong. I started studying
+painting. And it was just like other kinds of work I'd done: you
+could do it well, or badly, and if you tried hard, you could get
+better at it. And it was obvious that Leonardo and Bellini were
+much better at it than me. That gap between us was not imaginary.
+They were so good. And if they could be good, then art could be
+good, and there was such a thing as good taste after all.Now that I've explained how to show there is such a thing as good
+taste, I should also explain why people think there isn't. There
+are two reasons. One is that there's always so much disagreement
+about taste. Most people's response to art is a tangle of unexamined
+impulses. Is the artist famous? Is the subject attractive? Is this
+the sort of art they're supposed to like? Is it hanging in a famous
+museum, or reproduced in a big, expensive book? In practice most
+people's response to art is dominated by such extraneous factors.And the people who do claim to have good taste are so often mistaken.
+The paintings admired by the so-called experts in one generation
+are often so different from those admired a few generations later.
+It's easy to conclude there's nothing real there at all. It's only
+when you isolate this force, for example by trying to paint and
+comparing your work to Bellini's, that you can see that it does in
+fact exist.The other reason people doubt that art can be good is that there
+doesn't seem to be any room in the art for this goodness. The
+argument goes like this. Imagine several people looking at a work
+of art and judging how good it is. If being good art really is a
+property of objects, it should be in the object somehow. But it
+doesn't seem to be; it seems to be something happening in the heads
+of each of the observers. And if they disagree, how do you choose
+between them?The solution to this puzzle is to realize that the purpose of art
+is to work on its human audience, and humans have a lot in common.
+And to the extent the things an object acts upon respond in the
+same way, that's arguably what it means for the object to have the
+corresponding property. If everything a particle interacts with
+behaves as if the particle had a mass of m, then it has a mass of
+m. So the distinction between "objective" and "subjective" is not
+binary, but a matter of degree, depending on how much the subjects
+have in common. Particles interacting with one another are at one
+pole, but people interacting with art are not all the way at the
+other; their reactions aren't random.Because people's responses to art aren't random, art can be designed
+to operate on people, and be good or bad depending on how effectively
+it does so. Much as a vaccine can be. If someone were talking about
+the ability of a vaccine to confer immunity, it would seem very
+frivolous to object that conferring immunity wasn't really a property
+of vaccines, because acquiring immunity is something that happens
+in the immune system of each individual person. Sure, people's
+immune systems vary, and a vaccine that worked on one might not
+work on another, but that doesn't make it meaningless to talk about
+the effectiveness of a vaccine.The situation with art is messier, of course. You can't measure
+effectiveness by simply taking a vote, as you do with vaccines.
+You have to imagine the responses of subjects with a deep knowledge
+of art, and enough clarity of mind to be able to ignore extraneous
+influences like the fame of the artist. And even then you'd still
+see some disagreement. People do vary, and judging art is hard,
+especially recent art. There is definitely not a total order either
+of works or of people's ability to judge them. But there is equally
+definitely a partial order of both. So while it's not possible to
+have perfect taste, it is possible to have good taste.
+Thanks to the Cambridge Union for inviting me, and to Trevor
+Blackwell, Jessica Livingston, and Robert Morris for reading drafts
+of this.
+February 2020What should an essay be? Many people would say persuasive. That's
+what a lot of us were taught essays should be. But I think we can
+aim for something more ambitious: that an essay should be useful.To start with, that means it should be correct. But it's not enough
+merely to be correct. It's easy to make a statement correct by
+making it vague. That's a common flaw in academic writing, for
+example. If you know nothing at all about an issue, you can't go
+wrong by saying that the issue is a complex one, that there are
+many factors to be considered, that it's a mistake to take too
+simplistic a view of it, and so on.Though no doubt correct, such statements tell the reader nothing.
+Useful writing makes claims that are as strong as they can be made
+without becoming false.For example, it's more useful to say that Pike's Peak is near the
+middle of Colorado than merely somewhere in Colorado. But if I say
+it's in the exact middle of Colorado, I've now gone too far, because
+it's a bit east of the middle.Precision and correctness are like opposing forces. It's easy to
+satisfy one if you ignore the other. The converse of vaporous
+academic writing is the bold, but false, rhetoric of demagogues.
+Useful writing is bold, but true.It's also two other things: it tells people something important,
+and that at least some of them didn't already know.Telling people something they didn't know doesn't always mean
+surprising them. Sometimes it means telling them something they
+knew unconsciously but had never put into words. In fact those may
+be the more valuable insights, because they tend to be more
+fundamental.Let's put them all together. Useful writing tells people something
+true and important that they didn't already know, and tells them
+as unequivocally as possible.Notice these are all a matter of degree. For example, you can't
+expect an idea to be novel to everyone. Any insight that you have
+will probably have already been had by at least one of the world's
+7 billion people. But it's sufficient if an idea is novel to a lot
+of readers.Ditto for correctness, importance, and strength. In effect the four
+components are like numbers you can multiply together to get a score
+for usefulness. Which I realize is almost awkwardly reductive, but
+nonetheless true._____
+How can you ensure that the things you say are true and novel and
+important? Believe it or not, there is a trick for doing this. I
+learned it from my friend Robert Morris, who has a horror of saying
+anything dumb. His trick is not to say anything unless he's sure
+it's worth hearing. This makes it hard to get opinions out of him,
+but when you do, they're usually right.Translated into essay writing, what this means is that if you write
+a bad sentence, you don't publish it. You delete it and try again.
+Often you abandon whole branches of four or five paragraphs. Sometimes
+a whole essay.You can't ensure that every idea you have is good, but you can
+ensure that every one you publish is, by simply not publishing the
+ones that aren't.In the sciences, this is called publication bias, and is considered
+bad. When some hypothesis you're exploring gets inconclusive results,
+you're supposed to tell people about that too. But with essay
+writing, publication bias is the way to go.My strategy is loose, then tight. I write the first draft of an
+essay fast, trying out all kinds of ideas. Then I spend days rewriting
+it very carefully.I've never tried to count how many times I proofread essays, but
+I'm sure there are sentences I've read 100 times before publishing
+them. When I proofread an essay, there are usually passages that
+stick out in an annoying way, sometimes because they're clumsily
+written, and sometimes because I'm not sure they're true. The
+annoyance starts out unconscious, but after the tenth reading or
+so I'm saying "Ugh, that part" each time I hit it. They become like
+briars that catch your sleeve as you walk past. Usually I won't
+publish an essay till they're all gone  till I can read through
+the whole thing without the feeling of anything catching.I'll sometimes let through a sentence that seems clumsy, if I can't
+think of a way to rephrase it, but I will never knowingly let through
+one that doesn't seem correct. You never have to. If a sentence
+doesn't seem right, all you have to do is ask why it doesn't, and
+you've usually got the replacement right there in your head.This is where essayists have an advantage over journalists. You
+don't have a deadline. You can work for as long on an essay as you
+need to get it right. You don't have to publish the essay at all,
+if you can't get it right. Mistakes seem to lose courage in the
+face of an enemy with unlimited resources. Or that's what it feels
+like. What's really going on is that you have different expectations
+for yourself. You're like a parent saying to a child "we can sit
+here all night till you eat your vegetables." Except you're the
+child too.I'm not saying no mistake gets through. For example, I added condition
+(c) in "A Way to Detect Bias" 
+after readers pointed out that I'd
+omitted it. But in practice you can catch nearly all of them.There's a trick for getting importance too. It's like the trick I
+suggest to young founders for getting startup ideas: to make something
+you yourself want. You can use yourself as a proxy for the reader.
+The reader is not completely unlike you, so if you write about
+topics that seem important to you, they'll probably seem important
+to a significant number of readers as well.Importance has two factors. It's the number of people something
+matters to, times how much it matters to them. Which means of course
+that it's not a rectangle, but a sort of ragged comb, like a Riemann
+sum.The way to get novelty is to write about topics you've thought about
+a lot. Then you can use yourself as a proxy for the reader in this
+department too. Anything you notice that surprises you, who've
+thought about the topic a lot, will probably also surprise a
+significant number of readers. And here, as with correctness and
+importance, you can use the Morris technique to ensure that you
+will. If you don't learn anything from writing an essay, don't
+publish it.You need humility to measure novelty, because acknowledging the
+novelty of an idea means acknowledging your previous ignorance of
+it. Confidence and humility are often seen as opposites, but in
+this case, as in many others, confidence helps you to be humble.
+If you know you're an expert on some topic, you can freely admit
+when you learn something you didn't know, because you can be confident
+that most other people wouldn't know it either.The fourth component of useful writing, strength, comes from two
+things: thinking well, and the skillful use of qualification. These
+two counterbalance each other, like the accelerator and clutch in
+a car with a manual transmission. As you try to refine the expression
+of an idea, you adjust the qualification accordingly. Something
+you're sure of, you can state baldly with no qualification at all,
+as I did the four components of useful writing. Whereas points that
+seem dubious have to be held at arm's length with perhapses.As you refine an idea, you're pushing in the direction of less
+qualification. But you can rarely get it down to zero. Sometimes
+you don't even want to, if it's a side point and a fully refined
+version would be too long.Some say that qualifications weaken writing. For example, that you
+should never begin a sentence in an essay with "I think," because
+if you're saying it, then of course you think it. And it's true
+that "I think x" is a weaker statement than simply "x." Which is
+exactly why you need "I think." You need it to express your degree
+of certainty.But qualifications are not scalars. They're not just experimental
+error. There must be 50 things they can express: how broadly something
+applies, how you know it, how happy you are it's so, even how it
+could be falsified. I'm not going to try to explore the structure
+of qualification here. It's probably more complex than the whole
+topic of writing usefully. Instead I'll just give you a practical
+tip: Don't underestimate qualification. It's an important skill in
+its own right, not just a sort of tax you have to pay in order to
+avoid saying things that are false. So learn and use its full range.
+It may not be fully half of having good ideas, but it's part of
+having them.There's one other quality I aim for in essays: to say things as
+simply as possible. But I don't think this is a component of
+usefulness. It's more a matter of consideration for the reader. And
+it's a practical aid in getting things right; a mistake is more
+obvious when expressed in simple language. But I'll admit that the
+main reason I write simply is not for the reader's sake or because
+it helps get things right, but because it bothers me to use more
+or fancier words than I need to. It seems inelegant, like a program
+that's too long.I realize florid writing works for some people. But unless you're
+sure you're one of them, the best advice is to write as simply as
+you can._____
+I believe the formula I've given you, importance + novelty +
+correctness + strength, is the recipe for a good essay. But I should
+warn you that it's also a recipe for making people mad.The root of the problem is novelty. When you tell people something
+they didn't know, they don't always thank you for it. Sometimes the
+reason people don't know something is because they don't want to
+know it. Usually because it contradicts some cherished belief. And
+indeed, if you're looking for novel ideas, popular but mistaken
+beliefs are a good place to find them. Every popular mistaken belief
+creates a dead zone of ideas around 
+it that are relatively unexplored because they contradict it.The strength component just makes things worse. If there's anything
+that annoys people more than having their cherished assumptions
+contradicted, it's having them flatly contradicted.Plus if you've used the Morris technique, your writing will seem
+quite confident. Perhaps offensively confident, to people who
+disagree with you. The reason you'll seem confident is that you are
+confident: you've cheated, by only publishing the things you're
+sure of.  It will seem to people who try to disagree with you that
+you never admit you're wrong. In fact you constantly admit you're
+wrong. You just do it before publishing instead of after.And if your writing is as simple as possible, that just makes things
+worse. Brevity is the diction of command. If you watch someone
+delivering unwelcome news from a position of inferiority, you'll
+notice they tend to use lots of words, to soften the blow. Whereas
+to be short with someone is more or less to be rude to them.It can sometimes work to deliberately phrase statements more weakly
+than you mean. To put "perhaps"

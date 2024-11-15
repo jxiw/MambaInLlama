@@ -1,0 +1,1 @@
+{"model": "meta-llama/Llama-3.2-3B-Instruct", "context_length": 30308, "depth_percent": 78.0, "version": 1, "needle": "\nThe best thing to do in San Francisco is eat a sandwich and sit in Dolores Park on a sunny day.\n", "model_response": "Get funded by Y Combinator.", "score": 0.0, "test_duration_seconds": 1.0864129066467285, "test_timestamp_utc": "2024-11-14 20:45:05+0000"}
