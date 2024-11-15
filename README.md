@@ -19,7 +19,7 @@ Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while pre
 
 ## Evaluation
 
-Please follow the instructions [here](benchmark/README.md). Our evaluation includes: a. Standard tasks in [LM Eval](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/llm_eval), b. [Chat Benchmarks](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/alpaca_eval) and [here](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/mt_bench), c. Reasoning tasks [Math and Code Reasoning Benchmarks](https://github.com/jxiw/ZeroEval), and d. Long-range tasks, [NeedleInAHaystack](). Our goal is to provide a thorough evaluation and study.
+Please follow the instructions [here](benchmark/README.md). Our evaluation includes: a. Standard tasks in [LM Eval](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/llm_eval), b. [Chat Benchmarks](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/alpaca_eval) and [here](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/mt_bench), c. Reasoning tasks [Math and Code Reasoning Benchmarks](https://github.com/jxiw/ZeroEval), and d. Long-range tasks, [NeedleInAHaystack](benchmark/needle/README.md). Our goal is to provide a thorough evaluation and study.
 
 ## Changelog
 - **[2024.10.06]** We simplified the procedure and distilled the Hybrid Mamba2 3B model using the [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) as the teacher model, and the [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) as the initialized model. Check [this](mamba2_llama3.2_3B/README.md) for more details.
@@ -28,16 +28,33 @@ Please follow the instructions [here](benchmark/README.md). Our evaluation inclu
 
 ## Released Models
 
+### Hybrid Mamba (8B) distilled from Llama3.1 8B
+
+Check [this](llama3.1_8B/README.md) for more details.
+
+Models are available [here](https://huggingface.co/collections/JunxiongWang/mambainllama-distill-6737cbebfd1af6c3bd75a06c).
+
+| Model | MMLU (0-shot) <br> | AlpacaEval <br> (Win against GPT-4) | MT-Bench <br> (scored by GPT-4) | GSM8K (0-shot) | [CRUX](https://crux-eval.github.io/) (0-shot) | 
+|---------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|
+[Llama3.1-Mamba2-8B-distill](https://huggingface.co/JunxiongWang/Llama3.1-Mamba2-8B-distill) | 61.01 | 21.22 | 7.5 | 40.65 | 32.50 |
+[Llama3.1-Mamba-8B-distill](https://huggingface.co/JunxiongWang/Llama3.1-Mamba-8B-distill)  | 62.13 | 21.55 | 7.7 | 67.15 | 34.12 |
+
+These models are trained without using SFT + DPO. We find that with DPO, you can achieve significantly higher scores on the common sense task in LM evaluation benchmark or AlpacaEval. However, it may result in lower scores on reasoning benchmarks and long-range tasks, such as 'needle in a haystack'. Therefore, it is unclear whether this actually makes the model better.
+
 ### Hybrid Mamba (3B) distilled from Llama3.2 3B
 
 Check [this](mamba2_llama3.2_3B/README.md) for more details.
 
-Models are available [here](https://huggingface.co/collections/JunxiongWang/mamba2inllama32-3b-670ed6fcaddfb1834881e38b).
+Models are available [here](https://huggingface.co/collections/JunxiongWang/mambainllama-distill-6737cbebfd1af6c3bd75a06c).
 
-
-| Model | MMLU <br> | AlpacaEval <br> (LC win against GPT-4) | MT-Bench <br> (scored by GPT-4) | GSM8K (0-shot) | [CRUX](https://crux-eval.github.io/) (0-shot) |
+| Model | MMLU <br> | AlpacaEval <br> (Win against GPT-4) | MT-Bench <br> (scored by GPT-4) | GSM8K (0-shot) | [CRUX](https://crux-eval.github.io/) (0-shot) | 
 |---------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|
-[Llama-3.2-Mamba2-0.5-3B-dpo-v2](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half_DPO_v2) | 53.12 | 22.08 | 6.81| 50.37 | 20.12 |
+[Llama3.2-Mamba2-3B-distill](https://huggingface.co/JunxiongWang/Llama3.2-Mamba2-3B-distill) | 53.12 | 14.34 | 6.7 | 49.37 | 23.38 |
+[Llama3.2-Mamba-3B-distill](https://huggingface.co/JunxiongWang/Llama3.2-Mamba-3B-distill)  | 54.50 | 15.54 | 7.2 | 62.93 | 25.75 |
+
+Needle In A Haystack
+
+<img src="benchmark/needle/img/needle.png" alt="needle">
 
 ### Hybrid Mamba distilled from Llama3
 
@@ -91,7 +108,7 @@ We provide an [environment file](environment.yml) that lists the specific Python
 # CUDA>=11.6 needed for `mamba-ssm` and `causal-conv1d`.
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
 # Install PyTorch (with CUDA 11.8) before everything else. those assume you are using cu118
-pip install torch --index-url https://download.pytorch.org/whl/cu118
+pip install torch==2.1.1+cu118 --index-url https://download.pytorch.org/whl/cu118
 
 pip install causal-conv1d==1.4.0
 pip install flash-attn==2.6.3
