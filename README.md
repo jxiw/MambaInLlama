@@ -34,7 +34,7 @@ Check [this](llama3.1_8B/README.md) for more details.
 
 Models are available [here](https://huggingface.co/collections/JunxiongWang/mambainllama-distill-6737cbebfd1af6c3bd75a06c).
 
-| Model | MMLU (0-shot) <br> | AlpacaEval <br> (Win against GPT-4) | MT-Bench <br> (scored by GPT-4) | GSM8K (0-shot) | [CRUX](https://crux-eval.github.io/) (0-shot) | 
+| Model | MMLU (0-shot) <br> | AlpacaEval <br> (Win against GPT-4) | MT-Bench <br> (scored by GPT-4) | GSM8K (0-shot) | [CRUX](https://huggingface.co/spaces/allenai/ZeroEval) (0-shot) | 
 |---------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|
 [Llama3.1-Mamba2-8B-distill](https://huggingface.co/JunxiongWang/Llama3.1-Mamba2-8B-distill) | 61.01 | 21.22 | 7.5 | 40.65 | 32.50 |
 [Llama3.1-Mamba-8B-distill](https://huggingface.co/JunxiongWang/Llama3.1-Mamba-8B-distill)  | 62.13 | 21.55 | 7.7 | 67.15 | 34.12 |
@@ -47,12 +47,12 @@ Check [this](mamba2_llama3.2_3B/README.md) for more details.
 
 Models are available [here](https://huggingface.co/collections/JunxiongWang/mambainllama-distill-6737cbebfd1af6c3bd75a06c).
 
-| Model | MMLU <br> | AlpacaEval <br> (Win against GPT-4) | MT-Bench <br> (scored by GPT-4) | GSM8K (0-shot) | [CRUX](https://crux-eval.github.io/) (0-shot) | 
+| Model | MMLU (0-shot) <br> | AlpacaEval <br> (Win against GPT-4) | MT-Bench <br> (scored by GPT-4) | GSM8K (0-shot) | [CRUX](https://huggingface.co/spaces/allenai/ZeroEval) (0-shot) | 
 |---------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|
 [Llama3.2-Mamba2-3B-distill](https://huggingface.co/JunxiongWang/Llama3.2-Mamba2-3B-distill) | 53.12 | 14.34 | 6.7 | 49.37 | 23.38 |
 [Llama3.2-Mamba-3B-distill](https://huggingface.co/JunxiongWang/Llama3.2-Mamba-3B-distill)  | 54.50 | 15.54 | 7.2 | 62.93 | 25.75 |
 
-Needle In A Haystack
+Needle In A Haystack. The distillation training length is 2k.
 
 <img src="benchmark/needle/img/needle.png" alt="needle">
 
