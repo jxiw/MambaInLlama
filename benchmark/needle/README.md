@@ -16,5 +16,4 @@ Notice that, during the distillation, we only train model with 2k context.
 
 Here is the results
 
-<img src="img/needle.png" alt="needle" style="height:200px; width:auto; margin-right: 10px;">
-```
+<img src="img/needle.png" alt="needle">
