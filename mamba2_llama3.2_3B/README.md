@@ -20,7 +20,7 @@ If you run DPO, you are able to get a model like [this](https://huggingface.co/J
 
 Zero-shot results when using the [Llama-3.1-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct) as the teacher model, and the [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) as the initialized model
 
-| Model          | [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) | [Llama-3.2-Mamba2-0.5-3B-sft](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half)       | [Llama-3.2-Mamba2-0.5-3B-dpo](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half_DPO)       |
+| Model          | [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) | [Llama3.2-Mamba2-3B-distill](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half)       | [Llama-3.2-Mamba2-0.5-3B-dpo](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half_DPO)       |
 |---------------|---------------------------------------------------------------------------------|-----------------------------------|-----------------------------------|
 | Initialization Model | N/A                                                                             | Llama-3.2-3B-Instruct             | Llama-3.2-3B-Instruct             |
 | Teacher Model | N/A                                                                             | Llama-3.1-70B-Instruct             | Llama-3.1-70B-Instruct             |
