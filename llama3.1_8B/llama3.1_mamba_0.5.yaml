@@ -1,8 +1,8 @@
 # Model arguments
-model_name_or_path: meta-llama/Llama-3.2-3B-Instruct
+model_name_or_path: meta-llama/Llama-3.1-8B-Instruct
 teacher_model_name_or_path: meta-llama/Llama-3.1-70B-Instruct
 with_distill: false
-ssm_layers: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26]
+ssm_layers: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
 init_with_kqvo: true
 decontaminate: true
 torch_dtype: bfloat16
@@ -33,7 +33,7 @@ lr_scheduler_type: cosine
 max_seq_length: 2048
 max_steps: -1
 num_train_epochs: 1
-output_dir: Llama3.2-Mamba2-3B-distill
+output_dir: Llama3.1-Mamba-8B-distill
 overwrite_output_dir: true
 per_device_eval_batch_size: 4
 per_device_train_batch_size: 2
