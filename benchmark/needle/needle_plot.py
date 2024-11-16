@@ -17,9 +17,9 @@ model_configs = [
 
 def load_data(config):
     json_files = glob.glob(f"{config['folder']}*.json")
-    data = []
-    # plot_max_length = 64 * 1000 
-    plot_max_length = 60 * 1000
+    data = [] 
+    plot_max_length = 36 * 1000
+    # plot_max_length = 60 * 1000
     expected_answer = "eat a sandwich and sit in Dolores Park on a sunny day.".lower().split()
     
     for file in json_files:
@@ -46,7 +46,8 @@ def create_heatmap(df, ax, title, pretrain_length):
 def main():
     fig, axes = plt.subplots(nrows=2, ncols=3, figsize=(15, 9))
     y_labels = ['0%', '', '', '33%', '', '', '67%', '', '', '100%']
-    x_labels = ['1K', '', '8k', '', '', '16k', '', '', '', '', '32k', '', '', '', '', '', '', '', '60k']
+    x_labels = ['1K', '', '8k', '', '', '16k', '', '', '', '', '36k']
+    # x_labels = ['1K', '', '8k', '', '', '16k', '', '', '', '', '32k', '', '', '', '', '', '', '', '60k']
     # x_labels = ['1K', '', '8k', '', '', '16k', '', '', '', '', '32k', '', '', '', '', '', '', '', '', '64K']
     
     for ax, config in zip(axes.flatten(), model_configs):
