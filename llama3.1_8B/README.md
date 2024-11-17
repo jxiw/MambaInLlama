@@ -11,25 +11,24 @@ This process roughly takes takes 8 to 9 days in 8xA100, 4 days in 8xH100.
 2. (Optional) Align the SFT model using DPO.
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba2/train_distill.py mamba2_llama3.2_3B/large_llama3_ft_mamba2_0.5_dpo.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba2/train_distill.py llama3.2_8B/llama3.1_mamba2_0.5_dpo.yaml
 ```
 
 If you run DPO, you are able to get a model like [this](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half_DPO). 
 
-Zero-shot results when using the [Llama-3.1-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct) as the teacher model, and the [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) as the initialized model
+Zero-shot results when using the [Llama-3.1-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct) as the teacher model, and the [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) as the initialized model
 
-| Model          | [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) | [Llama-3.2-Mamba2-0.5-3B](https://huggingface.co/JunxiongWang/Llama3.1-Mamba-8B-distill)       | [Llama-3.2-Mamba2-0.5-3B-dpo](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half_DPO)       |
-|---------------|---------------------------------------------------------------------------------|-----------------------------------|-----------------------------------|
-| Initialization Model | N/A                                                                             | Llama-3.1-8B-Instruct             | Llama-3.1-8B-Instruct             |
-| Teacher Model | N/A                                                                             | Llama-3.1-70B-Instruct             | Llama-3.1-70B-Instruct             |
-| arc_challenge   | 0.459                                                                           | 0.4667                                                            | 0.541                                                                 |
-| arc_easy        | 0.7407                                                                          | 0.7668                                                            | 0.8026                                                                |                                                               |
-| hellaswag       | 0.7043                                                                          | 0.6913                                                            | 0.7445                                                                |
-| mmlu            | 0.6043                                                                          | 0.5271                                                            | 0.5247                                                                |
-| openbookqa      | 0.36                                                                            | 0.388                                                             | 0.424                                                                 |
-| piqa            | 0.7568                                                                          | 0.7601                                                            | 0.7769                                                                |
-| pubmedqa        | 0.696                                                                           | 0.638                                                             | 0.654                                                                 |
-| race            | 0.4067                                                                          | 0.3981                                                            | 0.4344                                                                |
-| winogrande      | 0.6748                                                                          | 0.6606                                                            | 0.6732                                                                |
-
-We are removing more attention during the process, while keeping it in torch.
+| Model          | [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) | [Llama-3.1-Mamba-0.5-8B](https://huggingface.co/JunxiongWang/Llama3.1-Mamba-8B-distill)       | [Llama-3.1-Mamba-0.5-8B-dpo](https://huggingface.co/JunxiongWang/Llama3.1-Mamba-8B-dpo)       | [Llama-3.1-Mamba2-0.5-8B](https://huggingface.co/JunxiongWang/Llama3.1-Mamba2-8B-distill)       | [Llama-3.1-Mamba2-0.5-8B-dpo](https://huggingface.co/JunxiongWang/Llama3.1-Mamba-8B-dpo)       |
+|---------------|---------------------------------------------------------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
+| Initialization Model | N/A                                                                             | Llama-3.1-8B-Instruct             | Llama-3.1-8B-Instruct             | Llama-3.1-8B-Instruct             | Llama-3.1-8B-Instruct             |
+| Teacher Model | N/A                                                                             | Llama-3.1-70B-Instruct             | Llama-3.1-70B-Instruct             | Llama-3.1-70B-Instruct             | Llama-3.1-70B-Instruct             |
+| arc_challenge       | 0.552                 | 0.5384                   | 0.5657                | 0.5265                    | 0.5973                |
+| arc_easy            | 0.8178                | 0.8224                   | 0.8401                | 0.822                     | 0.8481                |
+| hellaswag           | 0.7921                | 0.7591                   | 0.7736                | 0.7536                    | 0.7969                |
+| mmlu (0 shot)       | 0.6812                | 0.6213                   | 0.636                 | 0.6101                    | 0.5974                |
+| openbookqa          | 0.432                 | 0.428                    | 0.442                 | 0.416                     | 0.44                  |
+| piqa                | 0.8079                | 0.7933                   | 0.8041                | 0.7889                    | 0.8003                |
+| pubmedqa            | 0.752                 | 0.72                     | 0.744                 | 0.726                     | 0.746                 |
+| race                | 0.4478                | 0.4211                   | 0.4344                | 0.4211                    | 0.4612                |
+| winogrande          | 0.7388                | 0.7277                   | 0.738                 | 0.7174                    | 0.7411                |
+| truthful            | 0.4267                | 0.4002                   | 0.4607                | 0.4031                    | 0.5022                |

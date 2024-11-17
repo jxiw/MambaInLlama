@@ -8,7 +8,7 @@ ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml t
 
 This process roughly takes takes 8 to 9 days in 8xA100, 4 days in 8xH100.
 
-The ```train_sft_distill.py``` script allows you to initialize your Mamba model with a transformer model of the similar size (same layers), but distill it from a larger teacher model. You can also consider using [Llama-3.1-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct).
+The ```train_distill.py``` script allows you to initialize your Mamba model with a transformer model of the similar size (same layers), but distill it from a larger teacher model. You can also consider using [Llama-3.1-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct).
 
 2. (Optional) Align the SFT model using DPO.
 
