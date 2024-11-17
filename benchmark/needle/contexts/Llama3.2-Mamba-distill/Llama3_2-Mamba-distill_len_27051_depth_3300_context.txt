@@ -1,0 +1,1696 @@
+<|begin_of_text|><|begin_of_text|>December 2014I've read Villehardouin's chronicle of the Fourth Crusade at least
+two times, maybe three.  And yet if I had to write down everything
+I remember from it, I doubt it would amount to much more than a
+page.  Multiply this times several hundred, and I get an uneasy
+feeling when I look at my bookshelves. What use is it to read all
+these books if I remember so little from them?A few months ago, as I was reading Constance Reid's excellent
+biography of Hilbert, I figured out if not the answer to this
+question, at least something that made me feel better about it.
+She writes:
+
+  Hilbert had no patience with mathematical lectures which filled
+  the students with facts but did not teach them how to frame a
+  problem and solve it. He often used to tell them that "a perfect
+  formulation of a problem is already half its solution."
+
+That has always seemed to me an important point, and I was even
+more convinced of it after hearing it confirmed by Hilbert.But how had I come to believe in this idea in the first place?  A
+combination of my own experience and other things I'd read.  None
+of which I could at that moment remember!  And eventually I'd forget
+that Hilbert had confirmed it too.  But my increased belief in the
+importance of this idea would remain something I'd learned from
+this book, even after I'd forgotten I'd learned it.Reading and experience train your model of the world.  And even if
+you forget the experience or what you read, its effect on your model
+of the world persists.  Your mind is like a compiled program you've
+lost the source of.  It works, but you don't know why.The place to look for what I learned from Villehardouin's chronicle
+is not what I remember from it, but my mental models of the crusades,
+Venice, medieval culture, siege warfare, and so on.  Which doesn't
+mean I couldn't have read more attentively, but at least the harvest
+of reading is not so miserably small as it might seem.This is one of those things that seem obvious in retrospect.  But
+it was a surprise to me and presumably would be to anyone else who
+felt uneasy about (apparently) forgetting so much they'd read.Realizing it does more than make you feel a little better about
+forgetting, though.  There are specific implications.For example, reading and experience are usually "compiled" at the
+time they happen, using the state of your brain at that time.  The
+same book would get compiled differently at different points in
+your life.  Which means it is very much worth reading important
+books multiple times.  I always used to feel some misgivings about
+rereading books.  I unconsciously lumped reading together with work
+like carpentry, where having to do something again is a sign you
+did it wrong the first time.  Whereas now the phrase "already read"
+seems almost ill-formed.Intriguingly, this implication isn't limited to books.  Technology
+will increasingly make it possible to relive our experiences.  When
+people do that today it's usually to enjoy them again (e.g. when
+looking at pictures of a trip) or to find the origin of some bug in
+their compiled code (e.g. when Stephen Fry succeeded in remembering
+the childhood trauma that prevented him from singing).  But as
+technologies for recording and playing back your life improve, it
+may become common for people to relive experiences without any goal
+in mind, simply to learn from them again as one might when rereading
+a book.Eventually we may be able not just to play back experiences but
+also to index and even edit them. So although not knowing how you
+know things may seem part of being human, it may not be.
+Thanks to Sam Altman, Jessica Livingston, and Robert Morris for reading 
+drafts of this.April 2012A palliative care nurse called Bronnie Ware made a list of the
+biggest regrets
+of the dying.  Her list seems plausible.  I could see
+myself — can see myself — making at least 4 of these
+5 mistakes.If you had to compress them into a single piece of advice, it might
+be: don't be a cog.  The 5 regrets paint a portrait of post-industrial
+man, who shrinks himself into a shape that fits his circumstances,
+then turns dutifully till he stops.The alarming thing is, the mistakes that produce these regrets are
+all errors of omission.  You forget your dreams, ignore your family,
+suppress your feelings, neglect your friends, and forget to be
+happy.  Errors of omission are a particularly dangerous type of
+mistake, because you make them by default.I would like to avoid making these mistakes.  But how do you avoid
+mistakes you make by default?  Ideally you transform your life so
+it has other defaults.  But it may not be possible to do that
+completely. As long as these mistakes happen by default, you probably
+have to be reminded not to make them.  So I inverted the 5 regrets,
+yielding a list of 5 commands
+
+   Don't ignore your dreams; don't work too much; say what you
+   think; cultivate friendships; be happy.
+
+which I then put at the top of the file I use as a todo list.November 2005In the next few years, venture capital funds will find themselves
+squeezed from four directions.  They're already stuck with a seller's
+market, because of the huge amounts they raised at the end of the
+Bubble and still haven't invested.  This by itself is not the end
+of the world.  In fact, it's just a more extreme version of the
+norm
+in the VC business: too much money chasing too few deals.Unfortunately, those few deals now want less and less money, because
+it's getting so cheap to start a startup.  The four causes: open
+source, which makes software free; Moore's law, which makes hardware
+geometrically closer to free; the Web, which makes promotion free
+if you're good; and better languages, which make development a lot
+cheaper.When we started our startup in 1995, the first three were our biggest
+expenses.  We had to pay $5000 for the Netscape Commerce Server,
+the only software that then supported secure http connections.  We
+paid $3000 for a server with a 90 MHz processor and 32 meg of
+memory.  And we paid a PR firm about $30,000 to promote our launch.Now you could get all three for nothing.  You can get the software
+for free; people throw away computers more powerful than our first
+server; and if you make something good you can generate ten times
+as much traffic by word of mouth online than our first PR firm got
+through the print media.And of course another big change for the average startup is that
+programming languages have improved-- or rather, the median language has.  At most startups ten years
+ago, software development meant ten programmers writing code in
+C++.  Now the same work might be done by one or two using Python
+or Ruby.During the Bubble, a lot of people predicted that startups would
+outsource their development to India.  I think a better model for
+the future is David Heinemeier Hansson, who outsourced his development
+to a more powerful language instead.  A lot of well-known applications
+are now, like BaseCamp, written by just one programmer.  And one
+guy is more than 10x cheaper than ten, because (a) he won't waste
+any time in meetings, and (b) since he's probably a founder, he can
+pay himself nothing.Because starting a startup is so cheap, venture capitalists now
+often want to give startups more money than the startups want to
+take.  VCs like to invest several million at a time.  But as one
+VC told me after a startup he funded would only take about half a
+million, "I don't know what we're going to do.  Maybe we'll just
+have to give some of it back." Meaning give some of the fund back
+to the institutional investors who supplied it, because it wasn't
+going to be possible to invest it all.Into this already bad situation comes the third problem: Sarbanes-Oxley.
+Sarbanes-Oxley is a law, passed after the Bubble, that drastically
+increases the regulatory burden on public companies. And in addition
+to the cost of compliance, which is at least two million dollars a
+year, the law introduces frightening legal exposure for corporate
+officers.  An experienced CFO I know said flatly: "I would not
+want to be CFO of a public company now."You might think that responsible corporate governance is an area
+where you can't go too far.  But you can go too far in any law, and
+this remark convinced me that Sarbanes-Oxley must have.  This CFO
+is both the smartest and the most upstanding money guy I know.  If
+Sarbanes-Oxley deters people like him from being CFOs of public  
+companies, that's proof enough that it's broken.Largely because of Sarbanes-Oxley, few startups go public now.  For
+all practical purposes, succeeding now equals getting bought.  Which
+means VCs are now in the business of finding promising little 2-3
+man startups and pumping them up into companies that cost $100
+million to acquire.   They didn't mean to be in this business; it's
+just what their business has evolved into.Hence the fourth problem: the acquirers have begun to realize they
+can buy wholesale.  Why should they wait for VCs to make the startups
+they want more expensive?  Most of what the VCs add, acquirers don't
+want anyway.  The acquirers already have brand recognition and HR
+departments.  What they really want is the software and the developers,
+and that's what the startup is in the early phase: concentrated
+software and developers.Google, typically, seems to have been the first to figure this out.
+"Bring us your startups early," said Google's speaker at the Startup School.  They're quite
+explicit about it: they like to acquire startups at just the point
+where they would do a Series A round.  (The Series A round is the
+first round of real VC funding; it usually happens in the first
+year.) It is a brilliant strategy, and one that other big technology
+companies will no doubt try to duplicate.  Unless they want to have 
+still more of their lunch eaten by Google.Of course, Google has an advantage in buying startups: a lot of the
+people there are rich, or expect to be when their options vest.
+Ordinary employees find it very hard to recommend an acquisition;
+it's just too annoying to see a bunch of twenty year olds get rich
+when you're still working for salary.  Even if it's the right thing   
+for your company to do.The Solution(s)Bad as things look now, there is a way for VCs to save themselves.
+They need to do two things, one of which won't surprise them, and  
+another that will seem an anathema.Let's start with the obvious one: lobby to get Sarbanes-Oxley  
+loosened.  This law was created to prevent future Enrons, not to
+destroy the IPO market.  Since the IPO market was practically dead
+when it passed, few saw what bad effects it would have.  But now 
+that technology has recovered from the last bust, we can see clearly
+what a bottleneck Sarbanes-Oxley has become.Startups are fragile plants—seedlings, in fact.  These seedlings
+are worth protecting, because they grow into the trees of the
+economy.  Much of the economy's growth is their growth.  I think
+most politicians realize that.  But they don't realize just how   
+fragile startups are, and how easily they can become collateral
+damage of laws meant to fix some other problem.Still more dangerously, when you destroy startups, they make very
+little noise.  If you step on the toes of the coal industry, you'll
+hear about it.  But if you inadvertantly squash the startup industry,
+all that happens is that the founders of the next Google stay in 
+grad school instead of starting a company.My second suggestion will seem shocking to VCs: let founders cash  
+out partially in the Series A round.  At the moment, when VCs invest
+in a startup, all the stock they get is newly issued and all the 
+money goes to the company.  They could buy some stock directly from
+the founders as well.Most VCs have an almost religious rule against doing this.  They
+don't want founders to get a penny till the company is sold or goes
+public.  VCs are obsessed with control, and they worry that they'll
+have less leverage over the founders if the founders have any money.This is a dumb plan.  In fact, letting the founders sell a little stock
+early would generally be better for the company, because it would
+cause the founders' attitudes toward risk to be aligned with the
+VCs'.  As things currently work, their attitudes toward risk tend
+to be diametrically opposed: the founders, who have nothing, would
+prefer a 100% chance of $1 million to a 20% chance of $10 million,
+while the VCs can afford to be "rational" and prefer the latter.Whatever they say, the reason founders are selling their companies
+early instead of doing Series A rounds is that they get paid up
+front.  That first million is just worth so much more than the
+subsequent ones.  If founders could sell a little stock early,
+they'd be happy to take VC money and bet the rest on a bigger
+outcome.So why not let the founders have that first million, or at least
+half million?  The VCs would get same number of shares for the   
+money.  So what if some of the money would go to the  
+founders instead of the company?Some VCs will say this is
+unthinkable—that they want all their money to be put to work
+growing the company.  But the fact is, the huge size of current VC
+investments is dictated by the structure
+of VC funds, not the needs of startups.  Often as not these large  
+investments go to work destroying the company rather than growing
+it.The angel investors who funded our startup let the founders sell
+some stock directly to them, and it was a good deal for everyone. 
+The angels made a huge return on that investment, so they're happy.
+And for us founders it blunted the terrifying all-or-nothingness
+of a startup, which in its raw form is more a distraction than a
+motivator.If VCs are frightened at the idea of letting founders partially
+cash out, let me tell them something still more frightening: you
+are now competing directly with Google.
+Thanks to Trevor Blackwell, Sarah Harlin, Jessica
+Livingston, and Robert Morris for reading drafts of this.April 2006(This essay is derived from a talk at the 2006 
+Startup School.)The startups we've funded so far are pretty quick, but they seem
+quicker to learn some lessons than others.  I think it's because
+some things about startups are kind of counterintuitive.We've now 
+invested 
+in enough companies that I've learned a trick
+for determining which points are the counterintuitive ones:
+they're the ones I have to keep repeating.So I'm going to number these points, and maybe with future startups
+I'll be able to pull off a form of Huffman coding. I'll make them
+all read this, and then instead of nagging them in detail, I'll
+just be able to say: number four!
+1. Release Early.The thing I probably repeat most is this recipe for a startup: get
+a version 1 out fast, then improve it based on users' reactions.By "release early" I don't mean you should release something full
+of bugs, but that you should release something minimal.  Users hate
+bugs, but they don't seem to mind a minimal version 1, if there's
+more coming soon.There are several reasons it pays to get version 1 done fast.  One
+is that this is simply the right way to write software, whether for
+a startup or not.  I've been repeating that since 1993, and I haven't seen much since to
+contradict it.  I've seen a lot of startups die because they were
+too slow to release stuff, and none because they were too quick.
+[1]One of the things that will surprise you if you build something
+popular is that you won't know your users.  Reddit now has almost half a million
+unique visitors a month.  Who are all those people?  They have no
+idea.  No web startup does.  And since you don't know your users,
+it's dangerous to guess what they'll like.  Better to release
+something and let them tell you.Wufoo took this to heart and released
+their form-builder before the underlying database.  You can't even
+drive the thing yet, but 83,000 people came to sit in the driver's
+seat and hold the steering wheel.  And Wufoo got valuable feedback
+from it: Linux users complained they used too much Flash, so they
+rewrote their software not to.  If they'd waited to release everything
+at once, they wouldn't have discovered this problem till it was
+more deeply wired in.Even if you had no users, it would still be important to release
+quickly, because for a startup the initial release acts as a shakedown
+cruise.  If anything major is broken-- if the idea's no good,
+for example, or the founders hate one another-- the stress of getting
+that first version out will expose it.  And if you have such problems
+you want to find them early.Perhaps the most important reason to release early, though, is that
+it makes you work harder.  When you're working on something that
+isn't released, problems are intriguing.  In something that's out
+there, problems are alarming.  There is a lot more urgency once you
+release.  And I think that's precisely why people put it off.  They
+know they'll have to work a lot harder once they do. 
+[2]
+2. Keep Pumping Out Features.Of course, "release early" has a second component, without which
+it would be bad advice.  If you're going to start with something
+that doesn't do much, you better improve it fast.What I find myself repeating is "pump out features."  And this rule
+isn't just for the initial stages.  This is something all startups
+should do for as long as they want to be considered startups.I don't mean, of course, that you should make your application ever
+more complex.  By "feature" I mean one unit of hacking-- one quantum
+of making users' lives better.As with exercise, improvements beget improvements.  If you run every
+day, you'll probably feel like running tomorrow.  But if you skip
+running for a couple weeks, it will be an effort to drag yourself
+out.  So it is with hacking: the more ideas you implement, the more
+ideas you'll have.  You should make your system better at least in
+some small way every day or two.This is not just a good way to get development done; it is also a
+form of marketing.  Users love a site that's constantly improving.
+In fact, users expect a site to improve.  Imagine if you visited a
+site that seemed very good, and then returned two months later and
+not one thing had changed.  Wouldn't it start to seem lame? 
+[3]They'll like you even better when you improve in response to their
+comments, because customers are used to companies ignoring them.
+If you're the rare exception-- a company that actually listens--
+you'll generate fanatical loyalty.  You won't need to advertise,
+because your users will do it for you.This seems obvious too, so why do I have to keep repeating it?  I
+think the problem here is that people get used to how things are.
+Once a product gets past the stage where it has glaring flaws, you
+start to get used to it, and gradually whatever features it happens
+to have become its identity.  For example, I doubt many people at
+Yahoo (or Google for that matter) realized how much better web mail
+could be till Paul Buchheit showed them.I think the solution is to assume that anything you've made is far
+short of what it could be.  Force yourself, as a sort of intellectual
+exercise, to keep thinking of improvements.  Ok, sure, what you
+have is perfect.  But if you had to change something, what would
+it be?If your product seems finished, there are two possible explanations:
+(a) it is finished, or (b) you lack imagination.  Experience suggests
+(b) is a thousand times more likely.
+3. Make Users Happy.Improving constantly is an instance of a more general rule: make
+users happy.  One thing all startups have in common is that they
+can't force anyone to do anything.  They can't force anyone to use
+their software, and they can't force anyone to do deals with them.
+A startup has to sing for its supper.  That's why the successful
+ones make great things.  They have to, or die.When you're running a startup you feel like a little bit of debris
+blown about by powerful winds.  The most powerful wind is users.
+They can either catch you and loft you up into the sky, as they did
+with Google, or leave you flat on the pavement, as they do with
+most startups.  Users are a fickle wind, but more powerful than any
+other.  If they take you up, no competitor can keep you down.As a little piece of debris, the rational thing for you to do is
+not to lie flat, but to curl yourself into a shape the wind will
+catch.I like the wind metaphor because it reminds you how impersonal the
+stream of traffic is.  The vast majority of people who visit your
+site will be casual visitors.  It's them you have to design your
+site for.  The people who really care will find what they want by
+themselves.The median visitor will arrive with their finger poised on the Back
+button.  Think about your own experience: most links you
+follow lead to something lame.  Anyone who has used the web for
+more than a couple weeks has been trained to click on Back after
+following a link.  So your site has to say "Wait!  Don't click on
+Back.  This site isn't lame.  Look at this, for example."There are two things you have to do to make people pause.  The most
+important is to explain, as concisely as possible, what the hell
+your site is about.  How often have you visited a site that seemed
+to assume you already knew what they did?  For example, the corporate
+site that says the
+company makes
+
+  enterprise content management solutions for business that enable
+  organizations to unify people, content and processes to minimize
+  business risk, accelerate time-to-value and sustain lower total
+  cost of ownership.
+
+An established company may get away with such an opaque description,
+but no startup can.  A startup
+should be able to explain in one or two sentences exactly what it
+does. 
+[4]
+And not just to users.  You need this for everyone:
+investors, acquirers, partners, reporters, potential employees, and
+even current employees.  You probably shouldn't even start a company
+to do something that can't be described compellingly in one or two
+sentences.The other thing I repeat is to give people everything you've got,
+right away.  If you have something impressive, try to put it on the
+front page, because that's the only one most visitors will see.
+Though indeed there's a paradox here: the more you push the good
+stuff toward the front, the more likely visitors are to explore
+further. 
+[5]In the best case these two suggestions get combined: you tell
+visitors what your site is about by showing them.  One of the
+standard pieces of advice in fiction writing is "show, don't tell."
+Don't say that a character's angry; have him grind his teeth, or
+break his pencil in half.  Nothing will explain what your site does
+so well as using it.The industry term here is "conversion."  The job of your site is
+to convert casual visitors into users-- whatever your definition
+of a user is.  You can measure this in your growth rate.  Either
+your site is catching on, or it isn't, and you must know which.  If
+you have decent growth, you'll win in the end, no matter how obscure
+you are now.  And if you don't, you need to fix something.
+4. Fear the Right Things.Another thing I find myself saying a lot is "don't worry."  Actually,
+it's more often "don't worry about this; worry about that instead."
+Startups are right to be paranoid, but they sometimes fear the wrong
+things.Most visible disasters are not so alarming as they seem.  Disasters
+are normal in a startup: a founder quits, you discover a patent
+that covers what you're doing, your servers keep crashing, you run
+into an insoluble technical problem, you have to change your name,
+a deal falls through-- these are all par for the course.  They won't
+kill you unless you let them.Nor will most competitors.  A lot of startups worry "what if Google
+builds something like us?"  Actually big companies are not the ones
+you have to worry about-- not even Google.  The people at Google
+are smart, but no smarter than you; they're not as motivated, because
+Google is not going to go out of business if this one product fails;
+and even at Google they have a lot of bureaucracy to slow them down.What you should fear, as a startup, is not the established players,
+but other startups you don't know exist yet.  They're way more
+dangerous than Google because, like you, they're cornered animals.Looking just at existing competitors can give you a false sense of
+security.  You should compete against what someone else could be
+doing, not just what you can see people doing.  A corollary is that
+you shouldn't relax just because you have no visible competitors
+yet.  No matter what your idea, there's someone else out there
+working on the same thing.That's the downside of it being easier to start a startup: more people
+are doing it.  But I disagree with Caterina Fake when she says that
+makes this a bad time to start a startup.  More people are starting
+startups, but not as many more as could.  Most college graduates
+still think they have to get a job.  The average person can't ignore
+something that's been beaten into their head since they were three
+just because serving web pages recently got a lot cheaper.And in any case, competitors are not the biggest threat.  Way more
+startups hose themselves than get crushed by competitors.  There
+are a lot of ways to do it, but the three main ones are internal
+disputes, inertia, and ignoring users.  Each is, by itself, enough
+to kill you.  But if I had to pick the worst, it would be ignoring
+users.  If you want a recipe for a startup that's going to die,
+here it is: a couple of founders who have some great idea they know
+everyone is going to love, and that's what they're going to build,
+no matter what.Almost everyone's initial plan is broken.  If companies stuck to
+their initial plans, Microsoft would be selling programming languages,
+and Apple would be selling printed circuit boards.  In both cases
+their customers told them what their business should be-- and they
+were smart enough to listen.As Richard Feynman said, the imagination of nature is greater than
+the imagination of man.  You'll find more interesting things by
+looking at the world than you could ever produce just by thinking.
+This principle is very powerful.  It's why the best abstract painting
+still falls short of Leonardo, for example.  And it applies to
+startups too.  No idea for a product could ever be so clever as the
+ones you can discover by smashing a beam of prototypes into a beam
+of users.
+5. Commitment Is a Self-Fulfilling Prophecy.I now have enough experience with startups to be able to say what
+the most important quality is in a startup founder, and it's not
+what you might think.  The most important quality in a startup
+founder is determination.  Not intelligence-- determination.This is a little depressing.  I'd like to believe Viaweb succeeded
+because we were smart, not merely determined.  A lot of people in
+the startup world want to believe that.  Not just founders, but
+investors too.  They like the idea of inhabiting a world ruled by
+intelligence.  And you can tell they really believe this, because
+it affects their investment decisions.Time after time VCs invest in startups founded by eminent professors.
+This may work in biotech, where a lot of startups simply commercialize
+existing research, but in software you want to invest in students,
+not professors.  Microsoft, Yahoo, and Google were all founded by
+people who dropped out of school to do it.  What students lack in
+experience they more than make up in dedication.Of course, if you want to get rich, it's not enough merely to be
+determined.  You have to be smart too, right?  I'd like to think
+so, but I've had an experience that convinced me otherwise: I spent
+several years living in New York.You can lose quite a lot in the brains department and it won't kill
+you.  But lose even a little bit in the commitment department, and
+that will kill you very rapidly.Running a startup is like walking on your hands: it's possible, but
+it requires extraordinary effort.  If an ordinary employee were
+asked to do the things a startup founder has to, he'd be very
+indignant.  Imagine if you were hired at some big company, and in
+addition to writing software ten times faster than you'd ever had
+to before, they expected you to answer support calls, administer
+the servers, design the web site, cold-call customers, find the
+company office space, and go out and get everyone lunch.And to do all this not in the calm, womb-like atmosphere of a big
+company, but against a backdrop of constant disasters.  That's the
+part that really demands determination.  In a startup, there's
+always some disaster happening.  So if you're the least bit inclined
+to find an excuse to quit, there's always one right there.But if you lack commitment, chances are it will have been hurting
+you long before you actually quit.  Everyone who deals with startups
+knows how important commitment is, so if they sense you're ambivalent,
+they won't give you much attention.  If you lack commitment, you'll
+just find that for some mysterious reason good things happen to
+your competitors but not to you.  If you lack commitment, it will
+seem to you that you're unlucky.Whereas if you're determined to stick around, people will pay
+attention to you, because odds are they'll have to deal with you
+later.  You're a local, not just a tourist, so everyone has to come
+to terms with you.At Y Combinator we sometimes mistakenly fund teams who have the
+attitude that they're going to give this startup thing a shot for
+three months, and if something great happens, they'll stick with
+it-- "something great" meaning either that someone wants to buy
+them or invest millions of dollars in them.  But if this is your
+attitude, "something great" is very unlikely to happen to you,
+because both acquirers and investors judge you by your level of
+commitment.If an acquirer thinks you're going to stick around no matter what,
+they'll be more likely to buy you, because if they don't and you
+stick around, you'll probably grow, your price will go up, and
+they'll be left wishing they'd bought you earlier.  Ditto for
+investors.  What really motivates investors, even big VCs, is not
+the hope of good returns, but the fear of missing out. 
+[6]
+So if
+you make it clear you're going to succeed no matter what, and the only
+reason you need them is to make it happen a little faster, you're
+much more likely to get money.You can't fake this.  The only way to convince everyone that you're
+ready to fight to the death is actually to be ready to.You have to be the right kind of determined, though.  I carefully
+chose the word determined rather than stubborn, because stubbornness
+is a disastrous quality in a startup.  You have to be determined,
+but flexible, like a running back.  A successful running back doesn't
+just put his head down and try to run through people.  He improvises:
+if someone appears in front of him, he runs around them; if someone
+tries to grab him, he spins out of their grip; he'll even run in
+the wrong direction briefly if that will help.  The one thing he'll
+never do is stand still. 
+[7]
+6. There Is Always Room.I was talking recently to a startup founder about whether it might
+be good to add a social component to their software.  He said he
+didn't think so, because the whole social thing was tapped out.
+Really?  So in a hundred years the only social networking sites
+will be the Facebook, MySpace, Flickr, and Del.icio.us?  Not likely.There is always room for new stuff.  At every point in history,
+even the darkest bits of the dark ages, people were discovering
+things that made everyone say "why didn't anyone think of that
+before?"  We know this continued to be true up till 2004, when the
+Facebook was founded-- though strictly speaking someone else did
+think of that.The reason we don't see the opportunities all around us is that we
+adjust to however things are, and assume that's how things have to
+be.  For example, it would seem crazy to most people to try to make
+a better search engine than Google.  Surely that field, at least,
+is tapped out.  Really?  In a hundred years-- or even twenty-- are
+people still going to search for information using something like
+the current Google?  Even Google probably doesn't think that.In particular, I don't think there's any limit to the number of
+startups.  Sometimes you hear people saying "All these guys starting
+startups now are going to be disappointed. How many little startups
+are Google and Yahoo going to buy, after all?" That sounds cleverly
+skeptical, but I can prove it's mistaken.  No one proposes that
+there's some limit to the number of people who can be employed in
+an economy consisting of big, slow-moving companies with a couple
+thousand people each.  Why should there be any limit to the number
+who could be employed by small, fast-moving companies with ten each?
+It seems to me the only limit would be the number of people who
+want to work that hard.The limit on the number of startups is not the number that can get
+acquired by Google and Yahoo-- though it seems even that should
+be unlimited, if the startups were actually worth buying-- but the
+amount of wealth that can be created.  And I don't think there's
+any limit on that, except cosmological ones.So for all practical purposes, there is no limit to the number of
+startups.  Startups make wealth, which means they make things people
+want, and if there's a limit on the number of things people want,
+we are nowhere near it.  I still don't even have a flying car.
+7. Don't Get Your Hopes Up.This is another one I've been repeating since long before Y Combinator.
+It was practically the corporate motto at Viaweb.Startup founders are naturally optimistic.  They wouldn't do it
+otherwise.  But you should treat your optimism the way you'd treat
+the core of a nuclear reactor: as a source of power that's also
+very dangerous.  You have to build a shield around it, or it will
+fry you.The shielding of a reactor is not uniform; the reactor would be
+useless if it were.  It's pierced in a few places to let pipes in.
+An optimism shield has to be pierced too.  I think the place to
+draw the line is between what you expect of yourself, and what you
+expect of other people.  It's ok to be optimistic about what you
+can do, but assume the worst about machines and other people.This is particularly necessary in a startup, because you tend to
+be pushing the limits of whatever you're doing.  So things don't
+happen in the smooth, predictable way they do in the rest of the
+world.  Things change suddenly, and usually for the worse.Shielding your optimism is nowhere more important than with deals.
+If your startup is doing a deal, just assume it's not going to
+happen.  The VCs who say they're going to invest in you aren't.
+The company that says they're going to buy you isn't.  The big
+customer who wants to use your system in their whole company won't.
+Then if things work out you can be pleasantly surprised.The reason I warn startups not to get their hopes up is not to save
+them from being disappointed when things fall through.  It's
+for a more practical reason: to prevent them from leaning their
+company against something that's going to fall over, taking them
+with it.For example, if someone says they want to invest in you, there's a
+natural tendency to stop looking for other investors.  That's why
+people proposing deals seem so positive: they want you to
+stop looking.  And you want to stop too, because doing deals is a
+pain.  Raising money, in particular, is a huge time sink.  So you
+have to consciously force yourself to keep looking.Even if you ultimately do the first deal, it will be to your advantage
+to have kept looking, because you'll get better terms.  Deals are
+dynamic; unless you're negotiating with someone unusually honest,
+there's not a single point where you shake hands and the deal's
+done. There are usually a lot of subsidiary questions to be cleared
+up after the handshake, and if the other side senses weakness-- if
+they sense you need this deal-- they will be very tempted to screw
+you in the details.VCs and corp dev guys are professional negotiators.  They're trained
+to take advantage of weakness. 
+[8]
+So while they're often nice
+guys, they just can't help it.  And as pros they do this more than
+you.  So don't even try to bluff them.  The only way a startup can
+have any leverage in a deal is genuinely not to need it.  And if
+you don't believe in a deal, you'll be less likely to depend on it.So I want to plant a hypnotic suggestion in your heads: when you
+hear someone say the words "we want to invest in you" or "we want
+to acquire you," I want the following phrase to appear automatically
+in your head: don't get your hopes up.  Just continue running
+your company as if this deal didn't exist.  Nothing is more likely
+to make it close.The way to succeed in a startup is to focus on the goal of getting
+lots of users, and keep walking swiftly toward it while investors
+and acquirers scurry alongside trying to wave money in your face.
+Speed, not MoneyThe way I've described it, starting a startup sounds pretty stressful.
+It is.  When I talk to the founders of the companies we've funded,
+they all say the same thing: I knew it would be hard, but I didn't
+realize it would be this hard.So why do it?  It would be worth enduring a lot of pain and stress
+to do something grand or heroic, but just to make money?  Is making
+money really that important?No, not really.  It seems ridiculous to me when people take business
+too seriously.  I regard making money as a boring errand to be got
+out of the way as soon as possible.  There is nothing grand or
+heroic about starting a startup per se.So why do I spend so much time thinking about startups?  I'll tell
+you why.  Economically, a startup is best seen not as a way to get
+rich, but as a way to work faster.<|begin_of_text|>
+The best thing to do in San Francisco is eat a sandwich and sit in Dolores Park on a sunny day.
+  You have to make a living, and
+a startup is a way to get that done quickly, instead of letting it
+drag on through your whole life.
+[9]We take it for granted most of the time, but human life is fairly
+miraculous.  It is also palpably short.  You're given this marvellous
+thing, and then poof, it's taken away.  You can see why people
+invent gods to explain it.  But even to people who don't believe
+in gods, life commands respect.  There are times in most of our
+lives when the days go by in a blur, and almost everyone has a
+sense, when this happens, of wasting something precious.  As Ben
+Franklin said, if you love life, don't waste time, because time is
+what life is made of.So no, there's nothing particularly grand about making money.  That's
+not what makes startups worth the trouble.  What's important about
+startups is the speed.  By compressing the dull but necessary task
+of making a living into the smallest possible time, you show respect
+for life, and there is something grand about that.Notes[1]
+Startups can die from releasing something full of bugs, and not
+fixing them fast enough, but I don't know of any that died from
+releasing something stable but minimal very early, then promptly
+improving it.[2]
+I know this is why I haven't released Arc.  The moment I do,
+I'll have people nagging me for features.[3]
+A web site is different from a book or movie or desktop application
+in this respect.  Users judge a site not as a single snapshot, but
+as an animation with multiple frames.  Of the two, I'd say the rate of
+improvement is more important to users than where you currently
+are.[4]
+It should not always tell this to users, however.  For example,
+MySpace is basically a replacement mall for mallrats.  But it was
+wiser for them, initially, to pretend that the site was about bands.[5]
+Similarly, don't make users register to try your site.  Maybe
+what you have is so valuable that visitors should gladly register
+to get at it.  But they've been trained to expect the opposite.
+Most of the things they've tried on the web have sucked-- and
+probably especially those that made them register.[6]
+VCs have rational reasons for behaving this way. They don't
+make their money (if they make money) off their median investments.
+In a typical fund, half the companies fail, most of the rest generate
+mediocre returns, and one or two "make the fund" by succeeding
+spectacularly.  So if they miss just a few of the most promising
+opportunities, it could hose the whole fund.[7]
+The attitude of a running back doesn't translate to soccer.
+Though it looks great when a forward dribbles past multiple defenders,
+a player who persists in trying such things will do worse in the
+long term than one who passes.[8]
+The reason Y Combinator never negotiates valuations
+is that we're not professional negotiators, and don't want to turn
+into them.[9]
+There are two ways to do 
+work you love: (a) to make money, then work
+on what you love, or (b) to get a job where you get paid to work on
+stuff you love.  In practice the first phases of both
+consist mostly of unedifying schleps, and in (b) the second phase is less
+secure.Thanks to Sam Altman, Trevor Blackwell, Beau Hartshorne, Jessica 
+Livingston, and Robert Morris for reading drafts of this.September 2017The most valuable insights are both general and surprising. 
+F = ma for example. But general and surprising is a hard
+combination to achieve. That territory tends to be picked
+clean, precisely because those insights are so valuable.Ordinarily, the best that people can do is one without the
+other: either surprising without being general (e.g.
+gossip), or general without being surprising (e.g.
+platitudes).Where things get interesting is the moderately valuable
+insights.  You get those from small additions of whichever
+quality was missing.  The more common case is a small
+addition of generality: a piece of gossip that's more than
+just gossip, because it teaches something interesting about
+the world. But another less common approach is to focus on
+the most general ideas and see if you can find something new
+to say about them. Because these start out so general, you
+only need a small delta of novelty to produce a useful
+insight.A small delta of novelty is all you'll be able to get most
+of the time. Which means if you take this route, your ideas
+will seem a lot like ones that already exist. Sometimes
+you'll find you've merely rediscovered an idea that did
+already exist.  But don't be discouraged.  Remember the huge
+multiplier that kicks in when you do manage to think of
+something even a little new.Corollary: the more general the ideas you're talking about,
+the less you should worry about repeating yourself.  If you
+write enough, it's inevitable you will.  Your brain is much
+the same from year to year and so are the stimuli that hit
+it. I feel slightly bad when I find I've said something
+close to what I've said before, as if I were plagiarizing
+myself. But rationally one shouldn't.  You won't say
+something exactly the same way the second time, and that
+variation increases the chance you'll get that tiny but
+critical delta of novelty.And of course, ideas beget ideas.  (That sounds 
+familiar.)
+An idea with a small amount of novelty could lead to one
+with more. But only if you keep going. So it's doubly
+important not to let yourself be discouraged by people who
+say there's not much new about something you've discovered.
+"Not much new" is a real achievement when you're talking
+about the most general ideas. It's not true that there's nothing new under the sun.  There
+are some domains where there's almost nothing new.  But
+there's a big difference between nothing and almost nothing,
+when it's multiplied by the area under the sun.
+Thanks to Sam Altman, Patrick Collison, and Jessica
+Livingston for reading drafts of this.February 2007A few days ago I finally figured out something I've wondered about
+for 25 years: the relationship between wisdom and intelligence.
+Anyone can see they're not the same by the number of people who are
+smart, but not very wise.  And yet intelligence and wisdom do seem
+related.  How?What is wisdom?  I'd say it's knowing what to do in a lot of
+situations.  I'm not trying to make a deep point here about the
+true nature of wisdom, just to figure out how we use the word.  A
+wise person is someone who usually knows the right thing to do.And yet isn't being smart also knowing what to do in certain
+situations?  For example, knowing what to do when the teacher tells
+your elementary school class to add all the numbers from 1 to 100?
+[1]Some say wisdom and intelligence apply to different types of
+problems—wisdom to human problems and intelligence to abstract
+ones.  But that isn't true.  Some wisdom has nothing to do with
+people: for example, the wisdom of the engineer who knows certain
+structures are less prone to failure than others.  And certainly
+smart people can find clever solutions to human problems as well
+as abstract ones. 
+[2]Another popular explanation is that wisdom comes from experience
+while intelligence is innate.  But people are not simply wise in
+proportion to how much experience they have.  Other things must
+contribute to wisdom besides experience, and some may be innate: a
+reflective disposition, for example.Neither of the conventional explanations of the difference between
+wisdom and intelligence stands up to scrutiny.  So what is the
+difference?  If we look at how people use the words "wise" and
+"smart," what they seem to mean is different shapes of performance.Curve"Wise" and "smart" are both ways of saying someone knows what to
+do.  The difference is that "wise" means one has a high average
+outcome across all situations, and "smart" means one does spectacularly
+well in a few.  That is, if you had a graph in which the x axis
+represented situations and the y axis the outcome, the graph of the
+wise person would be high overall, and the graph of the smart person
+would have high peaks.The distinction is similar to the rule that one should judge talent
+at its best and character at its worst.  Except you judge intelligence
+at its best, and wisdom by its average.  That's how the two are
+related: they're the two different senses in which the same curve
+can be high.So a wise person knows what to do in most situations, while a smart
+person knows what to do in situations where few others could.  We
+need to add one more qualification: we should ignore cases where
+someone knows what to do because they have inside information. 
+[3]
+But aside from that, I don't think we can get much more specific
+without starting to be mistaken.Nor do we need to.  Simple as it is, this explanation predicts, or
+at least accords with, both of the conventional stories about the
+distinction between wisdom and intelligence.  Human problems are
+the most common type, so being good at solving those is key in
+achieving a high average outcome.   And it seems natural that a
+high average outcome depends mostly on experience, but that dramatic
+peaks can only be achieved by people with certain rare, innate
+qualities; nearly anyone can learn to be a good swimmer, but to be
+an Olympic swimmer you need a certain body type.This explanation also suggests why wisdom is such an elusive concept:
+there's no such thing.  "Wise" means something—that one is
+on average good at making the right choice.  But giving the name
+"wisdom" to the supposed quality that enables one to do that doesn't
+mean such a thing exists.  To the extent "wisdom" means anything,
+it refers to a grab-bag of qualities as various as self-discipline,
+experience, and empathy.  
+[4]Likewise, though "intelligent" means something, we're asking for
+trouble if we insist on looking for a single thing called "intelligence."
+And whatever its components, they're not all innate.  We use the
+word "intelligent" as an indication of ability: a smart person can
+grasp things few others could.  It does seem likely there's some
+inborn predisposition to intelligence (and wisdom too), but this
+predisposition is not itself intelligence.One reason we tend to think of intelligence as inborn is that people
+trying to measure it have concentrated on the aspects of it that
+are most measurable.  A quality that's inborn will obviously be
+more convenient to work with than one that's influenced by experience,
+and thus might vary in the course of a study.  The problem comes
+when we drag the word "intelligence" over onto what they're measuring.
+If they're measuring something inborn, they can't be measuring
+intelligence.  Three year olds aren't smart.   When we describe one
+as smart, it's shorthand for "smarter than other three year olds."SplitPerhaps it's a technicality to point out that a predisposition to
+intelligence is not the same as intelligence.  But it's an important
+technicality, because it reminds us that we can become smarter,
+just as we can become wiser.The alarming thing is that we may have to choose between the two.If wisdom and intelligence are the average and peaks of the same
+curve, then they converge as the number of points on the curve
+decreases.  If there's just one point, they're identical: the average
+and maximum are the same.  But as the number of points increases,
+wisdom and intelligence diverge.  And historically the number of
+points on the curve seems to have been increasing: our ability is
+tested in an ever wider range of situations.In the time of Confucius and Socrates, people seem to have regarded
+wisdom, learning, and intelligence as more closely related than we
+do.  Distinguishing between "wise" and "smart" is a modern habit.
+[5]
+And the reason we do is that they've been diverging.  As knowledge
+gets more specialized, there are more points on the curve, and the
+distinction between the spikes and the average becomes sharper,
+like a digital image rendered with more pixels.One consequence is that some old recipes may have become obsolete.
+At the very least we have to go back and figure out if they were
+really recipes for wisdom or intelligence.  But the really striking
+change, as intelligence and wisdom drift apart, is that we may have
+to decide which we prefer.  We may not be able to optimize for both
+simultaneously.Society seems to have voted for intelligence.  We no longer admire
+the sage—not the way people did two thousand years ago.  Now
+we admire the genius.  Because in fact the distinction we began
+with has a rather brutal converse: just as you can be smart without
+being very wise, you can be wise without being very smart.  That
+doesn't sound especially admirable.  That gets you James Bond, who
+knows what to do in a lot of situations, but has to rely on Q for
+the ones involving math.Intelligence and wisdom are obviously not mutually exclusive.  In
+fact, a high average may help support high peaks.  But there are
+reasons to believe that at some point you have to choose between
+them.  One is the example of very smart people, who are so often
+unwise that in popular culture this now seems to be regarded as the
+rule rather than the exception.  Perhaps the absent-minded professor
+is wise in his way, or wiser than he seems, but he's not wise in
+the way Confucius or Socrates wanted people to be. 
+[6]NewFor both Confucius and Socrates, wisdom, virtue, and happiness were
+necessarily related.  The wise man was someone who knew what the
+right choice was and always made it; to be the right choice, it had
+to be morally right; he was therefore always happy, knowing he'd
+done the best he could.  I can't think of many ancient philosophers
+who would have disagreed with that, so far as it goes."The superior man is always happy; the small man sad," said Confucius.
+[7]Whereas a few years ago I read an interview with a mathematician
+who said that most nights he went to bed discontented, feeling he
+hadn't made enough progress.  
+[8]
+The Chinese and Greek words we
+translate as "happy" didn't mean exactly what we do by it, but
+there's enough overlap that this remark contradicts them.Is the mathematician a small man because he's discontented?  No;
+he's just doing a kind of work that wasn't very common in Confucius's
+day.Human knowledge seems to grow fractally.  Time after time, something
+that seemed a small and uninteresting area—experimental error,
+even—turns out, when examined up close, to have as much in
+it as all knowledge up to that point.  Several of the fractal buds
+that have exploded since ancient times involve inventing and
+discovering new things.  Math, for example, used to be something a
+handful of people did part-time.  Now it's the career of thousands.
+And in work that involves making new things, some old rules don't
+apply.Recently I've spent some time advising people, and there I find the
+ancient rule still works: try to understand the situation as well
+as you can, give the best advice you can based on your experience,
+and then don't worry about it, knowing you did all you could.  But
+I don't have anything like this serenity when I'm writing an essay.
+Then I'm worried.  What if I run out of ideas?  And when I'm writing,
+four nights out of five I go to bed discontented, feeling I didn't
+get enough done.Advising people and writing are fundamentally different types of
+work.  When people come to you with a problem and you have to figure
+out the right thing to do, you don't (usually) have to invent
+anything.  You just weigh the alternatives and try to judge which
+is the prudent choice.  But prudence can't tell me what sentence
+to write next.  The search space is too big.Someone like a judge or a military officer can in much of his work
+be guided by duty, but duty is no guide in making things.  Makers
+depend on something more precarious: inspiration.  And like most
+people who lead a precarious existence, they tend to be worried,
+not contented.  In that respect they're more like the small man of
+Confucius's day, always one bad harvest (or ruler) away from
+starvation. Except instead of being at the mercy of weather and
+officials, they're at the mercy of their own imagination.LimitsTo me it was a relief just to realize it might be ok to be discontented.
+The idea that a successful person should be happy has thousands of
+years of momentum behind it.  If I was any good, why didn't I have
+the easy confidence winners are supposed to have?  But that, I now
+believe, is like a runner asking "If I'm such a good athlete, why
+do I feel so tired?" Good runners still get tired; they just get
+tired at higher speeds.People whose work is to invent or discover things are in the same
+position as the runner.  There's no way for them to do the best
+they can, because there's no limit to what they could do.  The
+closest you can come is to compare yourself to other people.  But
+the better you do, the less this matters.  An undergrad who gets
+something published feels like a star.  But for someone at the top
+of the field, what's the test of doing well?  Runners can at least
+compare themselves to others doing exactly the same thing; if you
+win an Olympic gold medal, you can be fairly content, even if you
+think you could have run a bit faster.  But what is a novelist to
+do?Whereas if you're doing the kind of work in which problems are
+presented to you and you have to choose between several alternatives,
+there's an upper bound on your performance: choosing the best every
+time.  In ancient societies, nearly all work seems to have been of
+this type.  The peasant had to decide whether a garment was worth
+mending, and the king whether or not to invade his neighbor, but
+neither was expected to invent anything.  In principle they could
+have; the king could have invented firearms, then invaded his
+neighbor.  But in practice innovations were so rare that they weren't
+expected of you, any more than goalkeepers are expected to score
+goals. 
+[9]
+In practice, it seemed as if there was a correct decision
+in every situation, and if you made it you'd done your job perfectly,
+just as a goalkeeper who prevents the other team from scoring is
+considered to have played a perfect game.In this world, wisdom seemed paramount.  
+[10]
+Even now, most people
+do work in which problems are put before them and they have to
+choose the best alternative.  But as knowledge has grown more
+specialized, there are more and more types of work in which people
+have to make up new things, and in which performance is therefore
+unbounded.  Intelligence has become increasingly important relative
+to wisdom because there is more room for spikes.RecipesAnother sign we may have to choose between intelligence and wisdom
+is how different their recipes are.  Wisdom seems to come largely
+from curing childish qualities, and intelligence largely from
+cultivating them.Recipes for wisdom, particularly ancient ones, tend to have a
+remedial character.  To achieve wisdom one must cut away all the
+debris that fills one's head on emergence from childhood, leaving
+only the important stuff.  Both self-control and experience have
+this effect: to eliminate the random biases that come from your own
+nature and from the circumstances of your upbringing respectively.
+That's not all wisdom is, but it's a large part of it.  Much of
+what's in the sage's head is also in the head of every twelve year
+old.  The difference is that in the head of the twelve year old
+it's mixed together with a lot of random junk.The path to intelligence seems to be through working on hard problems.
+You develop intelligence as you might develop muscles, through
+exercise.  But there can't be too much compulsion here.  No amount
+of discipline can replace genuine curiosity.  So cultivating
+intelligence seems to be a matter of identifying some bias in one's
+character—some tendency to be interested in certain types of
+things—and nurturing it.  Instead of obliterating your
+idiosyncrasies in an effort to make yourself a neutral vessel for
+the truth, you select one and try to grow it from a seedling into
+a tree.The wise are all much alike in their wisdom, but very smart people
+tend to be smart in distinctive ways.Most of our educational traditions aim at wisdom. So perhaps one
+reason schools work badly is that they're trying to make intelligence
+using recipes for wisdom.  Most recipes for wisdom have an element
+of subjection.  At the very least, you're supposed to do what the
+teacher says.  The more extreme recipes aim to break down your
+individuality the way basic training does.  But that's not the route
+to intelligence.  Whereas wisdom comes through humility, it may
+actually help, in cultivating intelligence, to have a mistakenly
+high opinion of your abilities, because that encourages you to keep
+working.  Ideally till you realize how mistaken you were.(The reason it's hard to learn new skills late in life is not just
+that one's brain is less malleable.  Another probably even worse
+obstacle is that one has higher standards.)I realize we're on dangerous ground here.  I'm not proposing the
+primary goal of education should be to increase students' "self-esteem."
+That just breeds laziness.  And in any case, it doesn't really fool
+the kids, not the smart ones.  They can tell at a young age that a
+contest where everyone wins is a fraud.A teacher has to walk a narrow path: you want to encourage kids to
+come up with things on their own, but you can't simply applaud
+everything they produce.  You have to be a good audience: appreciative,
+but not too easily impressed.  And that's a lot of work.  You have
+to have a good enough grasp of kids' capacities at different ages
+to know when to be surprised.That's the opposite of traditional recipes for education.  Traditionally
+the student is the audience, not the teacher; the student's job is
+not to invent, but to absorb some prescribed body of material.  (The
+use of the term "recitation" for sections in some colleges is a
+fossil of this.) The problem with these old traditions is that
+they're too much influenced by recipes for wisdom.DifferentI deliberately gave this essay a provocative title; of course it's
+worth being wise.  But I think it's important to understand the
+relationship between intelligence and wisdom, and particularly what
+seems to be the growing gap between them.  That way we can avoid
+applying rules and standards to intelligence that are really meant
+for wisdom.  These two senses of "knowing what to do" are more
+different than most people realize.  The path to wisdom is through
+discipline, and the path to intelligence through carefully selected
+self-indulgence.  Wisdom is universal, and intelligence idiosyncratic.
+And while wisdom yields calmness, intelligence much of the time
+leads to discontentment.That's particularly worth remembering.  A physicist friend recently
+told me half his department was on Prozac.  Perhaps if we acknowledge
+that some amount of frustration is inevitable in certain kinds
+of work, we can mitigate its effects.  Perhaps we can box it up and
+put it away some of the time, instead of letting it flow together
+with everyday sadness to produce what seems an alarmingly large
+pool.  At the very least, we can avoid being discontented about
+being discontented.If you feel exhausted, it's not necessarily because there's something
+wrong with you.  Maybe you're just running fast.Notes[1]
+Gauss was supposedly asked this when he was 10.  Instead of
+laboriously adding together the numbers like the other students,
+he saw that they consisted of 50 pairs that each summed to 101 (100
++ 1, 99 + 2, etc), and that he could just multiply 101 by 50 to get
+the answer, 5050.[2]
+A variant is that intelligence is the ability to solve problems,
+and wisdom the judgement to know how to use those solutions.   But
+while this is certainly an important relationship between wisdom
+and intelligence, it's not the distinction between them.  Wisdom
+is useful in solving problems too, and intelligence can help in
+deciding what to do with the solutions.[3]
+In judging both intelligence and wisdom we have to factor out
+some knowledge. People who know the combination of a safe will be
+better at opening it than people who don't, but no one would say
+that was a test of intelligence or wisdom.But knowledge overlaps with wisdom and probably also intelligence.
+A knowledge of human nature is certainly part of wisdom.  So where
+do we draw the line?Perhaps the solution is to discount knowledge that at some point
+has a sharp drop in utility.  For example, understanding French
+will help you in a large number of situations, but its value drops
+sharply as soon as no one else involved knows French.  Whereas the
+value of understanding vanity would decline more gradually.The knowledge whose utility drops sharply is the kind that has
+little relation to other knowledge.  This includes mere conventions,
+like languages and safe combinations, and also what we'd call
+"random" facts, like movie stars' birthdays, or how to distinguish
+1956 from 1957 Studebakers.[4]
+People seeking some single thing called "wisdom" have been
+fooled by grammar.  Wisdom is just knowing the right thing to do,
+and there are a hundred and one different qualities that help in
+that.  Some, like selflessness, might come from meditating in an
+empty room, and others, like a knowledge of human nature, might
+come from going to drunken parties.Perhaps realizing this will help dispel the cloud of semi-sacred
+mystery that surrounds wisdom in so many people's eyes.  The mystery
+comes mostly from looking for something that doesn't exist.  And
+the reason there have historically been so many different schools
+of thought about how to achieve wisdom is that they've focused on
+different components of it.When I use the word "wisdom" in this essay, I mean no more than
+whatever collection of qualities helps people make the right choice
+in a wide variety of situations.[5]
+Even in English, our sense of the word "intelligence" is
+surprisingly recent.  Predecessors like "understanding" seem to
+have had a broader meaning.[6]
+There is of course some uncertainty about how closely the remarks
+attributed to Confucius and Socrates resemble their actual opinions.
+I'm using these names as we use the name "Homer," to mean the
+hypothetical people who said the things attributed to them.[7]
+Analects VII:36, Fung trans.Some translators use "calm" instead of "happy."  One source of
+difficulty here is that present-day English speakers have a different
+idea of happiness from many older societies.  Every language probably
+has a word meaning "how one feels when things are going well," but
+different cultures react differently when things go well.  We react
+like children, with smiles and laughter.  But in a more reserved
+society, or in one where life was tougher, the reaction might be a
+quiet contentment.[8]
+It may have been Andrew Wiles, but I'm not sure.  If anyone
+remembers such an interview, I'd appreciate hearing from you.[9]
+Confucius claimed proudly that he had never invented
+anything—that he had simply passed on an accurate account of
+ancient traditions.  [Analects VII:1] It's hard for us now to
+appreciate how important a duty it must have been in preliterate
+societies to remember and pass on the group's accumulated knowledge.
+Even in Confucius's time it still seems to have been the first duty
+of the scholar.[10]
+The bias toward wisdom in ancient philosophy may be exaggerated
+by the fact that, in both Greece and China, many of the first
+philosophers (including Confucius and Plato) saw themselves as
+teachers of administrators, and so thought disproportionately about
+such matters.  The few people who did invent things, like storytellers,
+must have seemed an outlying data point that could be ignored.Thanks to Trevor Blackwell, Sarah Harlin, Jessica Livingston,
+and Robert Morris for reading drafts of this.
+
+Want to start a startup?  Get funded by
+Y Combinator.
+
+
+
+
+July 2004(This essay is derived from a talk at Oscon 2004.)
+A few months ago I finished a new 
+book, 
+and in reviews I keep
+noticing words like "provocative'' and "controversial.'' To say
+nothing of "idiotic.''I didn't mean to make the book controversial.  I was trying to make
+it efficient.  I didn't want to waste people's time telling them
+things they already knew.  It's more efficient just to give them
+the diffs.  But I suppose that's bound to yield an alarming book.EdisonsThere's no controversy about which idea is most controversial:
+the suggestion that variation in wealth might not be as big a
+problem as we think.I didn't say in the book that variation in wealth was in itself a
+good thing.  I said in some situations it might be a sign of good
+things.  A throbbing headache is not a good thing, but it can be
+a sign of a good thing-- for example, that you're recovering
+consciousness after being hit on the head.Variation in wealth can be a sign of variation in productivity.
+(In a society of one, they're identical.) And that
+is almost certainly a good thing: if your society has no variation
+in productivity, it's probably not because everyone is Thomas
+Edison.  It's probably because you have no Thomas Edisons.In a low-tech society you don't see much variation in productivity.
+If you have a tribe of nomads collecting sticks for a fire, how
+much more productive is the best stick gatherer going to be than
+the worst?  A factor of two?  Whereas when you hand people a complex tool
+like a computer, the variation in what they can do with
+it is enormous.That's not a new idea.  Fred Brooks wrote about it in 1974, and
+the study he quoted was published in 1968.  But I think he
+underestimated the variation between programmers.  He wrote about productivity in lines
+of code:  the best programmers can solve a given problem in a tenth
+the time.  But what if the problem isn't given? In programming, as
+in many fields, the hard part isn't solving problems, but deciding
+what problems to solve.  Imagination is hard to measure, but
+in practice it dominates the kind of productivity that's measured
+in lines of code.Productivity varies in any field, but there are few in which it
+varies so much.  The variation between programmers
+is so great that it becomes a difference in kind.  I don't
+think this is something intrinsic to programming, though.  In every field,
+technology magnifies differences in productivity.  I think what's
+happening in programming is just that we have a lot of technological
+leverage.  But in every field the lever is getting longer, so the
+variation we see is something that more and more fields will see
+as time goes on.  And the success of companies, and countries, will
+depend increasingly on how they deal with it.If variation in productivity increases with technology, then the
+contribution of the most productive individuals will not only be
+disproportionately large, but will actually grow with time.  When
+you reach the point where 90% of a group's output is created by 1%
+of its members, you lose big if something (whether Viking raids,
+or central planning) drags their productivity down to the average.If we want to get the most out of them, we need to understand these
+especially productive people.  What motivates them?  What do they
+need to do their jobs?  How do you recognize them? How do you
+get them to come and work for you?  And then of course there's the
+question, how do you become one?More than MoneyI know a handful of super-hackers, so I sat down and thought about
+what they have in common.  Their defining quality is probably that
+they really love to program.  Ordinary programmers write code to pay
+the bills.  Great hackers think of it as something they do for fun,
+and which they're delighted to find people will pay them for.Great programmers are sometimes said to be indifferent to money.
+This isn't quite true.  It is true that all they really care about
+is doing interesting work.  But if you make enough money, you get
+to work on whatever you want, and for that reason hackers are
+attracted by the idea of making really large amounts of money.
+But as long as they still have to show up for work every day, they
+care more about what they do there than how much they get paid for
+it.Economically, this is a fact of the greatest importance, because
+it means you don't have to pay great hackers anything like what
+they're worth.  A great programmer might be ten or a hundred times
+as productive as an ordinary one, but he'll consider himself lucky
+to get paid three times as much.  As I'll explain later, this is
+partly because great hackers don't know how good they are.  But
+it's also because money is not the main thing they want.What do hackers want?  Like all craftsmen, hackers like good tools.
+In fact, that's an understatement.  Good hackers find it unbearable
+to use bad tools.  They'll simply refuse to work on projects with
+the wrong infrastructure.At a startup I once worked for, one of the things pinned up on our
+bulletin board was an ad from IBM.  It was a picture of an AS400,
+and the headline read, I think, "hackers despise
+it.'' [1]When you decide what infrastructure to use for a project, you're
+not just making a technical decision.  You're also making a social
+decision, and this may be the more important of the two.  For
+example, if your company wants to write some software, it might
+seem a prudent choice to write it in Java.  But when you choose a
+language, you're also choosing a community.  The programmers you'll
+be able to hire to work on a Java project won't be as
+smart as the
+ones you could get to work on a project written in Python.
+And the quality of your hackers probably matters more than the
+language you choose.  Though, frankly, the fact that good hackers
+prefer Python to Java should tell you something about the relative
+merits of those languages.Business types prefer the most popular languages because they view
+languages as standards. They don't want to bet the company on
+Betamax.  The thing about languages, though, is that they're not
+just standards.  If you have to move bits over a network, by all
+means use TCP/IP.  But a programming language isn't just a format.
+A programming language is a medium of expression.I've read that Java has just overtaken Cobol as the most popular
+language.  As a standard, you couldn't wish for more.  But as a
+medium of expression, you could do a lot better.  Of all the great
+programmers I can think of, I know of only one who would voluntarily
+program in Java.  And of all the great programmers I can think of
+who don't work for Sun, on Java, I know of zero.Great hackers also generally insist on using open source software.
+Not just because it's better, but because it gives them more control.
+Good hackers insist on control.  This is part of what makes them
+good hackers:  when something's broken, they need to fix it.  You
+want them to feel this way about the software they're writing for
+you.  You shouldn't be surprised when they feel the same way about
+the operating system.A couple years ago a venture capitalist friend told me about a new
+startup he was involved with.  It sounded promising.  But the next
+time I talked to him, he said they'd decided to build their software
+on Windows NT, and had just hired a very experienced NT developer
+to be their chief technical officer.  When I heard this, I thought,
+these guys are doomed.  One, the CTO couldn't be a first rate
+hacker, because to become an eminent NT developer he would have
+had to use NT voluntarily, multiple times, and I couldn't imagine
+a great hacker doing that; and two, even if he was good, he'd have
+a hard time hiring anyone good to work for him if the project had
+to be built on NT. [2]The Final FrontierAfter software, the most important tool to a hacker is probably
+his office.  Big companies think the function of office space is to express
+rank.  But hackers use their offices for more than that: they
+use their office as a place to think in.  And if you're a technology
+company, their thoughts are your product.  So making hackers work
+in a noisy, distracting environment is like having a paint factory
+where the air is full of soot.The cartoon strip Dilbert has a lot to say about cubicles, and with
+good reason.  All the hackers I know despise them.  The mere prospect
+of being interrupted is enough to prevent hackers from working on
+hard problems.  If you want to get real work done in an office with
+cubicles, you have two options: work at home, or come in early or
+late or on a weekend, when no one else is there.  Don't companies
+realize this is a sign that something is broken?  An office
+environment is supposed to be something that helps
+you work, not something you work despite.Companies like Cisco are proud that everyone there has a cubicle,
+even the CEO.  But they're not so advanced as they think; obviously
+they still view office space as a badge of rank.  Note too that
+Cisco is famous for doing very little product development in house.
+They get new technology by buying the startups that created it-- where
+presumably the hackers did have somewhere quiet to work.One big company that understands what hackers need is Microsoft.
+I once saw a recruiting ad for Microsoft with a big picture of a
+door.  Work for us, the premise was, and we'll give you a place to
+work where you can actually get work done.   And you know, Microsoft
+is remarkable among big companies in that they are able to develop
+software in house.  Not well, perhaps, but well enough.If companies want hackers to be productive, they should look at
+what they do at home.  At home, hackers can arrange things themselves
+so they can get the most done.  And when they work at home, hackers
+don't work in noisy, open spaces; they work in rooms with doors.  They
+work in cosy, neighborhoody places with people around and somewhere
+to walk when they need to mull something over, instead of in glass
+boxes set in acres of parking lots.  They have a sofa they can take
+a nap on when they feel tired, instead of sitting in a coma at
+their desk, pretending to work.  There's no crew of people with
+vacuum cleaners that roars through every evening during the prime
+hacking hours.  There are no meetings or, God forbid, corporate
+retreats or team-building exercises.  And when you look at what
+they're doing on that computer, you'll find it reinforces what I
+said earlier about tools.  They may have to use Java and Windows
+at work, but at home, where they can choose for themselves, you're
+more likely to find them using Perl and Linux.Indeed, these statistics about Cobol or Java being the most popular
+language can be misleading.  What we ought to look at, if we want
+to know what tools are best, is what hackers choose when they can
+choose freely-- that is, in projects of their own.  When you ask
+that question, you find that open source operating systems already
+have a dominant market share, and the number one language is probably
+Perl.InterestingAlong with good tools, hackers want interesting projects.  What
+makes a project interesting?  Well, obviously overtly sexy
+applications like stealth planes or special effects software would
+be interesting to work on.  But any application can be interesting
+if it poses novel technical challenges.  So it's hard to predict
+which problems hackers will like, because some become
+interesting only when the people working on them discover a new
+kind of solution.  Before ITA
+(who wrote the software inside Orbitz),
+the people working on airline fare searches probably thought it
+was one of the most boring applications imaginable.  But ITA made
+it interesting by 
+redefining the problem in a more ambitious way.I think the same thing happened at Google.  When Google was founded,
+the conventional wisdom among the so-called portals was that search
+was boring and unimportant.  But the guys at Google didn't think
+search was boring, and that's why they do it so well.This is an area where managers can make a difference.  Like a parent
+saying to a child, I bet you can't clean up your whole room in
+ten minutes, a good manager can sometimes redefine a problem as a
+more interesting one.  Steve Jobs seems to be particularly good at
+this, in part simply by having high standards.  There were a lot
+of small, inexpensive computers before the Mac.  He redefined the
+problem as: make one that's beautiful.  And that probably drove
+the developers harder than any carrot or stick could.They certainly delivered.  When the Mac first appeared, you didn't
+even have to turn it on to know it would be good; you could tell
+from the case.  A few weeks ago I was walking along the street in
+Cambridge, and in someone's trash I saw what appeared to be a Mac
+carrying case.  I looked inside, and there was a Mac SE.  I carried
+it home and plugged it in, and it booted.  The happy Macintosh
+face, and then the finder.  My God, it was so simple.  It was just
+like... Google.Hackers like to work for people with high standards.  But it's not
+enough just to be exacting.  You have to insist on the right things.
+Which usually means that you have to be a hacker yourself.  I've
+seen occasional articles about how to manage programmers.  Really
+there should be two articles: one about what to do if
+you are yourself a programmer, and one about what to do if you're not.  And the 
+second could probably be condensed into two words:  give up.The problem is not so much the day to day management.  Really good
+hackers are practically self-managing.  The problem is, if you're
+not a hacker, you can't tell who the good hackers are.  A similar
+problem explains why American cars are so ugly.  I call it the
+design paradox.  You might think that you could make your products
+beautiful just by hiring a great designer to design them.  But if
+you yourself don't have good taste, 
+how are you going to recognize
+a good designer?  By definition you can't tell from his portfolio.
+And you can't go by the awards he's won or the jobs he's had,
+because in design, as in most fields, those tend to be driven by
+fashion and schmoozing, with actual ability a distant third.
+There's no way around it:  you can't manage a process intended to
+produce beautiful things without knowing what beautiful is.  American
+cars are ugly because American car companies are run by people with
+bad taste.Many people in this country think of taste as something elusive,
+or even frivolous.  It is neither.  To drive design, a manager must
+be the most demanding user of a company's products.  And if you
+have really good taste, you can, as Steve Jobs does, make satisfying
+you the kind of problem that good people like to work on.Nasty Little ProblemsIt's pretty easy to say what kinds of problems are not interesting:
+those where instead of solving a few big, clear, problems, you have
+to solve a lot of nasty little ones.  One of the worst kinds of
+projects is writing an interface to a piece of software that's
+full of bugs.  Another is when you have to customize
+something for an individual client's complex and ill-defined needs.
+To hackers these kinds of projects are the death of a thousand
+cuts.The distinguishing feature of nasty little problems is that you
+don't learn anything from them.   Writing a compiler is interesting
+because it teaches you what a compiler is.  But writing an interface
+to a buggy piece of software doesn't teach you anything, because the
+bugs are random.  [3] So it's not just fastidiousness that makes good
+hackers avoid nasty little problems.  It's more a question of
+self-preservation.  Working on nasty little problems makes you
+stupid.  Good hackers avoid it for the same reason models avoid
+cheeseburgers.Of course some problems inherently have this character.  And because
+of supply and demand, they pay especially well.  So a company that
+found a way to get great hackers to work on tedious problems would
+be very successful.  How would you do it?One place this happens is in startups.  At our startup we had 
+Robert Morris working as a system administrator.  That's like having the
+Rolling Stones play at a bar mitzvah.  You can't hire that kind of
+talent.  But people will do any amount of drudgery for companies
+of which they're the founders.  [4]Bigger companies solve the problem by partitioning the company.
+They get smart people to work for them by establishing a separate
+R&D department where employees don't have to work directly on
+customers' nasty little problems. [5] In this model, the research
+department functions like a mine. They produce new ideas; maybe
+the rest of the company will be able to use them.You may not have to go to this extreme.  
+Bottom-up programming
+suggests another way to partition the company: have the smart people
+work as toolmakers.  If your company makes software to do x, have
+one group that builds tools for writing software of that type, and
+another that uses these tools to write the applications.  This way
+you might be able to get smart people to write 99% of your code,
+but still keep them almost as insulated from users as they would
+be in a traditional research department.  The toolmakers would have
+users, but they'd only be the company's own developers.  [6]If Microsoft used this approach, their software wouldn't be so full
+of security holes, because the less smart people writing the actual
+applications wouldn't be doing low-level stuff like allocating
+memory.  Instead of writing Word directly in C, they'd be plugging
+together big Lego blocks of Word-language.  (Duplo, I believe, is
+the technical term.)ClumpingAlong with interesting problems, what good hackers like is other
+good hackers.  Great hackers tend to clump together-- sometimes
+spectacularly so, as at Xerox Parc.   So you won't attract good
+hackers in linear proportion to how good an environment you create
+for them.  The tendency to clump means it's more like the square
+of the environment.  So it's winner take all.  At any given time,
+there are only about ten or twenty places where hackers most want to
+work, and if you aren't one of them, you won't just have fewer
+great hackers, you'll have zero.Having great hackers is not, by itself, enough to make a company
+successful.  It works well for Google and ITA, which are two of
+the hot spots right now, but it didn't help Thinking Machines or
+Xerox.  Sun had a good run for a while, but their business model
+is a down elevator.  In that situation, even the best hackers can't
+save you.I think, though, that all other things being equal, a company that
+can attract great hackers will have a huge advantage.  There are
+people who would disagree with this.  When we were making the rounds
+of venture capital firms in the 1990s, several told us that software
+companies didn't win by writing great software, but through brand,
+and dominating channels, and doing the right deals.They really seemed to believe this, and I think I know why.  I
+think what a lot of VCs are looking for, at least unconsciously,
+is the next Microsoft.  And of course if Microsoft is your model,
+you shouldn't be looking for companies that hope to win by writing
+great software.  But VCs are mistaken to look for the next Microsoft,
+because no startup can be the next Microsoft unless some other
+company is prepared to bend over at just the right moment and be
+the next IBM.It's a mistake to use Microsoft as a model, because their whole
+culture derives from that one lucky break.  Microsoft is a bad data
+point.  If you throw them out, you find that good products do tend
+to win in the market.  What VCs should be looking for is the next
+Apple, or the next Google.I think Bill Gates knows this.  What worries him about Google is
+not the power of their brand, but the fact that they have
+better hackers. [7]
+RecognitionSo who are the great hackers?  How do you know when you meet one?
+That turns out to be very hard.  Even hackers can't tell.  I'm
+pretty sure now that my friend Trevor Blackwell is a great hacker.
+You may have read on Slashdot how he made his 
+own Segway.  The
+remarkable thing about this project was that he wrote all the
+software in one day (in Python, incidentally).For Trevor, that's
+par for the course.  But when I first met him, I thought he was a
+complete idiot.  He was standing in Robert Morris's office babbling
+at him about something or other, and I remember standing behind
+him making frantic gestures at Robert to shoo this nut out of his
+office so we could go to lunch.  Robert says he misjudged Trevor
+at first too.  Apparently when Robert first met him, Trevor had
+just begun a new scheme that involved writing down everything about
+every aspect of his life on a stack of index cards, which he carried
+with him everywhere.  He'd also just arrived from Canada, and had
+a strong Canadian accent and a mullet.The problem is compounded by the fact that hackers, despite their
+reputation for social obliviousness, sometimes put a good deal of
+effort into seeming smart.  When I was in grad school I used to
+hang around the MIT AI Lab occasionally. It was kind of intimidating
+at first.  Everyone there spoke so fast.  But after a while I
+learned the trick of speaking fast.  You don't have to think any
+faster; just use twice as many words to say everything.  With this amount of noise in the signal, it's hard to tell good
+hackers when you meet them.  I can't tell, even now.  You also
+can't tell from their resumes.  It seems like the only way to judge
+a hacker is to work with him on something.And this is the reason that high-tech areas 
+only happen around universities.  The active ingredient
+here is not so much the professors as the students.  Startups grow up
+around universities because universities bring together promising young
+people and make them work on the same projects.  The
+smart ones learn who the other smart ones are, and together
+they cook up new projects of their own.Because you can't tell a great hacker except by working with him,
+hackers themselves can't tell how good they are.  This is true to
+a degree in most fields.  I've found that people who
+are great at something are not so much convinced of their own
+greatness as mystified at why everyone else seems so incompetent.
+But it's particularly hard for hackers to know how good they are,
+because it's hard to compare their work.  This is easier in most
+other fields.  In the hundred meters, you know in 10 seconds who's
+fastest.  Even in math there seems to be a general consensus about
+which problems are hard to solve, and what constitutes a good
+solution.  But hacking is like writing.  Who can say which of two
+novels is better?  Certainly not the authors.With hackers, at least, other hackers can tell.  That's because,
+unlike novelists, hackers collaborate on projects.  When you get
+to hit a few difficult problems over the net at someone, you learn
+pretty quickly how hard they hit them back.  But hackers can't
+watch themselves at work.  So if you ask a great hacker how good
+he is, he's almost certain to reply, I don't know.  He's not just
+being modest.  He really doesn't know.And none of us know, except about people we've actually worked
+with.  Which puts us in a weird situation: we don't know who our
+heroes should be.  The hackers who become famous tend to become
+famous by random accidents of PR.  Occasionally I need to give an
+example of a great hacker, and I never know who to use.  The first
+names that come to mind always tend to be people I know personally,
+but it seems lame to use them.  So, I think, maybe I should say
+Richard Stallman, or Linus Torvalds, or Alan Kay, or someone famous
+like that.  But I have no idea if these guys are great hackers.
+I've never worked with them on anything.If there is a Michael Jordan of hacking, no one knows, including
+him.CultivationFinally, the question the hackers have all been wondering about:
+how do you become a great hacker?  I don't know if it's possible
+to make yourself into one.  But it's certainly possible to do things
+that make you stupid, and if you can make yourself stupid, you
+can probably make yourself smart too.The key to being a good hacker may be to work on what you like.
+When I think about the great hackers I know, one thing they have
+in common is the extreme 
+difficulty of making them work 
+on anything they
+don't want to.  I don't know if this is cause or effect; it may be
+both.To do something well you have to love it.  
+So to the extent you
+can preserve hacking as something you love, you're likely to do it
+well.  Try to keep the sense of wonder you had about programming at
+age 14.  If you're worried that your current job is rotting your
+brain, it probably is.The best hackers tend to be smart, of course, but that's true in
+a lot of fields.  Is there some quality that's unique to hackers?
+I asked some friends, and the number one thing they mentioned was
+curiosity.  
+I'd always supposed that all smart people were curious--
+that curiosity was simply the first derivative of knowledge.  But
+apparently hackers are particularly curious, especially about how
+things work.  That makes sense, because programs are in effect
+giant descriptions of how things work.Several friends mentioned hackers' ability to concentrate-- their
+ability, as one put it, to "tune out everything outside their own
+heads.''  I've certainly noticed this.  And I've heard several 
+hackers say that after drinking even half a beer they can't program at
+all.   So maybe hacking does require some special ability to focus.
+Perhaps great hackers can load a large amount of context into their
+head, so that when they look at a line of code, they see not just
+that line but the whole program around it.  John McPhee
+wrote that Bill Bradley's success as a basketball player was due
+partly to his extraordinary peripheral vision.  "Perfect'' eyesight
+means about 47 degrees of vertical peripheral vision.  Bill Bradley
+had 70; he could see the basket when he was looking at the floor.
+Maybe great hackers have some similar inborn ability.  (I cheat by
+using a very dense language, 
+which shrinks the court.)This could explain the disconnect over cubicles.  Maybe the people
+in charge of facilities, not having any concentration to shatter,
+have no idea that working in a cubicle feels to a hacker like having
+one's brain in a blender.  (Whereas Bill, if the rumors of autism
+are true, knows all too well.)One difference I've noticed between great hackers and smart people
+in general is that hackers are more 
+politically incorrect.  To the
+extent there is a secret handshake among good hackers, it's when they
+know one another well enough to express opinions that would get
+them stoned to death by the general public.  And I can see why
+political incorrectness would be a useful quality in programming.
+Programs are very complex and, at least in the hands of good
+programmers, very fluid.  In such situations it's helpful to have
+a habit of questioning assumptions.Can you cultivate these qualities?  I don't know.  But you can at
+least not repress them.  So here is my best shot at a recipe.  If
+it is possible to make yourself into a great hacker, the way to do
+it may be to make the following deal with yourself: you never have
+to work on boring projects (unless your family will starve otherwise),
+and in return, you'll never allow yourself to do a half-assed job.
+All the great hackers I know seem to have made that deal, though
+perhaps none of them had any choice in the matter.Notes
+[1] In fairness, I have to say that IBM makes decent hardware.  I
+wrote this on an IBM laptop.[2] They did turn out to be doomed.  They shut down a few months
+later.[3] I think this is what people mean when they talk
+about the "meaning of life."  On the face of it, this seems an 
+odd idea.  Life isn't an expression; how could it have meaning?
+But it can have a quality that feels a lot like meaning.  In a project
+like a compiler, you have to solve a lot of problems, but the problems
+all fall into a pattern, as in a signal.  Whereas when the problems
+you have to solve are random, they seem like noise.
+[4] Einstein at one point worked designing refrigerators. (He had equity.)[5] It's hard to say exactly what constitutes research in the
+computer world, but as a first approximation, it's software that
+doesn't have users.I don't think it's publication that makes the best hackers want to work
+in research departments.  I think it's mainly not having to have a
+three hour meeting with a product manager about problems integrating
+the Korean version of Word 13.27 with the talking paperclip.[6] Something similar has been happening for a long time in the
+construction industry. When you had a house built a couple hundred
+years ago, the local builders built everything in it.  But increasingly
+what builders do is assemble components designed and manufactured
+by someone else.  This has, like the arrival of desktop publishing,
+given people the freedom to experiment in disastrous ways, but it
+is certainly more efficient.[7] Google is much more dangerous to Microsoft than Netscape was.
+Probably more dangerous than any other company has ever been.  Not
+least because they're determined to fight.  On their job listing
+page, they say that one of their "core values'' is "Don't be evil.''
+From a company selling soybean oil or mining equipment, such a
+statement would merely be eccentric.  But I think all of us in the
+computer world recognize who that is a declaration of war on.Thanks to Jessica Livingston, Robert Morris, and Sarah Harlin
+for reading earlier versions of this talk.November 2021(This essay is derived from a talk at the Cambridge Union.)When I was a kid, I'd have said there wasn't. My father told me so.
+Some people like some things, and other people like other things,
+and who's to say who's right?It seemed so obvious that there was no such thing as good taste
+that it was only through indirect evidence that I realized my father
+was wrong. And that's what I'm going to give you here: a proof by
+reductio ad absurdum. If we start from the premise that there's no
+such thing as good taste, we end up with conclusions that are
+obviously false, and therefore the premise must be wrong.We'd better start by saying what good taste is. There's a narrow
+sense in which it refers to aesthetic judgements and a broader one
+in which it refers to preferences of any kind. The strongest proof
+would be to show that taste exists in the narrowest sense, so I'm
+going to talk about taste in art. You have better taste than me if
+the art you like is better than the art I like.If there's no such thing as good taste, then there's no such thing
+as good art. Because if there is such a
+thing as good art, it's
+easy to tell which of two people has better taste. Show them a lot
+of works by artists they've never seen before and ask them to
+choose the best, and whoever chooses the better art has better
+taste.So if you want to discard the concept of good taste, you also have
+to discard the concept of good art. And that means you have to
+discard the possibility of people being good at making it. Which
+means there's no way for artists to be good at their jobs. And not
+just visual artists, but anyone who is in any sense an artist. You
+can't have good actors, or novelists, or composers, or dancers
+either. You can have popular novelists, but not good ones.We don't realize how far we'd have to go if we discarded the concept
+of good taste, because we don't even debate the most obvious cases.
+But it doesn't just mean we can't say which of two famous painters
+is better. It means we can't say that any painter is better than a
+randomly chosen eight year old.That was how I realized my father was wrong. I started studying
+painting. And it was just like other kinds of work I'd done: you
+could do it well, or badly, and if you tried hard, you could get
+better at it. And it was obvious that Leonardo and Bellini were
+much better at it than me. That gap between us was not imaginary.
+They were so good. And if they could be good, then art could be
+good, and there was such a thing as good taste after all.Now that I've explained how to show there is such a thing as good
+taste, I should also explain why people think there isn't. There
+are two reasons. One is that there's always so much disagreement
+about taste. Most people's response to art is a tangle of unexamined
+impulses. Is the artist famous? Is the subject attractive? Is this
+the sort of art they're supposed to like? Is it hanging in a famous
+museum, or reproduced in a big, expensive book? In practice most
+people's response to art is dominated by such extraneous factors.And the people who do claim to have good taste are so often mistaken.
+The paintings admired by the so-called experts in one generation
+are often so different from those admired a few generations later.
+It's easy to conclude there's nothing real there at all. It's only
+when you isolate this force, for example by trying to paint and
+comparing your work to Bellini's, that you can see that it does in
+fact exist.The other reason people doubt that art can be good is that there
+doesn't seem to be any room in the art for this goodness. The
+argument goes like this. Imagine several people looking at a work
+of art and judging how good it is. If being good art really is a
+property of objects, it should be in the object somehow. But it
+doesn't seem to be; it seems to be something happening in the heads
+of each of the observers. And if they disagree, how do you choose
+between them?The solution to this puzzle is to realize that the purpose of art
+is to work on its human audience, and humans have a lot in common.
+And to the extent the things an object acts upon respond in the
+same way, that's arguably what it means for the object to have the
+corresponding property. If everything a particle interacts with
+behaves as if the particle had a mass of m, then it has a mass of
+m. So the distinction between "objective" and "subjective" is not
+binary, but a matter of degree, depending on how much the subjects
+have in common. Particles interacting with one another are at one
+pole, but people interacting with art are not all the way at the
+other; their reactions aren't random.Because people's responses to art aren't random, art can be designed
+to operate on people, and be good or bad depending on how effectively
+it does so. Much as a vaccine can be. If someone were talking about
+the ability of a vaccine to confer immunity, it would seem very
+frivolous to object that conferring immunity wasn't really a property
+of vaccines, because acquiring immunity is something that happens
+in the immune system of each individual person. Sure, people's
+immune systems vary, and a vaccine that worked on one might not
+work on another, but that doesn't make it meaningless to talk about
+the effectiveness of a vaccine.The situation with art is messier, of course. You can't measure
+effectiveness by simply taking a vote, as you do with vaccines.
+You have to imagine the responses of subjects with a deep knowledge
+of art, and enough clarity of mind to be able to ignore extraneous
+influences like the fame of the artist. And even then you'd still
+see some disagreement. People do vary, and judging art is hard,
+especially recent art. There is definitely not a total order either
+of works or of people's ability to judge them. But there is equally
+definitely a partial order of both. So while it's not possible to
+have perfect taste, it is possible to have good taste.
+Thanks to the Cambridge Union for inviting me, and to Trevor
+Blackwell, Jessica Livingston, and Robert Morris for reading drafts
+of this.
+May 2003If Lisp is so great, why don't more people use it?  I was    
+asked this question by a student in the audience at a 
+talk I gave recently.  Not for the first time, either.In languages, as in so many things, there's not much     
+correlation between popularity and quality.  Why does   
+John Grisham (King of Torts sales rank, 44) outsell
+Jane Austen (Pride and Prejudice sales rank, 6191)?
+Would even Grisham claim that it's because he's a better
+writer?Here's the first sentence of Pride and Prejudice:
+
+It is a truth universally acknowledged, that a single man 
+in possession of a good fortune must be in want of a
+wife.
+
+"It is a truth universally acknowledged?"  Long words for
+the first sentence of a love story.Like Jane Austen, Lisp looks hard.  Its syntax, or lack
+of syntax, makes it look completely unlike 
+the languages
+most people are used to.  Before I learned Lisp, I was afraid
+of it too.  I recently came across a notebook from 1983
+in which I'd written:
+
+I suppose I should learn Lisp, but it seems so foreign.
+
+Fortunately, I was 19 at the time and not too resistant to learning
+new things.  I was so ignorant that learning
+almost anything meant learning new things.People frightened by Lisp make up other reasons for not
+using it.  The standard
+excuse, back when C was the default language, was that Lisp
+was too slow.  Now that Lisp dialects are among
+the faster
+languages available, that excuse has gone away.
+Now the standard excuse is openly circular: that other languages
+are more popular.(Beware of such reasoning.  It gets you Windows.)Popularity is always self-perpetuating, but it's especially
+so in programming languages. More libraries
+get written for popular languages, which makes them still
+more popular.  Programs often have to work with existing programs,
+and this is easier if they're written in the same language,
+so languages spread from program to program like a virus.
+And managers prefer popular languages, because they give them 
+more leverage over developers, who can more easily be replaced.Indeed, if programming languages were all more or less equivalent,
+there would be little justification for using any but the most
+popular.  But they aren't all equivalent, not by a long
+shot.  And that's why less popular languages, like Jane Austen's 
+novels, continue to survive at all.  When everyone else is reading 
+the latest John Grisham novel, there will always be a few people 
+reading Jane Austen instead.
+
+Want to start a startup?  Get funded by
+Y Combinator.
+
+
+
+
+October 2010After barely changing at all for decades, the startup funding
+business is now in what could, at least by comparison, be called
+turmoil.  At Y Combinator we've seen dramatic changes in the funding
+environment for startups.  Fortunately one of them is much higher
+valuations.The trends we've been seeing are probably not YC-specific.  I wish
+I could say they were, but the main cause is probably just that we
+see trends first—partly because the startups we fund are very
+plugged into the Valley and are quick to take advantage of anything
+new, and partly because we fund so many that we have enough data
+points to see patterns clearly.What we're seeing now, everyone's probably going to be seeing in
+the next couple years.  So I'm going to explain what we're seeing,
+and what that will mean for you if you try to raise money.Super-AngelsLet me start by describing what the world of startup funding used
+to look like.  There used to be two sharply differentiated types
+of investors: angels and venture capitalists.  Angels are individual
+rich people who invest small amounts of their own money, while VCs
+are employees of funds that invest large amounts of other people's.For decades there were just those two types of investors, but now
+a third type has appeared halfway between them: the so-called
+super-angels. 
+[1]
+  And VCs have been provoked by their arrival
+into making a lot of angel-style investments themselves.  So the
+previously sharp line between angels and VCs has become hopelessly
+blurred.There used to be a no man's land between angels and VCs.  Angels
+would invest $20k to $50k apiece, and VCs usually a million or more.
+So an angel round meant a collection of angel investments that
+combined to maybe $200k, and a VC round meant a series A round in
+which a single VC fund (or occasionally two) invested $1-5 million.The no man's land between angels and VCs was a very inconvenient
+one for startups, because it coincided with the amount many wanted
+to raise.  Most startups coming out of Demo Day wanted to raise
+around $400k.  But it was a pain to stitch together that much out
+of angel investments, and most VCs weren't interested in investments
+so small.  That's the fundamental reason the super-angels have
+appeared.  They're responding to the market.The arrival of a new type of investor is big news for startups,
+because there used to be only two and they rarely competed with one
+another.  Super-angels compete with both angels and VCs.  That's
+going to change the rules about how to raise money.  I don't know
+yet what the new rules will be, but it looks like most of the changes
+will be for the better.A super-angel has some of the qualities of an angel, and some of
+the qualities of a VC.  They're usually individuals, like angels.
+In fact many of the current super-angels were initially angels of
+the classic type.  But like VCs, they invest other people's money.
+This allows them to invest larger amounts than angels:  a typical
+super-angel investment is currently about $100k.  They make investment
+decisions quickly, like angels.  And they make a lot more investments
+per partner than VCs—up to 10 times as many.The fact that super-angels invest other people's money makes them
+doubly alarming to VCs. They don't just compete for startups; they
+also compete for investors.  What super-angels really are is a new
+form of fast-moving, lightweight VC fund.   And those of us in the
+technology world know what usually happens when something comes
+along that can be described in terms like that.  Usually it's the
+replacement.Will it be?  As of now, few of the startups that take money from
+super-angels are ruling out taking VC money.  They're just postponing
+it.  But that's still a problem for VCs.  Some of the startups that
+postpone raising VC money may do so well on the angel money they
+raise that they never bother to raise more.  And those who do raise
+VC rounds will be able to get higher valuations when they do.  If
+the best startups get 10x higher valuations when they raise series
+A rounds, that would cut VCs' returns from winners at least tenfold.
+[2]So I think VC funds are seriously threatened by the super-angels.
+But one thing that may save them to some extent is the uneven
+distribution of startup outcomes: practically all the returns are
+concentrated in a few big successes.  The expected value of a startup
+is the percentage chance it's Google.  So to the extent that winning
+is a matter of absolute returns, the super-angels could win practically
+all the battles for individual startups and yet lose the war, if
+they merely failed to get those few big winners.  And there's a
+chance that could happen, because the top VC funds have better
+brands, and can also do more for their portfolio companies.  
+[3]Because super-angels make more investments per partner, they have
+less partner per investment.  They can't pay as much attention to
+you as a VC on your board could.  How much is that extra attention
+worth?  It will vary enormously from one partner to another.  There's
+no consensus yet in the general case.  So for now this is something
+startups are deciding individually.Till now, VCs' claims about how much value they added were sort of
+like the government's.  Maybe they made you feel better, but you
+had no choice in the matter, if you needed money on the scale only
+VCs could supply.  Now that VCs have competitors, that's going to
+put a market price on the help they offer.  The interesting thing
+is, no one knows yet what it will be.Do startups that want to get really big need the sort of advice and
+connections only the top VCs can supply?  Or would super-angel money
+do just as well?  The VCs will say you need them, and the super-angels
+will say you don't.  But the truth is, no one knows yet, not even
+the VCs and super-angels themselves.   All the super-angels know
+is that their new model seems promising enough to be worth trying,
+and all the VCs know is that it seems promising enough to worry
+about.RoundsWhatever the outcome, the conflict between VCs and super-angels is
+good news for founders.  And not just for the obvious reason that
+more competition for deals means better terms.  The whole shape of
+deals is changing.One of the biggest differences between angels and VCs is the amount
+of your company they want.  VCs want a lot.  In a series A round
+they want a third of your company, if they can get it.  They don't
+care much how much they pay for it, but they want a lot because the
+number of series A investments they can do is so small.  In a
+traditional series A investment, at least one partner from the VC
+fund takes a seat on your board.  
+[4]
+ Since board seats last about
+5 years and each partner can't handle more than about 10 at once,
+that means a VC fund can only do about 2 series A deals per partner
+per year. And that means they need to get as much of the company
+as they can in each one.  You'd have to be a very promising startup
+indeed to get a VC to use up one of his 10 board seats for only a
+few percent of you.Since angels generally don't take board seats, they don't have this
+constraint.  They're happy to buy only a few percent of you.  And
+although the super-angels are in most respects mini VC funds, they've
+retained this critical property of angels.  They don't take board
+seats, so they don't need a big percentage of your company.Though that means you'll get correspondingly less attention from
+them, it's good news in other respects.  Founders never really liked
+giving up as much equity as VCs wanted.  It was a lot of the company
+to give up in one shot.  Most founders doing series A deals would
+prefer to take half as much money for half as much stock, and then
+see what valuation they could get for the second half of the stock
+after using the first half of the money to increase its value.  But
+VCs never offered that option.Now startups have another alternative.  Now it's easy to raise angel
+rounds about half the size of series A rounds.  Many of the startups
+we fund are taking this route, and I predict that will be true of
+startups in general.A typical big angel round might be $600k on a convertible note with
+a valuation cap of $4 million premoney.  Meaning that when the note
+converts into stock (in a later round, or upon acquisition), the
+investors in that round will get.6 / 4.6, or 13% of the company.
+That's a lot less than the 30 to 40% of the company you usually
+give up in a series A round if you do it so early.  
+[5]But the advantage of these medium-sized rounds is not just that
+they cause less dilution.  You also lose less control.  After an
+angel round, the founders almost always still have control of the
+company, whereas after a series A round they often don't.  The
+traditional board structure after a series A round is two founders,
+two VCs, and a (supposedly) neutral fifth person.  Plus series A
+terms usually give the investors a veto over various kinds of
+important decisions, including selling the company.  Founders usually
+have a lot of de facto control after a series A, as long as things
+are going well.  But that's not the same as just being able to do
+what you want, like you could before.A third and quite significant advantage of angel rounds is that
+they're less stressful to raise.  Raising a traditional series A
+round has in the past taken weeks, if not months.  When a VC firm
+can only do 2 deals per partner per year, they're careful about
+which they do.  To get a traditional series A round you have to go
+through a series of meetings, culminating in a full partner meeting
+where the firm as a whole says yes or no.  That's the really scary
+part for founders: not just that series A rounds take so long, but
+at the end of this long process the VCs might still say no.  The
+chance of getting rejected after the full partner meeting averages
+about 25%.  At some firms it's over 50%.Fortunately for founders, VCs have been getting a lot faster.
+Nowadays Valley VCs are more likely to take 2 weeks than 2 months.
+But they're still not as fast as angels and super-angels, the most
+decisive of whom sometimes decide in hours.Raising an angel round is not only quicker, but you get feedback
+as it progresses.  An angel round is not an all or nothing thing
+like a series A.  It's composed of multiple investors with varying
+degrees of seriousness, ranging from the upstanding ones who commit
+unequivocally to the jerks who give you lines like "come back to
+me to fill out the round." You usually start collecting money from
+the most committed investors and work your way out toward the
+ambivalent ones, whose interest increases as the round fills up.But at each point you know how you're doing.  If investors turn
+cold you may have to raise less, but when investors in an angel
+round turn cold the process at least degrades gracefully, instead
+of blowing up in your face and leaving you with nothing, as happens
+if you get rejected by a VC fund after a full partner meeting.
+Whereas if investors seem hot, you can not only close the round
+faster, but now that convertible notes are becoming the norm,
+actually raise the price to reflect demand.ValuationHowever, the VCs have a weapon they can use against the super-angels,
+and they have started to use it.   VCs have started making angel-sized
+investments too.  The term "angel round" doesn't mean that all the
+investors in it are angels; it just describes the structure of the
+round.  Increasingly the participants include VCs making investments
+of a hundred thousand or two.  And when VCs invest in angel rounds
+they can do things that super-angels don't like.  VCs are quite
+valuation-insensitive in angel rounds—partly because they are
+in general, and partly because they don't care that much about the
+returns on angel rounds, which they still view mostly as a way to
+recruit startups for series A rounds later.  So VCs who invest in
+angel rounds can blow up the valuations for angels and super-ang

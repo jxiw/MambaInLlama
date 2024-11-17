@@ -1,0 +1,450 @@
+<|begin_of_text|><|begin_of_text|>December 2014I've read Villehardouin's chronicle of the Fourth Crusade at least
+two times, maybe three.  And yet if I had to write down everything
+I remember from it, I doubt it would amount to much more than a
+page.  Multiply this times several hundred, and I get an uneasy
+feeling when I look at my bookshelves. What use is it to read all
+these books if I remember so little from them?A few months ago, as I was reading Constance Reid's excellent
+biography of Hilbert, I figured out if not the answer to this
+question, at least something that made me feel better about it.
+She writes:
+
+  Hilbert had no patience with mathematical lectures which filled
+  the students with facts but did not teach them how to frame a
+  problem and solve it. He often used to tell them that "a perfect
+  formulation of a problem is already half its solution."
+
+That has always seemed to me an important point, and I was even
+more convinced of it after hearing it confirmed by Hilbert.But how had I come to believe in this idea in the first place?  A
+combination of my own experience and other things I'd read.  None
+of which I could at that moment remember!  And eventually I'd forget
+that Hilbert had confirmed it too.  But my increased belief in the
+importance of this idea would remain something I'd learned from
+this book, even after I'd forgotten I'd learned it.Reading and experience train your model of the world.  And even if
+you forget the experience or what you read, its effect on your model
+of the world persists.  Your mind is like a compiled program you've
+lost the source of.  It works, but you don't know why.The place to look for what I learned from Villehardouin's chronicle
+is not what I remember from it, but my mental models of the crusades,
+Venice, medieval culture, siege warfare, and so on.  Which doesn't
+mean I couldn't have read more attentively, but at least the harvest
+of reading is not so miserably small as it might seem.This is one of those things that seem obvious in retrospect.  But
+it was a surprise to me and presumably would be to anyone else who
+felt uneasy about (apparently) forgetting so much they'd read.Realizing it does more than make you feel a little better about
+forgetting, though.  There are specific implications.For example, reading and experience are usually "compiled" at the
+time they happen, using the state of your brain at that time.  The
+same book would get compiled differently at different points in
+your life.  Which means it is very much worth reading important
+books multiple times.  I always used to feel some misgivings about
+rereading books.  I unconsciously lumped reading together with work
+like carpentry, where having to do something again is a sign you
+did it wrong the first time.  Whereas now the phrase "already read"
+seems almost ill-formed.Intriguingly, this implication isn't limited to books.  Technology
+will increasingly make it possible to relive our experiences.  When
+people do that today it's usually to enjoy them again (e.g. when
+looking at pictures of a trip) or to find the origin of some bug in
+their compiled code (e.g. when Stephen Fry succeeded in remembering
+the childhood trauma that prevented him from singing).  But as
+technologies for recording and playing back your life improve, it
+may become common for people to relive experiences without any goal
+in mind, simply to learn from them again as one might when rereading
+a book.Eventually we may be able not just to play back experiences but
+also to index and even edit them. So although not knowing how you
+know things may seem part of being human, it may not be.
+Thanks to Sam Altman, Jessica Livingston, and Robert Morris for reading 
+drafts of this.April 2012A palliative care nurse called Bronnie Ware made a list of the
+biggest regrets
+of the dying.  Her list seems plausible.  I could see
+myself — can see myself — making at least 4 of these
+5 mistakes.If you had to compress them into a single piece of advice, it might
+be: don't be a cog.  The 5 regrets paint a portrait of post-industrial
+man, who shrinks himself into a shape that fits his circumstances,
+then turns dutifully till he stops.The alarming thing is, the mistakes that produce these regrets are
+all errors of omission.  You forget your dreams, ignore your family,
+suppress your feelings, neglect your friends, and forget to be
+happy.  Errors of omission are a particularly dangerous type of
+mistake, because you make them by default.I would like to avoid making these mistakes.  But how do you avoid
+mistakes you make by default?  Ideally you transform your life so
+it has other defaults.  But it may not be possible to do that
+completely. As long as these mistakes happen by default, you probably
+have to be reminded not to make them.  So I inverted the 5 regrets,
+yielding a list of 5 commands
+
+   Don't ignore your dreams; don't work too much; say what you
+   think; cultivate friendships; be happy.
+
+which I then put at the top of the file I use as a todo list.November 2005In the next few years, venture capital funds will find themselves
+squeezed from four directions.  They're already stuck with a seller's
+market, because of the huge amounts they raised at the end of the
+Bubble and still haven't invested.  This by itself is not the end
+of the world.  In fact, it's just a more extreme version of the
+norm
+in the VC business: too much money chasing too few deals.Unfortunately, those few deals now want less and less money, because
+it's getting so cheap to start a startup.  The four causes: open
+source, which makes software free; Moore's law, which makes hardware
+geometrically closer to free; the Web, which makes promotion free
+if you're good; and better languages, which make development a lot
+cheaper.When we started our startup in 1995, the first three were our biggest
+expenses.  We had to pay $5000 for the Netscape Commerce Server,
+the only software that then supported secure http connections.  We
+paid $3000 for a server with a 90 MHz processor and 32 meg of
+memory.  And we paid a PR firm about $30,000 to promote our launch.Now you could get all three for nothing.  You can get the software
+for free; people throw away computers more powerful than our first
+server; and if you make something good you can generate ten times
+as much traffic by word of mouth online than our first PR firm got
+through the print media.And of course another big change for the average startup is that
+programming languages have improved-- or rather, the median language has.  At most startups ten years
+ago, software development meant ten programmers writing code in
+C++.  Now the same work might be done by one or two using Python
+or Ruby.During the Bubble, a lot of people predicted that startups would
+outsource their development to India.  I think a better model for
+the future is David Heinemeier Hansson, who outsourced his development
+to a more powerful language instead.  A lot of well-known applications
+are now, like BaseCamp, written by just one programmer.  And one
+guy is more than 10x cheaper than ten, because (a) he won't waste
+any time in meetings, and (b) since he's probably a founder, he can
+pay himself nothing.Because starting a startup is so cheap, venture capitalists now
+often want to give startups more money than the startups want to
+take.  VCs like to invest several million at a time.  But as one
+VC told me after a startup he funded would only take about half a
+million, "I don't know what we're going to do.  Maybe we'll just
+have to give some of it back." Meaning give some of the fund back
+to the institutional investors who supplied it, because it wasn't
+going to be possible to invest it all.Into this already bad situation comes the third problem: Sarbanes-Oxley.
+Sarbanes-Oxley is a law, passed after the Bubble, that drastically
+increases the regulatory burden on public companies. And in addition
+to the cost of compliance, which is at least two million dollars a
+year, the law introduces frightening legal exposure for corporate
+officers.  An experienced CFO I know said flatly: "I would not
+want to be CFO of a public company now."You might think that responsible corporate governance is an area
+where you can't go too far.  But you can go too far in any law, and
+this remark convinced me that Sarbanes-Oxley must have.  This CFO
+is both the smartest and the most upstanding money guy I know.  If
+Sarbanes-Oxley deters people like him from being CFOs of public  
+companies, that's proof enough that it's broken.Largely because of Sarbanes-Oxley, few startups go public now.  For
+all practical purposes, succeeding now equals getting bought.  Which
+means VCs are now in the business of finding promising little 2-3
+man startups and pumping them up into companies that cost $100
+million to acquire.   They didn't mean to be in this business; it's
+just what their business has evolved into.Hence the fourth problem: the acquirers have begun to realize they
+can buy wholesale.  Why should they wait for VCs to make the startups
+they want more expensive?  Most of what the VCs add, acquirers don't
+want anyway.  The acquirers already have brand recognition and HR
+departments.  What they really want is the software and the developers,
+and that's what the startup is in the early phase: concentrated
+software and developers.Google, typically, seems to have been the first to figure this out.
+"Bring us your startups early," said Google's speaker at the Startup School.  They're quite
+explicit about it: they like to acquire startups at just the point
+where they would do a Series A round.  (The Series A round is the
+first round of real VC funding; it usually happens in the first
+year.) It is a brilliant strategy, and one that other big technology
+companies will no doubt try to duplicate.  Unless they want to have 
+still more of their lunch eaten by Google.Of course, Google has an advantage in buying startups: a lot of the
+people there are rich, or expect to be when their options vest.
+Ordinary employees find it very hard to recommend an acquisition;
+it's just too annoying to see a bunch of twenty year olds get rich
+when you're still working for salary.<|begin_of_text|>
+The best thing to do in San Francisco is eat a sandwich and sit in Dolores Park on a sunny day.
+  Even if it's the right thing   
+for your company to do.The Solution(s)Bad as things look now, there is a way for VCs to save themselves.
+They need to do two things, one of which won't surprise them, and  
+another that will seem an anathema.Let's start with the obvious one: lobby to get Sarbanes-Oxley  
+loosened.  This law was created to prevent future Enrons, not to
+destroy the IPO market.  Since the IPO market was practically dead
+when it passed, few saw what bad effects it would have.  But now 
+that technology has recovered from the last bust, we can see clearly
+what a bottleneck Sarbanes-Oxley has become.Startups are fragile plants—seedlings, in fact.  These seedlings
+are worth protecting, because they grow into the trees of the
+economy.  Much of the economy's growth is their growth.  I think
+most politicians realize that.  But they don't realize just how   
+fragile startups are, and how easily they can become collateral
+damage of laws meant to fix some other problem.Still more dangerously, when you destroy startups, they make very
+little noise.  If you step on the toes of the coal industry, you'll
+hear about it.  But if you inadvertantly squash the startup industry,
+all that happens is that the founders of the next Google stay in 
+grad school instead of starting a company.My second suggestion will seem shocking to VCs: let founders cash  
+out partially in the Series A round.  At the moment, when VCs invest
+in a startup, all the stock they get is newly issued and all the 
+money goes to the company.  They could buy some stock directly from
+the founders as well.Most VCs have an almost religious rule against doing this.  They
+don't want founders to get a penny till the company is sold or goes
+public.  VCs are obsessed with control, and they worry that they'll
+have less leverage over the founders if the founders have any money.This is a dumb plan.  In fact, letting the founders sell a little stock
+early would generally be better for the company, because it would
+cause the founders' attitudes toward risk to be aligned with the
+VCs'.  As things currently work, their attitudes toward risk tend
+to be diametrically opposed: the founders, who have nothing, would
+prefer a 100% chance of $1 million to a 20% chance of $10 million,
+while the VCs can afford to be "rational" and prefer the latter.Whatever they say, the reason founders are selling their companies
+early instead of doing Series A rounds is that they get paid up
+front.  That first million is just worth so much more than the
+subsequent ones.  If founders could sell a little stock early,
+they'd be happy to take VC money and bet the rest on a bigger
+outcome.So why not let the founders have that first million, or at least
+half million?  The VCs would get same number of shares for the   
+money.  So what if some of the money would go to the  
+founders instead of the company?Some VCs will say this is
+unthinkable—that they want all their money to be put to work
+growing the company.  But the fact is, the huge size of current VC
+investments is dictated by the structure
+of VC funds, not the needs of startups.  Often as not these large  
+investments go to work destroying the company rather than growing
+it.The angel investors who funded our startup let the founders sell
+some stock directly to them, and it was a good deal for everyone. 
+The angels made a huge return on that investment, so they're happy.
+And for us founders it blunted the terrifying all-or-nothingness
+of a startup, which in its raw form is more a distraction than a
+motivator.If VCs are frightened at the idea of letting founders partially
+cash out, let me tell them something still more frightening: you
+are now competing directly with Google.
+Thanks to Trevor Blackwell, Sarah Harlin, Jessica
+Livingston, and Robert Morris for reading drafts of this.April 2006(This essay is derived from a talk at the 2006 
+Startup School.)The startups we've funded so far are pretty quick, but they seem
+quicker to learn some lessons than others.  I think it's because
+some things about startups are kind of counterintuitive.We've now 
+invested 
+in enough companies that I've learned a trick
+for determining which points are the counterintuitive ones:
+they're the ones I have to keep repeating.So I'm going to number these points, and maybe with future startups
+I'll be able to pull off a form of Huffman coding. I'll make them
+all read this, and then instead of nagging them in detail, I'll
+just be able to say: number four!
+1. Release Early.The thing I probably repeat most is this recipe for a startup: get
+a version 1 out fast, then improve it based on users' reactions.By "release early" I don't mean you should release something full
+of bugs, but that you should release something minimal.  Users hate
+bugs, but they don't seem to mind a minimal version 1, if there's
+more coming soon.There are several reasons it pays to get version 1 done fast.  One
+is that this is simply the right way to write software, whether for
+a startup or not.  I've been repeating that since 1993, and I haven't seen much since to
+contradict it.  I've seen a lot of startups die because they were
+too slow to release stuff, and none because they were too quick.
+[1]One of the things that will surprise you if you build something
+popular is that you won't know your users.  Reddit now has almost half a million
+unique visitors a month.  Who are all those people?  They have no
+idea.  No web startup does.  And since you don't know your users,
+it's dangerous to guess what they'll like.  Better to release
+something and let them tell you.Wufoo took this to heart and released
+their form-builder before the underlying database.  You can't even
+drive the thing yet, but 83,000 people came to sit in the driver's
+seat and hold the steering wheel.  And Wufoo got valuable feedback
+from it: Linux users complained they used too much Flash, so they
+rewrote their software not to.  If they'd waited to release everything
+at once, they wouldn't have discovered this problem till it was
+more deeply wired in.Even if you had no users, it would still be important to release
+quickly, because for a startup the initial release acts as a shakedown
+cruise.  If anything major is broken-- if the idea's no good,
+for example, or the founders hate one another-- the stress of getting
+that first version out will expose it.  And if you have such problems
+you want to find them early.Perhaps the most important reason to release early, though, is that
+it makes you work harder.  When you're working on something that
+isn't released, problems are intriguing.  In something that's out
+there, problems are alarming.  There is a lot more urgency once you
+release.  And I think that's precisely why people put it off.  They
+know they'll have to work a lot harder once they do. 
+[2]
+2. Keep Pumping Out Features.Of course, "release early" has a second component, without which
+it would be bad advice.  If you're going to start with something
+that doesn't do much, you better improve it fast.What I find myself repeating is "pump out features."  And this rule
+isn't just for the initial stages.  This is something all startups
+should do for as long as they want to be considered startups.I don't mean, of course, that you should make your application ever
+more complex.  By "feature" I mean one unit of hacking-- one quantum
+of making users' lives better.As with exercise, improvements beget improvements.  If you run every
+day, you'll probably feel like running tomorrow.  But if you skip
+running for a couple weeks, it will be an effort to drag yourself
+out.  So it is with hacking: the more ideas you implement, the more
+ideas you'll have.  You should make your system better at least in
+some small way every day or two.This is not just a good way to get development done; it is also a
+form of marketing.  Users love a site that's constantly improving.
+In fact, users expect a site to improve.  Imagine if you visited a
+site that seemed very good, and then returned two months later and
+not one thing had changed.  Wouldn't it start to seem lame? 
+[3]They'll like you even better when you improve in response to their
+comments, because customers are used to companies ignoring them.
+If you're the rare exception-- a company that actually listens--
+you'll generate fanatical loyalty.  You won't need to advertise,
+because your users will do it for you.This seems obvious too, so why do I have to keep repeating it?  I
+think the problem here is that people get used to how things are.
+Once a product gets past the stage where it has glaring flaws, you
+start to get used to it, and gradually whatever features it happens
+to have become its identity.  For example, I doubt many people at
+Yahoo (or Google for that matter) realized how much better web mail
+could be till Paul Buchheit showed them.I think the solution is to assume that anything you've made is far
+short of what it could be.  Force yourself, as a sort of intellectual
+exercise, to keep thinking of improvements.  Ok, sure, what you
+have is perfect.  But if you had to change something, what would
+it be?If your product seems finished, there are two possible explanations:
+(a) it is finished, or (b) you lack imagination.  Experience suggests
+(b) is a thousand times more likely.
+3. Make Users Happy.Improving constantly is an instance of a more general rule: make
+users happy.  One thing all startups have in common is that they
+can't force anyone to do anything.  They can't force anyone to use
+their software, and they can't force anyone to do deals with them.
+A startup has to sing for its supper.  That's why the successful
+ones make great things.  They have to, or die.When you're running a startup you feel like a little bit of debris
+blown about by powerful winds.  The most powerful wind is users.
+They can either catch you and loft you up into the sky, as they did
+with Google, or leave you flat on the pavement, as they do with
+most startups.  Users are a fickle wind, but more powerful than any
+other.  If they take you up, no competitor can keep you down.As a little piece of debris, the rational thing for you to do is
+not to lie flat, but to curl yourself into a shape the wind will
+catch.I like the wind metaphor because it reminds you how impersonal the
+stream of traffic is.  The vast majority of people who visit your
+site will be casual visitors.  It's them you have to design your
+site for.  The people who really care will find what they want by
+themselves.The median visitor will arrive with their finger poised on the Back
+button.  Think about your own experience: most links you
+follow lead to something lame.  Anyone who has used the web for
+more than a couple weeks has been trained to click on Back after
+following a link.  So your site has to say "Wait!  Don't click on
+Back.  This site isn't lame.  Look at this, for example."There are two things you have to do to make people pause.  The most
+important is to explain, as concisely as possible, what the hell
+your site is about.  How often have you visited a site that seemed
+to assume you already knew what they did?  For example, the corporate
+site that says the
+company makes
+
+  enterprise content management solutions for business that enable
+  organizations to unify people, content and processes to minimize
+  business risk, accelerate time-to-value and sustain lower total
+  cost of ownership.
+
+An established company may get away with such an opaque description,
+but no startup can.  A startup
+should be able to explain in one or two sentences exactly what it
+does. 
+[4]
+And not just to users.  You need this for everyone:
+investors, acquirers, partners, reporters, potential employees, and
+even current employees.  You probably shouldn't even start a company
+to do something that can't be described compellingly in one or two
+sentences.The other thing I repeat is to give people everything you've got,
+right away.  If you have something impressive, try to put it on the
+front page, because that's the only one most visitors will see.
+Though indeed there's a paradox here: the more you push the good
+stuff toward the front, the more likely visitors are to explore
+further. 
+[5]In the best case these two suggestions get combined: you tell
+visitors what your site is about by showing them.  One of the
+standard pieces of advice in fiction writing is "show, don't tell."
+Don't say that a character's angry; have him grind his teeth, or
+break his pencil in half.  Nothing will explain what your site does
+so well as using it.The industry term here is "conversion."  The job of your site is
+to convert casual visitors into users-- whatever your definition
+of a user is.  You can measure this in your growth rate.  Either
+your site is catching on, or it isn't, and you must know which.  If
+you have decent growth, you'll win in the end, no matter how obscure
+you are now.  And if you don't, you need to fix something.
+4. Fear the Right Things.Another thing I find myself saying a lot is "don't worry."  Actually,
+it's more often "don't worry about this; worry about that instead."
+Startups are right to be paranoid, but they sometimes fear the wrong
+things.Most visible disasters are not so alarming as they seem.  Disasters
+are normal in a startup: a founder quits, you discover a patent
+that covers what you're doing, your servers keep crashing, you run
+into an insoluble technical problem, you have to change your name,
+a deal falls through-- these are all par for the course.  They won't
+kill you unless you let them.Nor will most competitors.  A lot of startups worry "what if Google
+builds something like us?"  Actually big companies are not the ones
+you have to worry about-- not even Google.  The people at Google
+are smart, but no smarter than you; they're not as motivated, because
+Google is not going to go out of business if this one product fails;
+and even at Google they have a lot of bureaucracy to slow them down.What you should fear, as a startup, is not the established players,
+but other startups you don't know exist yet.  They're way more
+dangerous than Google because, like you, they're cornered animals.Looking just at existing competitors can give you a false sense of
+security.  You should compete against what someone else could be
+doing, not just what you can see people doing.  A corollary is that
+you shouldn't relax just because you have no visible competitors
+yet.  No matter what your idea, there's someone else out there
+working on the same thing.That's the downside of it being easier to start a startup: more people
+are doing it.  But I disagree with Caterina Fake when she says that
+makes this a bad time to start a startup.  More people are starting
+startups, but not as many more as could.  Most college graduates
+still think they have to get a job.  The average person can't ignore
+something that's been beaten into their head since they were three
+just because serving web pages recently got a lot cheaper.And in any case, competitors are not the biggest threat.  Way more
+startups hose themselves than get crushed by competitors.  There
+are a lot of ways to do it, but the three main ones are internal
+disputes, inertia, and ignoring users.  Each is, by itself, enough
+to kill you.  But if I had to pick the worst, it would be ignoring
+users.  If you want a recipe for a startup that's going to die,
+here it is: a couple of founders who have some great idea they know
+everyone is going to love, and that's what they're going to build,
+no matter what.Almost everyone's initial plan is broken.  If companies stuck to
+their initial plans, Microsoft would be selling programming languages,
+and Apple would be selling printed circuit boards.  In both cases
+their customers told them what their business should be-- and they
+were smart enough to listen.As Richard Feynman said, the imagination of nature is greater than
+the imagination of man.  You'll find more interesting things by
+looking at the world than you could ever produce just by thinking.
+This principle is very powerful.  It's why the best abstract painting
+still falls short of Leonardo, for example.  And it applies to
+startups too.  No idea for a product could ever be so clever as the
+ones you can discover by smashing a beam of prototypes into a beam
+of users.
+5. Commitment Is a Self-Fulfilling Prophecy.I now have enough experience with startups to be able to say what
+the most important quality is in a startup founder, and it's not
+what you might think.  The most important quality in a startup
+founder is determination.  Not intelligence-- determination.This is a little depressing.  I'd like to believe Viaweb succeeded
+because we were smart, not merely determined.  A lot of people in
+the startup world want to believe that.  Not just founders, but
+investors too.  They like the idea of inhabiting a world ruled by
+intelligence.  And you can tell they really believe this, because
+it affects their investment decisions.Time after time VCs invest in startups founded by eminent professors.
+This may work in biotech, where a lot of startups simply commercialize
+existing research, but in software you want to invest in students,
+not professors.  Microsoft, Yahoo, and Google were all founded by
+people who dropped out of school to do it.  What students lack in
+experience they more than make up in dedication.Of course, if you want to get rich, it's not enough merely to be
+determined.  You have to be smart too, right?  I'd like to think
+so, but I've had an experience that convinced me otherwise: I spent
+several years living in New York.You can lose quite a lot in the brains department and it won't kill
+you.  But lose even a little bit in the commitment department, and
+that will kill you very rapidly.Running a startup is like walking on your hands: it's possible, but
+it requires extraordinary effort.  If an ordinary employee were
+asked to do the things a startup founder has to, he'd be very
+indignant.  Imagine if you were hired at some big company, and in
+addition to writing software ten times faster than you'd ever had
+to before, they expected you to answer support calls, administer
+the servers, design the web site, cold-call customers, find the
+company office space, and go out and get everyone lunch.And to do all this not in the calm, womb-like atmosphere of a big
+company, but against a backdrop of constant disasters.  That's the
+part that really demands determination.  In a startup, there's
+always some disaster happening.  So if you're the least bit inclined
+to find an excuse to quit, there's always one right there.But if you lack commitment, chances are it will have been hurting
+you long before you actually quit.  Everyone who deals with startups
+knows how important commitment is, so if they sense you're ambivalent,
+they won't give you much attention.  If you lack commitment, you'll
+just find that for some mysterious reason good things happen to
+your competitors but not to you.  If you lack commitment, it will
+seem to you that you're unlucky.Whereas if you're determined to stick around, people will pay
+attention to you, because odds are they'll have to deal with you
+later.  You're a local, not just a tourist, so everyone has to come
+to terms with you.At Y Combinator we sometimes mistakenly fund teams who have the
+attitude that they're going to give this startup thing a shot for
+three months, and if something great happens, they'll stick with
+it-- "something great" meaning either that someone wants to buy
+them or invest millions of dollars in them.  But if this is your
+attitude, "something great" is very unlikely to happen to you,
+because both acquirers and investors judge you by your level of
+commitment.If an acquirer thinks you're going to stick around no matter what,
+they'll be more likely to buy you, because if they don't and you
+stick around, you'll probably grow, your price will go up, and
+they'll be left wishing they'd bought you earlier.  Ditto for
+investors.  What really motivates investors, even big VCs, is not
+the hope of good returns, but the fear of missing out. 
+[6]
+So if
+you make it clear you're going to succeed no matter what, and the only
+reason you need them is to make it happen a little faster, you're
+much more likely to get money.You can't fake this.  The only way to convince everyone that you're
+ready to fight to the death is actually to be ready to.You have to be the right kind of determined, though.  I carefully
+chose the word determined rather than stubborn, because stubbornness
+is a disastrous quality in a startup.  You have to be determined,
+but flexible, like a running back.  A successful running back doesn't
+just put his head down and try to run through people.  He improvises:
+if someone appears in front of him, he runs around them; if someone
+tries to grab him, he spins out of their grip; he'll even run in
+the wrong direction briefly if that will help.  The one thing he'll
+never do is stand still. 
+[7]
+6. There Is Always Room.I was talking recently to a startup founder about whether it might
+be good to add a social component to their software.  He said he
+didn't think so, because the whole social thing was tapped out.
+Really?  So in a hundred years the only social networking sites
