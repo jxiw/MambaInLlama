@@ -50,6 +50,8 @@ def main():
     # x_labels = ['1K', '', '8k', '', '', '16k', '', '', '', '', '32k', '', '', '', '', '', '', '', '60k']
     # x_labels = ['1K', '', '8k', '', '', '16k', '', '', '', '', '32k', '', '', '', '', '', '', '', '', '64K']
     
+    axes[1, 2].axis('off')
+
     for ax, config in zip(axes.flatten(), model_configs):
         df = load_data(config)
         create_heatmap(df, ax, config['title'], config['pretrained_len'])
