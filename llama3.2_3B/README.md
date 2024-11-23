@@ -13,7 +13,7 @@ The ```train_distill.py``` script allows you to initialize your Mamba model with
 2. (Optional) Align the SFT model using DPO.
 
 ```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba2/train_distill.py llama3.2_3B/large_llama3_ft_mamba2_0.5_dpo.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba2/train_dpo.py llama3.2_3B/large_llama3_ft_mamba2_0.5_dpo.yaml
 ```
 
 If you run DPO, you are able to get a model like [this](https://huggingface.co/JunxiongWang/Mamba2InLlama3B_Half_DPO). 
