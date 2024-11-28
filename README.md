@@ -1,6 +1,8 @@
 # MambaInLlama
 
-This repository contains the code and released models for our paper.
+This repository contains the code and released models for the distillation approach described in our paper.
+
+For fast inference and speculative decoding, please visit this [repository](https://github.com/itsdaniele/speculative_mamba).
 
 <div style="display: flex; justify-content: space-between;">
     <img src="assets/mambainllama.png" alt="MambaInLlama" style="height:200px; width:auto; margin-right: 10px;">
