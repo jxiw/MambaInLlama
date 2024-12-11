@@ -15,9 +15,11 @@ Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while pre
 
 ## Approach
 
-1. **Stepwise layer alignment** (Optional). Replace the attention layers by Mamba2, one by one in a stepwise manner. MLP layers are freezed in this stage.
-2. **End to end distillation** (Most important). Minimize KL divergence loss between the student and teacher models. You can consider to use a larger teacher model to get better results. (the is a end to end training, and MLP layers are not freezed in this stage).
+1. **Stepwise layer alignment** (Optional). Replace the attention layers by Mamba2, one by one in a stepwise manner. **MLP layers are frozen in this stage**.
+2. **End to end distillation** (Most important). Minimize KL divergence loss between the student and teacher models. You can consider to use a larger teacher model to get better results. (**the is a end to end training, and MLP layers are not frozen in this stage**).
 3. **Instruction tuning** (Optional). For simplicity, we use SFT + DPO for this process.
+
+**We freeze the MLP layers in the first stage because we want to produce a model similar to the initialization model. However, in the end-to-end training/distillation, we only focus on the KL loss, so training all parameters (not freezing the MLP layers) will give better results.**
 
 ## Evaluation
 
