@@ -17,7 +17,7 @@ Here are detailed commands to reproduce those models. Make sure you are in the r
 
 ## Hybrid Mamba (50% attention / 16 attention layer)
 
-### Distillation phrase:
+### Layerwise Distillation phrase:
 
 We start with [meta-llama/Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct). First, we replace 25% of the attention layers with Mamba, and then replace another 25% of the attention layers with Mamba by running the following command. 
 
@@ -33,13 +33,21 @@ Now, we have a distilled hybrid mamba model with 50% attention and 50% mamba. We
 
 This model is available [here](https://huggingface.co/JunxiongWang/llama3_0.50_mamba_progressive).
 
-### SFT
+### End-to-end Training phrase
+
+We explore two ways for this,
+
+Approach 1: SFT using CE loss of GPT-4 synthetic data
 
 ```
 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba/train_sft.py mamba_llama/llama3_0.50_mamba_sft.yaml
 ```
 
 This should rougly takes 4 days in 8x80G A100. This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_0_5_sft).
+
+Approach 2: SFT using KL loss of a larger teacher model, for example `Llama-70B-instruct`.
+
+Please check `train_mamba/train_distill.py`. It should have better results comapred with SFT using CE loss of GPT-4 synthetic data.
 
 ### DPO
 
