@@ -2,6 +2,8 @@
 
 1. We streamlined the process and distilled the Hybrid Mamba2 8B model, utilizing the [Llama-3.1-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct) as the teacher model and the [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) as the model for kqv initialization.
 
+**While layerwise distillation can enhance performance, here we use a single-step approach to illustrate our core idea (reuse weights from kqvo). And this end to end traning is the most important.**
+
 ```
 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba2/train_distill.py llama3.1_8B/llama3.1_mamba2_0.5.yaml
 ```
