@@ -47,7 +47,9 @@ This should rougly takes 4 days in 8x80G A100. This model is available [here](ht
 
 Approach 2: SFT using KL loss of a larger teacher model, for example `Llama-70B-instruct`.
 
-Please check `train_mamba/train_distill.py`. It should have better results comapred with SFT using CE loss of GPT-4 synthetic data.
+Please check `train_mamba/train_distill.py` and the Mamba-Llama-3.1 for details. It should have better results comapred with SFT using CE loss of GPT-4 synthetic data.
+
+If you don't do Layerwise Distillation phrase, you should set `with_distill` to False and it will initialize using attention linear layers. If you already do Layerwise Distillation phrase, you should set `with_distill` to True, and it loads the model trained after the first phrase.
 
 ### DPO
 
@@ -71,13 +73,23 @@ This should rougly takes few hours in 8x80G A100.
 
 We use the distilled SFT model from 50% attention to initialize this model.
 
-### SFT
+### End-to-end Training phrase
+
+We explore two ways for this,
+
+Approach 1: SFT using CE loss of GPT-4 synthetic data
 
 ```
 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba/train_sft.py mamba_llama/llama3_0.75_mamba_sft.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_0_75_sft).
+
+Approach 2: SFT using KL loss of a larger teacher model, for example `Llama-70B-instruct`.
+
+Please check `train_mamba/train_distill.py` and the Mamba-Llama-3.1 for details. It should have better results comapred with SFT using CE loss of GPT-4 synthetic data.
+
+If you don't do Layerwise Distillation phrase, you should set `with_distill` to False and it will initialize using attention linear layers. If you already do Layerwise Distillation phrase, you should set `with_distill` to True, and it loads the model trained after the first phrase.
 
 ### DPO
 
@@ -97,13 +109,21 @@ This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_
 
 We use the distilled SFT model from 25% attention to initialize this model.
 
-### SFT
+### End-to-end Training phrase
+
+Approach 1: SFT using CE loss of GPT-4 synthetic data
 
 ```
 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file deepspeed_zero3.yaml train_mamba/train_sft.py mamba_llama/llama3_0.875_mamba_sft.yaml
 ```
 
 This model is available [here](https://huggingface.co/JunxiongWang/llama3_mamba_0_875_sft).
+
+Approach 2: SFT using KL loss of a larger teacher model, for example `Llama-70B-instruct`.
+
+Please check `train_mamba/train_distill.py` and the Mamba-Llama-3.1 for details. It should have better results comapred with SFT using CE loss of GPT-4 synthetic data.
+
+If you don't do Layerwise Distillation phrase, you should set `with_distill` to False and it will initialize using attention linear layers. If you already do Layerwise Distillation phrase, you should set `with_distill` to True, and it loads the model trained after the first phrase. 
 
 ### DPO
 
