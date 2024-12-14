@@ -130,6 +130,8 @@ git clone https://github.com/huggingface/transformers.git --branch v4.43.1
 # transformers==4.43.1
 # trl==0.8.6
 # accelerate==0.33.0
+# peft==0.12.0
+# huggingface-hub==0.24.5
 ```
 
 If you install mamba-ssm using `pip install mamba-ssm==2.2.2`, you will need to manually change `CONDA_ENV_PATH/site-packages/mamba_ssm/modules/mha.py` to [this version](https://github.com/state-spaces/mamba/blob/014c094d11f780a27330657faabecaaded7a31db/mamba_ssm/modules/mha.py) to support GQA, since GQA is used in Llama3. The **mamba-ssm** used in my experiment is from this [commit](https://github.com/state-spaces/mamba/tree/49ddf8321e4987650e8dc8dc44caa44b892f207a).
