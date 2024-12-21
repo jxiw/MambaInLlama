@@ -280,11 +280,13 @@ print(generated_text[0])
 If you use this codebase, or otherwise found our work valuable, please cite:
 
 ```
-@article{junxiongdaniele2024mambainllama,
-  title   = {The Mamba in the Llama: Distilling and Accelerating Hybrid Models},
-  author  = {Junxiong Wang and Daniele Paliotta and Avner May and Alexander M. Rush and Tri Dao},
-  journal = {arXiv preprint arXiv:2408.15237},
-  year    = {2024}
+@inproceedings{
+junxiongdaniele2024mambainllama,
+title={The Mamba in the Llama: Distilling and Accelerating Hybrid Models},
+author={Junxiong Wang and Daniele Paliotta and Avner May and Alexander M Rush and Tri Dao},
+booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+year={2024},
+url={https://openreview.net/forum?id=uAzhODjALU}
 }
 ```
 
