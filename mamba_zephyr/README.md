@@ -47,7 +47,7 @@ This should rougly takes 3 days in 8x80G A100. This model is available [here](ht
 
 Approach 2: SFT using KL loss of a larger teacher model, for example `Llama-70B-instruct`.
 
-Please check `train_mamba/train_distill.py` and the Mamba-Llama-3.1 for details. It should have better results comapred with SFT using CE loss of GPT-4 synthetic data.
+Please check `train_mamba/train_distill.py` and the Mamba-Llama-3.1 for details. It should have better results comapred with SFT using CE loss of GPT-4 synthetic data. This model is available [here](https://huggingface.co/JunxiongWang/mamba_0_5_distill).
 
 If you don't do Layerwise Distillation phrase, you should set `with_distill` to False and it will initialize using attention linear layers. If you already do Layerwise Distillation phrase, you should set `with_distill` to True, and it loads the model trained after the first phrase.
 
