@@ -1,6 +1,8 @@
 ## Evaluating base models
 
-Please check [llm_eval](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/llm_eval) to evaluate base models.
+Please check [lm_eval](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/llm_eval) to evaluate base models.
+
+**If you use lm-evaluation-harness to evaluate generation-based tasks (e.g., GSM8K and MATH), make sure to apply the chat template (e.g., llama chat template) instead of using its default one. The distilled models are trained only on instruction-tuning data, and if you evaluate without applying the chat template, the results will be completely invalid and cause a terrible score.**
 
 ## Evaluating chat models
 
