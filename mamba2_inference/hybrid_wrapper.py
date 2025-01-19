@@ -97,8 +97,8 @@ class MambaTransformerHybridModelWrapper(nn.Module, GenerationMixin):
                     # support save from safetensors
                     ckpt = load_safetensors_to_dict(checkpoint_path)
         
-        merge_projections_for_layers(ckpt, self.attn_layers)
-        self.model.load_state_dict(ckpt)
+            merge_projections_for_layers(ckpt, self.attn_layers)
+            self.model.load_state_dict(ckpt)
         self.model = self.model.to(dtype).cuda()
         self.device = self.model.device
         self.can_generate = self.model.can_generate
