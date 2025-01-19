@@ -227,7 +227,8 @@ class Mamba(nn.Module):
         )
         if ssm_state is not None:
             y, last_state = y
-            ssm_state.copy_(last_state.unsqueeze(-2))
+            # ssm_state.copy_(last_state.unsqueeze(-2))
+            ssm_state.copy_(rearrange(last_state, "b (h d) n -> b h d n", h=self.num_C_head))
         y = rearrange(y, "b d l -> b l d")
         out = self.out_proj(y)
 
@@ -289,12 +290,12 @@ class Mamba(nn.Module):
             x = torch.repeat_interleave(x, dim=1, repeats=self.repeat_group)
             x = rearrange(x, "b n_group dstate -> b (n_group dstate)")
 
-        x = x.unsqueeze(-1)
-        dt = dt.unsqueeze(-1)
-        dt_bias = self.dt_proj.bias.unsqueeze(-1)
-        A = A.unsqueeze(1)
-        D = self.D.unsqueeze(-1)
-        z = z.unsqueeze(-1)
+        x = rearrange(x, "b (h d) -> b h d", h=self.num_C_head)
+        dt = rearrange(dt, "b (h d) -> b h d", h=self.num_C_head)
+        A = rearrange(A, "(h d) n -> h d n", h=self.num_C_head)
+        D = rearrange(self.D, "(h d) -> h d", h=self.num_C_head)
+        z = rearrange(z, "b (h d) -> b h d", h=self.num_C_head)
+        dt_bias = rearrange(self.dt_proj.bias, "(h d) -> h d", h=self.num_C_head)
 
         # SSM step
         assert selective_state_update is not None
@@ -302,7 +303,8 @@ class Mamba(nn.Module):
             ssm_state, x, dt, A, B, C, D, z=z, dt_bias=dt_bias, dt_softplus=True
         )
 
-        y = y.squeeze(-1)
+        # y = y.squeeze(-1)
+        y = rearrange(y, "b h d -> b (h d)")
         out = self.out_proj(y)
         
         return out.unsqueeze(1), conv_state, ssm_state
@@ -310,10 +312,13 @@ class Mamba(nn.Module):
     def allocate_inference_cache(self, batch_size, max_seqlen, dtype=None, **kwargs):
         device = self.out_proj.weight.device
         conv_dtype = self.conv1d.weight.dtype if dtype is None else dtype
-        conv_state = torch.zeros(batch_size, self.d_model * self.expand, self.d_conv, device=device, dtype=conv_dtype)
+        if self.repeat_kv_before_conv:
+            conv_state = torch.zeros(batch_size, self.d_inner, self.d_conv, device=device, dtype=conv_dtype)
+        else:
+            conv_state = torch.zeros(batch_size, self.d_xb, self.d_conv, device=device, dtype=conv_dtype)
         ssm_dtype = self.dt_proj.weight.dtype if dtype is None else dtype
         ssm_state = torch.zeros(
-            batch_size, self.d_model * self.expand, 1, self.d_state, device=device, dtype=ssm_dtype
+            batch_size, self.num_C_head, self.d_inner // self.num_C_head, self.d_state, device=device, dtype=ssm_dtype
         )
         return conv_state, ssm_state
 
@@ -321,17 +326,26 @@ class Mamba(nn.Module):
         assert self.layer_idx is not None
         if self.layer_idx not in inference_params.key_value_memory_dict:
             batch_shape = (batch_size,)
-            conv_state = torch.zeros(
-                batch_size,
-                self.d_model * self.expand,
-                self.d_conv,
-                device=self.conv1d.weight.device,
-                dtype=self.conv1d.weight.dtype,
-            )
+            if self.repeat_kv_before_conv:
+                conv_state = torch.zeros(
+                    batch_size,
+                    self.d_inner,
+                    self.d_conv,
+                    device=self.conv1d.weight.device,
+                    dtype=self.conv1d.weight.dtype,
+                )
+            else:
+                conv_state = torch.zeros(
+                    batch_size,
+                    self.d_xb,
+                    self.d_conv,
+                    device=self.conv1d.weight.device,
+                    dtype=self.conv1d.weight.dtype,
+                )
             ssm_state = torch.zeros(
                 batch_size,
-                self.d_model * self.expand,
-                1,
+                self.num_C_head,
+                self.d_inner // self.num_C_head,
                 self.d_state,
                 device=self.dt_proj.weight.device,
                 dtype=self.dt_proj.weight.dtype,
