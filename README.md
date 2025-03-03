@@ -11,7 +11,7 @@ For fast inference and speculative decoding, please visit this [repository](http
 
 Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while preserving the generational quality with the best effort. Typically, you only need 8x80G A100 (with very **limited** resources) and run for 3 to 4 days to reproduce our results. Our approach can be used for both base models and chat models. 
 
-**Notice: We strongly recommend using Mamba 1 instead of Mamba 2 for hybrid distillation. Its inference speed is faster, training converges more quickly, and results are better with hybrid attention, especially for challenging reasoning tasks.**
+*Notice: We strongly recommend using Mamba 1 instead of Mamba 2 for hybrid distillation. Its inference speed is faster, training converges more quickly, and results are better with hybrid attention, especially for challenging reasoning tasks.*
 
 <!-- If you don't want to do alignment or prefer not to use SFT/DPO at all, please refer to [this](mamba2_llama_stepwise/README.md) and in this case, you may consider using the base model instead of the chat model as teacher model and selecting the general web corpus dataset instead of the chat dataset. -->
 
@@ -28,11 +28,16 @@ Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while pre
 Please follow the instructions [here](benchmark/README.md). Our evaluation includes: a. Standard tasks in [LM Eval](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/llm_eval), b. [Chat Benchmarks](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/alpaca_eval) and [here](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/mt_bench), c. Reasoning tasks [Math and Code Reasoning Benchmarks](https://github.com/jxiw/ZeroEval), and d. Long-range tasks, [NeedleInAHaystack](benchmark/needle/README.md). Our goal is to provide a thorough evaluation and study.
 
 ## Changelog
+- **[2024.03.01]** MATH reasoning models are available here. [here](https://huggingface.co/collections/JunxiongWang/mambainllama-math-reasoning-67c151eb6ea48bd56b35f434) 
 - **[2024.10.06]** We simplified the procedure and distilled the Hybrid Mamba2 3B model using the [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) as the teacher model, and the [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) as the initialized model. Check [this](llama3.2_3B/README.md) for more details.
 - **[2024.08.26]** [Hybrid Mamba models](https://huggingface.co/JunxiongWang?search_models=MambaInLlama) and [Hybrid Mamba2 models](https://huggingface.co/JunxiongWang?search_models=Mamba2InLlama) distilled from [meta-llama/Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) are available.
 - **[2024.07.18]** We release first version code and models. We are distilling [meta-llama/Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct). Stay tuned for updates.
 
 ## Released Models
+
+### Hybrid Mamba Math models 
+
+Check [here](https://huggingface.co/collections/JunxiongWang/mambainllama-math-reasoning-67c151eb6ea48bd56b35f434) for reasoning models distilled from llama 1B and llama 3B.
 
 ### Hybrid Mamba (8B) distilled from Llama3.1 8B
 
