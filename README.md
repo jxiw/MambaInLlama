@@ -38,7 +38,9 @@ Please follow the instructions [here](benchmark/README.md). Our evaluation inclu
 
 ### Hybrid Mamba Math models 
 
-R1 style MATH reasoning models are available here. [JunxiongWang/M1-3B](https://huggingface.co/JunxiongWang/M1-3B). MATH-500: Pass@1 81.7, AIME-25 Pass@1: 22 
+R1 style MATH reasoning models are available here. [JunxiongWang/M1-3B](https://huggingface.co/JunxiongWang/M1-3B). 
+
+MATH-500: Pass@1 81.7, AIME-25 Pass@1: 22 
 
 Check [here](https://huggingface.co/collections/JunxiongWang/mambainllama-math-reasoning-67c151eb6ea48bd56b35f434) for reasoning models distilled from llama 1B and llama 3B.
 
