@@ -28,7 +28,7 @@ Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while pre
 Please follow the instructions [here](benchmark/README.md). Our evaluation includes: a. Standard tasks in [LM Eval](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/llm_eval), b. [Chat Benchmarks](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/alpaca_eval) and [here](https://github.com/jxiw/MambaInLlama/tree/main/benchmark/mt_bench), c. Reasoning tasks [Math and Code Reasoning Benchmarks](https://github.com/jxiw/ZeroEval), and d. Long-range tasks, [NeedleInAHaystack](benchmark/needle/README.md). Our goal is to provide a thorough evaluation and study.
 
 ## Changelog
-- **[2025.04.05]** R1 distill 1B level, MATH reasoning models are available here. [JunxiongWang/M1-3B](https://huggingface.co/JunxiongWang/M1-3B).
+- **[2025.04.05]** R1 distill 1B level, MATH reasoning models are available [here](https://huggingface.co/JunxiongWang/M1-3B).
 - **[2025.03.01]** MATH reasoning models are available here. [here](https://huggingface.co/collections/JunxiongWang/mambainllama-math-reasoning-67c151eb6ea48bd56b35f434) 
 - **[2024.10.06]** We simplified the procedure and distilled the Hybrid Mamba2 3B model using the [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) as the teacher model, and the [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) as the initialized model. Check [this](llama3.2_3B/README.md) for more details.
 - **[2024.08.26]** [Hybrid Mamba models](https://huggingface.co/JunxiongWang?search_models=MambaInLlama) and [Hybrid Mamba2 models](https://huggingface.co/JunxiongWang?search_models=Mamba2InLlama) distilled from [meta-llama/Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) are available.
@@ -38,7 +38,7 @@ Please follow the instructions [here](benchmark/README.md). Our evaluation inclu
 
 ### Hybrid Mamba Math models 
 
-R1 style MATH reasoning models are available here. [JunxiongWang/M1-3B](https://huggingface.co/JunxiongWang/M1-3B). 
+R1 style MATH reasoning models are available [here](https://huggingface.co/JunxiongWang/M1-3B). 
 
 MATH-500: Pass@1 81.7, AIME-25 Pass@1: 22 
 
