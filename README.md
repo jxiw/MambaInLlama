@@ -11,7 +11,7 @@ For fast inference and speculative decoding, please visit this [repository](http
 
 Our goal is to distill a large Transformer into a (Hybrid)-Mamba model while preserving the generational quality with the best effort. Typically, you only need 8x80G A100 (with very **limited** resources) and run for 3 to 4 days to reproduce our results. Our approach can be used for both base models and chat models. 
 
-*This repository is deprecated, please check [here](https://github.com/jxiw/M1) for more effcient training and distillation.*
+*This repository is deprecated, please check [here](https://github.com/jxiw/M1/tree/main/sft) for more efficient training and distillation. The new version uses Axolotl, which fixes bugs in TRL.*
 
 <!-- If you don't want to do alignment or prefer not to use SFT/DPO at all, please refer to [this](mamba2_llama_stepwise/README.md) and in this case, you may consider using the base model instead of the chat model as teacher model and selecting the general web corpus dataset instead of the chat dataset. -->
 
