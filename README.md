@@ -47,7 +47,7 @@ Please follow the instructions [here](benchmark/README.md). Our evaluation inclu
 | DeepSeek-R1-Distill-Qwen-1.5B (Transformer)    | 23.0          | 28.8          | 82.8         | 62.9         | 43.3              |
 | [**M1-3B (Mamba Hybrid Models)**](https://huggingface.co/togethercomputer/M1-3B)                | 23.5          | 28.5          | 84.0         | 62.8         | 47.3              |
 
-To reproduce the results, please check this and refer to [here]((https://github.com/jxiw/M1).
+To reproduce the results, please check this and refer to [M1]((https://github.com/jxiw/M1).
 
 Check [here](https://huggingface.co/collections/JunxiongWang/mambainllama-math-reasoning-67c151eb6ea48bd56b35f434) for reasoning models distilled from llama 1B and llama 3B.
 
