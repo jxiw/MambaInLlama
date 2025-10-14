@@ -160,6 +160,8 @@ Alternatively, you can build mamba-ssm from source, but ensure the commit is aft
 
 ### Generation Example
 
+This repository doesn’t support batch generation. For batch generation, please check out [this](https://github.com/jxiw/M1/tree/main).
+
 Mamba:
 
 ```
